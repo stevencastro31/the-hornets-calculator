@@ -1,29 +1,58 @@
 <script lang="ts">
     import { SlotType } from "$lib/types/SlotType";
+    import { SkillType } from "$lib/types/SkillType";
     import { SLOT_ICONS } from "$lib/objects/SlotIcon";
     import { SLOT_UIS } from "$lib/objects/SlotUI";
+    import { SILK_SKILL_ICONS } from "$lib/objects/SilkSkillIcon";
+    import { TOOL_ICONS } from "$lib/objects/ToolIcons";
+    import { ToolType } from "$lib/types/ToolType";
 
-    let { slot_type, show_icon = false, show_slot = true }: { slot_type: SlotType, show_icon?: boolean, show_slot?: boolean } = $props();
+    let { 
+        slot_type, show_icon = false, show_slot = true, skill, tool, is_venom = false }: { 
+            slot_type: SlotType, 
+            show_icon?: boolean, 
+            show_slot?: boolean,
+            skill? : SkillType,
+            tool? : ToolType,
+            is_venom?: boolean,
+        } = $props();
+
+    tool = ToolType.RED_PLASMIUM_PHIAL;
+    is_venom = true;
+
+    // flags
     let isRed: boolean = $derived(SlotType[slot_type].startsWith("RED"));
+    let isBlue: boolean = $derived(SlotType[slot_type].startsWith("BLUE"));
+    let isWhite: boolean = $derived(SlotType[slot_type].startsWith("WHITE"));
+    let isYellow: boolean = $derived(SlotType[slot_type].startsWith("YELLOW"));
     let isUp: boolean = $derived(SlotType[slot_type].endsWith("UP"));
     let isDown: boolean = $derived(SlotType[slot_type].endsWith("DOWN"));
 
+    // icon path
+    let skillPath = $derived(skill != undefined ? "assets/SKILLS/" +  SILK_SKILL_ICONS[skill] : "");
+    let toolPath = $derived.by(() => {
+        if (tool === undefined) return "";
+        let root = "assets/TOOLS/"
+        if (isRed && ToolType[tool].startsWith("RED")) {
+            root += "RED/";
+            if (is_venom)
+                root += "VENOM/"
+            return root + TOOL_ICONS[tool];
+        } else if (isBlue && ToolType[tool].startsWith("BLUE")) {
+            return root + "BLUE/" + TOOL_ICONS[tool];
+        } else if (isYellow && ToolType[tool].startsWith("YELLOW")) {
+            return root + "YELLOW/" + TOOL_ICONS[tool];
+        }
+        return "";
+    });
 
-    // TODO: Item Logic
-    let path = "assets/TOOLS/BLUE/11_spool_extender.png";
-    path = "";
-    // path = "assets/TOOLS/RED/16_cogfly.png";
-    // path = "assets/TOOLS/RED/23_plasmium_phial.png";
-    // path = "assets/TOOLS/YELLOW/01_compass.png";
-    // path = "assets/TOOLS/BLUE/22_wispfire_lantern.png";
-    // path = "assets/TOOLS/YELLOW/10_ascendants_grip.png";
+    // more flags
+    let icon_visible = $derived(show_icon || (!skillPath && isWhite) || (!toolPath && !isWhite));
 
-    if (path.length < 1)
-        show_icon = true;
-
-    // Add offsets to tool slots w/ direction
-    let posYSlot = isUp ? "top-5" : isDown ? "bottom-5" : "top-3";
-    let posYIcon = isUp ? "top-9" : isDown ? "bottom-9" : "top-8";
+    // add offsets to tool slots w/ direction
+    let posYSlotOther = $derived(isUp ? "top-6" : isDown ? "bottom-6" : "top-4");
+    let posYSlotWhite = $derived(isUp ? "top-7" : isDown ? "bottom-7" : "top-5");
+    let posYIcon = $derived(isUp ? "top-9" : isDown ? "bottom-9" : "top-8");
 </script>
 
 <div class="h-36 w-32 min-w-32 min-h-36 relative">
@@ -33,7 +62,7 @@
     {/if}
 
     <!-- Icon -->
-    {#if show_icon}
+    {#if icon_visible}
         {#if isRed && (isUp || isDown)}
             <div class={`w-20 h-24 absolute left-6 ${posYIcon}`}>
                 <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`}  alt="icon" class="w-full h-full object-contain"/>
@@ -45,10 +74,16 @@
         {/if}
     {/if}
 
-    <!-- Tool -->
-    {#if path.length > 0}
-        <div class={`size-30 absolute left-1 ${posYSlot}`}>
-            <img src={path} alt="slot" class="w-full h-full object-contain" />
-        </div>
+    <!-- Tool && Skill -->
+    {#if !icon_visible}
+        {#if isWhite}
+            <div class={`size-26 absolute left-3 ${posYSlotWhite}`}>
+                <img src={skillPath} alt="slot" class="w-full h-full object-contain" />
+            </div>
+        {:else}
+            <div class={`size-30 absolute left-1 ${posYSlotOther}`}>
+                <img src={toolPath} alt="slot" class="w-full h-full object-contain" />
+            </div>
+        {/if}
     {/if}
 </div>
