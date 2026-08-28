@@ -3,8 +3,8 @@
     import ToolSlot from "./ToolSlot.svelte";
 </script>
 
-<div class="w-164 h-180 min-w-164 min-h-180 bg-black justify-center p-20 rounded-4xl relative">
-    <img src="assets/CREST/Crest_Shaman.png" alt="crest" class="w-full h-full object-contain"/>
+<div class="w-164 h-180 min-w-164 min-h-180 justify-center p-20 relative">
+    <img src="assets/CREST/Crest_Shaman.png" alt="crest" class="w-full h-full object-contain select-none"/>
 
     <!-- Silk Skill -->
     <div class="absolute top-29 left-64">
