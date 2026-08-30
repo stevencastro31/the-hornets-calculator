@@ -4,7 +4,7 @@
     import { SLOT_ICONS } from "$lib/objects/SlotIcon";
     import { SLOT_UIS } from "$lib/objects/SlotUI";
     import { SILK_SKILL_ICONS } from "$lib/objects/SilkSkillIcon";
-    import { TOOL_ICONS } from "$lib/objects/ToolIcons";
+    import { TOOL_ICONS } from "$lib/objects/ToolIcon";
     import { ToolType } from "$lib/types/ToolType";
 
     let { 
@@ -19,12 +19,12 @@
         } = $props();
 
     // flags
-    let isRed: boolean = $derived(SlotType[slot_type].startsWith("RED"));
-    let isBlue: boolean = $derived(SlotType[slot_type].startsWith("BLUE"));
-    let isWhite: boolean = $derived(SlotType[slot_type].startsWith("WHITE"));
-    let isYellow: boolean = $derived(SlotType[slot_type].startsWith("YELLOW"));
-    let isUp: boolean = $derived(SlotType[slot_type].endsWith("UP"));
-    let isDown: boolean = $derived(SlotType[slot_type].endsWith("DOWN"));
+    let isRed: boolean = $derived(slot_type == SlotType.RED_UP || slot_type == SlotType.RED_CENTER || slot_type == SlotType.RED_DOWN);
+    let isBlue: boolean = $derived(slot_type == SlotType.BLUE);
+    let isYellow: boolean = $derived(slot_type == SlotType.YELLOW);
+    let isWhite: boolean = $derived(slot_type == SlotType.WHITE_UP || slot_type == SlotType.WHITE_CENTER || slot_type == SlotType.WHITE_DOWN);
+    let isUp: boolean = $derived(slot_type == SlotType.RED_UP || slot_type == SlotType.WHITE_UP);
+    let isDown: boolean = $derived(slot_type == SlotType.RED_DOWN || slot_type == SlotType.WHITE_DOWN);
 
     // icon path
     let skillPath = $derived(skill != undefined ? "assets/SKILLS/" +  SILK_SKILL_ICONS[skill] : "");
@@ -33,8 +33,9 @@
         let root = "assets/TOOLS/"
         if (isRed && ToolType[tool].startsWith("RED")) {
             root += "RED/";
-            if (is_venom)
-                root += "VENOM/"
+            if (is_venom) {
+                root += "VENOM/";
+            }
             return root + TOOL_ICONS[tool];
         } else if (isBlue && ToolType[tool].startsWith("BLUE")) {
             return root + "BLUE/" + TOOL_ICONS[tool];
@@ -44,33 +45,46 @@
         return "";
     });
 
+    // glow path
+    let glowPath = $derived.by(() => {
+        if (!is_selected) return "";
+        if (isRed) return "assets/TOOLS/tool_red_highlight.png";
+        if (isBlue) return "assets/TOOLS/tool_blue_highlight.png";
+        if (isYellow) return "assets/TOOLS/tool_yellow_highlight.png";
+        if (isWhite) return "assets/TOOLS/tool_white_highlight.png";
+        return "";
+    });
+
     // more flags
     let icon_visible = $derived((!skillPath && isWhite) || (!toolPath && !isWhite));
 
     // add offsets to tool slots w/ direction
-    let posYSlotOther = $derived(isUp ? "top-6" : isDown ? "bottom-6" : "top-4");
-    let posYSlotWhite = $derived(isUp ? "top-7" : isDown ? "bottom-7" : "top-5");
-    let posYIcon = $derived(isUp ? "top-9" : isDown ? "bottom-9" : "top-8");
+    let toolIconYOffsetOther = $derived(isUp ? "top-6" : isDown ? "bottom-6" : "top-4");
+    let toolIconYOffsetWhite = $derived(isUp ? "top-7" : isDown ? "bottom-7" : "top-5");
+    let glowYOffset = $derived(isUp ? "top-4" : isDown ? "bottom-4" : "top-2");
+    let toolTypeIconYOffset = $derived(isUp ? "top-9" : isDown ? "bottom-9" : "top-8");
+
+    let brightness = $derived(is_selected ? 100 : 50);
 </script>
 
 <div class="h-36 w-32 min-h-36 min-w-32 relative">
-
-
+    
     <!-- Slot -->
     {#if show_slot}
-        <img src={`assets/TOOLS/${SLOT_UIS[slot_type]}`} alt="slot" class="w-full h-full object-contain select-none"/>
+        <img src={`assets/TOOLS/${SLOT_UIS[slot_type]}`} alt="slot" class="w-full h-full object-contain select-none brightness-{brightness}"/>
     {/if}
+
 
     <!-- Icon -->
     {#if show_icon}
         {#if icon_visible}
             {#if isRed && (isUp || isDown)}
-                <div class={`w-20 h-24 absolute left-6 ${posYIcon}`}>
-                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`}  alt="icon" class="w-full h-full object-contain select-none"/>
+                <div class={`w-20 h-24 absolute left-6 ${toolTypeIconYOffset}`}>
+                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="w-full h-full object-contain select-none"/>
                 </div>
             {:else}
-                <div class={`size-20 absolute left-6 ${posYIcon}`}>
-                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`}  alt="icon" class="w-full h-full object-contain select-none"/>
+                <div class={`size-20 absolute left-6 ${toolTypeIconYOffset}`}>
+                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="w-full h-full object-contain select-none"/>
                 </div>
             {/if}
         {/if}
@@ -80,11 +94,11 @@
     <!-- Tool && Skill -->
     {#if !icon_visible}
         {#if isWhite}
-            <div class={`size-26 absolute left-3 ${posYSlotWhite}`}>
+            <div class={`size-26 absolute left-3 ${toolIconYOffsetWhite}`}>
                 <img src={skillPath} alt="skill icon" class="w-full h-full object-contain select-none" />
             </div>
         {:else}
-            <div class={`size-30 absolute left-1 ${posYSlotOther}`}>
+            <div class={`size-30 absolute left-1 ${toolIconYOffsetOther}`}>
                 <img src={toolPath} alt="tool icon" class="w-full h-full object-contain select-none" />
             </div>
         {/if}
@@ -92,18 +106,20 @@
 
 
     <!-- Glow -->
-    <div class={`size-30 absolute left-6 ${posYIcon}`}>
-        <img src="assets/TOOLS/tool_highlight.png"  alt="glow" class="w-full h-full object-contain select-none"/>
-    </div>
+    {#if is_selected}
+        <div class={`size-32 absolute ${glowYOffset} opacity-15`}>
+            <img src={glowPath} alt="glow" class="w-full h-full object-contain select-none"/>
+        </div>
+    {/if}
 
 
     <!-- Cursor -->
     {#if is_selected}
-        <div class="absolute -left-8 -top-6">
+        <div class="absolute -left-8 -top-6 z-10">
             <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="size-20 object-contain select-none"/>
         </div>
 
-        <div class="absolute -bottom-6 -right-8 rotate-180">
+        <div class="absolute -bottom-6 -right-8 rotate-180 z-10">
             <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="size-20 object-contain select-none"/>
         </div>
     {/if}
