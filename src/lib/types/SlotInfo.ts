@@ -3,6 +3,7 @@ import { ToolType } from "./ToolType";
 import { SkillType } from "./SkillType";
 
 export type SlotInfo {
+    id: number,
     type: SlotType;
     x: number;
     y: number;

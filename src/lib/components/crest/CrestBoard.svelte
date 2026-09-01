@@ -6,19 +6,25 @@
     import { ToolType } from "$lib/types/ToolType";
     import { SkillType } from "$lib/types/SkillType";
 
+    // props
     let { type }: { type: CrestType} = $props();
-    let crest_info = $derived(CREST_DATA[type]);
-    let vesticrest_info = $derived(CREST_DATA[CrestType.Vesti]);
 
+    // states
+    let crest_info = $state(CREST_DATA[type]);
+    let vesticrest_info = $state(CREST_DATA[CrestType.Vesti]);
+    let selected = $state(0);
+    let slot_index = $state(-1);
 
-    // crest_info.slots[0].skill = SkillType.PALE_NAILS;
-    // crest_info.slots[2].tool = ToolType.BLUE_EGG_OF_FLEALIA;
+    let selected_vesticrest_slot = $derived(vesticrest_info.slots[slot_index]);
+    let selected_crest_slot = $derived(crest_info.slots[slot_index]);
 
-    // vesticrest_info.slots[0].is_selected = true;
-    vesticrest_info.slots[0].tool = ToolType.BLUE_CLAW_MIRROR;
-    vesticrest_info.slots[1].tool = ToolType.YELLOW_DEAD_BUGS_PURSE;
-    vesticrest_info.slots[1].is_selected = true;
-
+    function SetTool() {
+        if (0 < selected) {
+            selected_crest_slot.tool = ToolType.BLUE_DRUIDS_EYE;
+        } else {
+            selected_vesticrest_slot.tool = ToolType.BLUE_DRUIDS_EYE;
+        }
+    }
 
     // #region resize logic
     let container: HTMLDivElement;
@@ -37,7 +43,10 @@
     // #endregion
 </script>
 
-<div class="w-full px-0 2xl:px-20">
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+
+<div class="w-full px-0 2xl:px-20" onclick={() => { selected = 0; slot_index = -1 }}>
     <div bind:this={container} class="w-full flex flex-col flex-grow" style={`visibility: ${ready ? "visible" : "hidden"}`}>
         <div class="pb-12" style={`height: ${720 * scale}px;`}>
             <div class="w-[1056px] flex flex-row origin-top-left" style={`transform: scale(${scale});`}>
@@ -47,22 +56,22 @@
                     <img src="assets/CREST/VestiCrest3.png" alt={vesticrest_info.name} class="w-full h-full object-contain select-none brightness-50"/>
 
                     <!-- Tool & Skill Slot UIs -->
-                    {#each vesticrest_info.slots as slot}
-                        <div class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={slot.is_selected} tool={slot.tool} skill={slot.skill}/>
+                    {#each vesticrest_info.slots as slot, i}
+                        <div onclick={(e) => { selected = slot.id; slot_index = i; e.stopPropagation() }} class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
+                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={selected === slot.id} tool={slot.tool} skill={slot.skill}/>
                         </div>
                     {/each}
                 </div>
 
                 <!-- Crest -->
-                <div class={`w-164 h-180 min-w-164 min-h-180 p-${crest_info.padding} justify-center relative`}>
+                <div class={`w-164 h-180 min-w-164 min-h-180 justify-center relative`} style={`padding: ${crest_info.padding * 0.25}rem`}>
                     <!-- Crest UI -->
                     <img src={`assets/CREST/${CREST_UIS[crest_info.type]}`} alt={crest_info.name} class="w-full h-full object-contain select-none brightness-50"/>
 
                     <!-- Tool & Skill Slot UIs -->
-                    {#each crest_info.slots as slot}
-                        <div class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={slot.is_selected} tool={slot.tool} skill={slot.skill}/>
+                    {#each crest_info.slots as slot, i}
+                        <div onclick={(e) => { selected = slot.id; slot_index = i; e.stopPropagation() }} class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
+                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={selected === slot.id} tool={slot.tool} skill={slot.skill}/>
                         </div>
                     {/each}
                 </div>
@@ -70,6 +79,8 @@
         </div>
     </div>
 </div>
+
+<button class="hover:bg-red-900" onclick={SetTool}> Set Tool </button>
 
 
 
