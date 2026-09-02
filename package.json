@@ -24,6 +24,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.3.0",
 		"@types/node": "^24",
+		"@types/siema": "^1.4.11",
 		"eslint": "^10.4.1",
 		"eslint-plugin-svelte": "^3.19.0",
 		"globals": "^17.6.0",
@@ -33,5 +34,8 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"svelte-carousel": "^1.0.25"
 	}
 }

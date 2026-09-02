@@ -1,0 +1,17 @@
+import { ToolType } from "$lib/types/ToolType";
+
+export const TOOLS_YELLOW = [
+    ToolType.YELLOW_COMPASS,
+    ToolType.YELLOW_SHARD_PENDANT,
+    ToolType.YELLOW_MAGNETIC_BROOCH,
+    ToolType.YELLOW_WEIGHTED_BELT,
+    ToolType.YELLOW_BARBED_BRACELET,
+    ToolType.YELLOW_DEAD_BUGS_PURSE,
+    ToolType.YELLOW_SHELL_SATCHEL,
+    ToolType.YELLOW_MAGNETITE_DICE,
+    ToolType.YELLOW_SCUTTLE_BRACE,
+    ToolType.YELLOW_ASCENDANTS_GRIP,
+    ToolType.YELLOW_SPIDER_STRINGS,
+    ToolType.YELLOW_SILKSPEED_ANKLETS,
+    ToolType.YELLOW_THIEFS_MARK,
+] as const;

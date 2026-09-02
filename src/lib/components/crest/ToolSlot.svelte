@@ -68,10 +68,9 @@
 </script>
 
 <div class="h-36 w-32 min-h-36 min-w-32 relative">
-    
     <!-- Slot -->
     {#if show_slot}
-        <img src={`assets/TOOLS/${SLOT_UIS[slot_type]}`} alt="slot" class="w-full h-full object-contain select-none brightness-{brightness}"/>
+        <img src={`assets/TOOLS/${SLOT_UIS[slot_type]}`} alt="slot" class="general brightness-{brightness}" draggable="false"/>
     {/if}
 
 
@@ -80,11 +79,11 @@
         {#if icon_visible}
             {#if isRed && (isUp || isDown)}
                 <div class={`w-20 h-24 absolute left-6 ${toolTypeIconYOffset}`}>
-                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="w-full h-full object-contain select-none"/>
+                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="general" draggable="false"/>
                 </div>
             {:else}
                 <div class={`size-20 absolute left-6 ${toolTypeIconYOffset}`}>
-                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="w-full h-full object-contain select-none"/>
+                    <img src={`assets/TOOLS/${SLOT_ICONS[slot_type]}`} alt="icon" class="general" draggable="false"/>
                 </div>
             {/if}
         {/if}
@@ -95,11 +94,11 @@
     {#if !icon_visible}
         {#if isWhite}
             <div class={`size-26 absolute left-3 ${toolIconYOffsetWhite}`}>
-                <img src={skillPath} alt="skill icon" class="w-full h-full object-contain select-none" />
+                <img src={skillPath} alt="skill icon" class="general" draggable="false"/>
             </div>
         {:else}
             <div class={`size-30 absolute left-1 ${toolIconYOffsetOther}`}>
-                <img src={toolPath} alt="tool icon" class="w-full h-full object-contain select-none" />
+                <img src={toolPath} alt="tool icon" class="general" draggable="false"/>
             </div>
         {/if}
     {/if}
@@ -108,7 +107,7 @@
     <!-- Glow -->
     {#if is_selected}
         <div class={`size-32 absolute ${glowYOffset} opacity-15`}>
-            <img src={glowPath} alt="glow" class="w-full h-full object-contain select-none"/>
+            <img src={glowPath} alt="glow" class="general" draggable="false"/>
         </div>
     {/if}
 
@@ -116,11 +115,27 @@
     <!-- Cursor -->
     {#if is_selected}
         <div class="absolute -left-8 -top-6 z-10">
-            <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="size-20 object-contain select-none"/>
+            <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="cursor" draggable="false"/>
         </div>
 
         <div class="absolute -bottom-6 -right-8 rotate-180 z-10">
-            <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="size-20 object-contain select-none"/>
+            <img src={`assets/TOOLS/silksong_cursor.png`} alt="slot" class="cursor" draggable="false"/>
         </div>
     {/if}
 </div>
+
+<style>
+    .general {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        user-select: none;
+    }
+
+    .cursor {
+        width: 5rem;
+        height: 5rem;
+        object-fit: contain;
+        user-select: none;
+    }
+</style>

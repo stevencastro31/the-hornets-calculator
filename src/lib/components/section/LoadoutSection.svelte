@@ -9,6 +9,9 @@
 
     import CrestBoard from "../crest/CrestBoard.svelte";
     import { CrestType } from "$lib/types/CrestType";
+    import type { UserInfo } from "$lib/types/UserInfo";
+
+    let { user_info = $bindable() } : { user_info: UserInfo } = $props();
 
     let tab_items = [
         {label: "Tools", value: LoadoutTabType.TOOLS, component: ToolTab}, 
@@ -21,9 +24,9 @@
 <SectionHeader title="Loadout"/>
 <hr>
 
-<CrestBoard type={CrestType.Hunter2}/>
+<CrestBoard bind:user_info={user_info}/>
 
-<LoadoutTabs items={tab_items} activeTabValue={0}/>
+<LoadoutTabs items={tab_items} activeTabValue={0} bind:user_info={user_info}/>
 
 
 

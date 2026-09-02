@@ -1,6 +1,5 @@
 <script>
     import SectionHeader from "../common/SectionHeader.svelte";
-
 </script>
 
 <SectionHeader title="Statistics"/>

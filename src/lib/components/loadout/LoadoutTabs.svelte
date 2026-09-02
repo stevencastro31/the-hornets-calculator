@@ -1,8 +1,9 @@
 <script lang="ts">
     import { LOADOUT_TAB_ICONS } from "$lib/objects/LoadoutTabIcons";
-    import type { LoadoutTabType } from "$lib/types/LoadoutTabType";
+    import { LoadoutTabType } from "$lib/types/LoadoutTabType";
+    import type { UserInfo } from "$lib/types/UserInfo";
 
-    let { items, activeTabValue } : { items: Array<{value: LoadoutTabType, label: string, component: any}>, activeTabValue: number } = $props();
+    let { items, activeTabValue, user_info = $bindable() } : { items: Array<{value: LoadoutTabType, label: string, component: any}>, activeTabValue: number, user_info: UserInfo } = $props();
     const handleClick = (tabValue: string | number) => () => (activeTabValue = tabValue as number);
 </script>
 
@@ -25,7 +26,7 @@
 {#each items as item}
 	{#if activeTabValue == item.value}
         <div class="flex grow">
-            <item.component/>
+            <item.component bind:user_info={user_info}/>
         </div>
 	{/if}
 {/each}
