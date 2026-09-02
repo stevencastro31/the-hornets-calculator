@@ -55,7 +55,7 @@
                                 slot_direction={slot.direction} 
                                 show_icon={slot.show_icon} 
                                 show_slot={slot.show_slot} 
-                                is_venom={slot.is_venom} 
+                                is_venom={user_info.current_tool_loadout.has(ToolType.BLUE_POLLIP_POUCH)}
                                 is_selected={user_info.selected_slot_id === slot.id} 
                                 tool={slot.tool} 
                                 skill={slot.skill} 
@@ -72,9 +72,6 @@
                     <!-- Tool & Skill Slot UIs -->
                     {#each crest_info.slots as slot, i}
                         <div onclick={(e) => { 
-
-
-
                                 user_info.selected_slot_id = slot.id; 
                                 user_info.selected_slot_index = i; 
                                 e.stopPropagation() 
@@ -84,7 +81,7 @@
                                 slot_direction={slot.direction} 
                                 show_icon={slot.show_icon} 
                                 show_slot={slot.show_slot} 
-                                is_venom={slot.is_venom} 
+                                is_venom={user_info.current_tool_loadout.has(ToolType.BLUE_POLLIP_POUCH)}
                                 is_selected={user_info.selected_slot_id === slot.id} 
                                 tool={slot.tool} 
                                 skill={slot.skill} 

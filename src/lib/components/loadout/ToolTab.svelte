@@ -10,7 +10,6 @@
     import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
     import { SlotType } from "$lib/types/SlotType";
     import { ToolType } from "$lib/types/ToolType";
-    import { SLOT_ICONS } from "$lib/objects/SlotIcon";
     import { SlotDirection } from "$lib/types/SlotDirection";
 
     let carousel : SvelteCarousel;
@@ -21,7 +20,8 @@
     let index = $derived(user_info.selected_slot_index);
     let active_slot = $derived(id < 0 ? user_info.active_vesticrest_info.slots[index] : (0 < id ? user_info.active_crest_info.slots[index] : null));
 
-    // TODO: equip direction indcator
+    // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
+    let red_tools_info: { tool: ToolType; direction: SlotDirection }[] = $state(TOOLS_RED.map(tool => ({ tool: tool, direction: SlotDirection.CENTER })));
 
     function SetToolSlot(tool: ToolType) {
         if (id === 0) return;   // ignore if there is no selected crest slot
@@ -33,6 +33,9 @@
         let old_tool: ToolType | undefined = user_info.active_crest_info.slots[index].tool;
         if (old_tool && user_info.current_tool_loadout.has(old_tool)) {
             user_info.current_tool_loadout.delete(old_tool);
+
+            // will break if you reorder the ToolType enum, changes the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
+            if (active_slot?.type === SlotType.RED) { red_tools_info[old_tool - 23].direction = SlotDirection.CENTER }
         }
         
         // equip tool to current loadout
@@ -41,7 +44,11 @@
             user_info.active_crest_info.slots[index].tool = tool;
         else if (id < 0)
             user_info.active_vesticrest_info.slots[index].tool = tool;
+
         user_info.current_tool_loadout.add(tool);
+
+        // will break if you reorder the ToolType enum, revert the appearance of the tool tab item that show the direction in which the tool is equipped on the crest board
+        if (active_slot?.type === SlotType.RED) { red_tools_info[tool - 23].direction = active_slot.direction || SlotDirection.UP  }
     };
 </script>
 
@@ -63,12 +70,12 @@
         </div>
 
         <div class="page">
-            <img src="assets/TOOLS/red_tools_heading.png" class="header" alt="header" draggable="false"/>
+            <img src="assets/MENU/red_tools_heading.png" class="header" alt="header" draggable="false"/>
             <div class={`tools ${active_slot?.type === SlotType.RED ? "" : "pointer-events-none"}`}>
-            {#each TOOLS_RED as tool, i}
-                <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool) }>
+            {#each red_tools_info as tool_info}
+                <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool_info.tool) }>
                     <div class="origin-top-left scale-60">
-                        <ToolSlot slot_type={SlotType.RED} tool={tool} is_selected={selected_tool === tool} is_glow={user_info.current_tool_loadout.has(tool)}/>
+                        <ToolSlot slot_type={SlotType.RED} slot_direction={tool_info.direction} tool={tool_info.tool} is_selected={selected_tool === tool_info.tool} is_glow={user_info.current_tool_loadout.has(tool_info.tool)} is_venom={user_info.current_tool_loadout.has(ToolType.BLUE_POLLIP_POUCH)}/>
                     </div>
                 </div>
             {/each}
@@ -76,9 +83,9 @@
         </div>
 
         <div class="page">
-            <img src="assets/TOOLS/blue_tools_heading.png" class="header" alt="header" draggable="false"/>
+            <img src="assets/MENU/blue_tools_heading.png" class="header" alt="header" draggable="false"/>
             <div class={`tools ${active_slot?.type === SlotType.BLUE ? "" : "pointer-events-none"}`}>
-            {#each TOOLS_BLUE as tool, i}
+            {#each TOOLS_BLUE as tool}
                 <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool) }>
                     <div class="origin-top-left scale-60">
                         <ToolSlot slot_type={SlotType.BLUE} tool={tool} is_selected={selected_tool === tool} is_glow={user_info.current_tool_loadout.has(tool)}/>
@@ -89,9 +96,9 @@
         </div>
 
         <div class="page">
-            <img src="assets/TOOLS/yellow_tool_heading.png" class="header" alt="header" draggable="false"/>
+            <img src="assets/MENU/yellow_tool_heading.png" class="header" alt="header" draggable="false"/>
             <div class={`tools ${active_slot?.type === SlotType.YELLOW ? "" : "pointer-events-none"}`}>
-            {#each TOOLS_YELLOW as tool, i}
+            {#each TOOLS_YELLOW as tool}
                 <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool) }>
                     <div class="origin-top-left scale-60">
                         <ToolSlot slot_type={SlotType.YELLOW} tool={tool} is_selected={selected_tool === tool} is_glow={user_info.current_tool_loadout.has(tool)}/>
@@ -129,7 +136,7 @@
 
     .header {
         width: 18rem;
-        padding-top: 1rem;
+        padding-top: 2rem;
         user-select: none;
     }
 
