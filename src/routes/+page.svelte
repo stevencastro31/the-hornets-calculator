@@ -24,8 +24,8 @@
     });
 </script>
 
-<div class="font-roboto text-white bg-gray-800">
-    <div class="h-16 w-screen"> nav bar 
+<div class="font-roboto text-white bg-gray-950 h-screen">
+    <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
             console.log(user_info.current_tool_loadout);
             console.log(user_info.current_tool_loadout.has(ToolType.RED_STRAIGHT_PIN))

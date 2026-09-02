@@ -32,7 +32,7 @@
         let root = "assets/TOOLS/"
         if (slot_type === SlotType.RED && ToolType[tool].startsWith("RED")) {
             root += "RED/";
-            if (is_venom) { root += "VENOM/"; }
+            if (is_venom && tool != ToolType.RED_NEEDLE_PHIAL) { root += "VENOM/"; }    // need to exclude Needle Phial (no posion variant)
             return root + TOOL_ICONS[tool];
         } else if (slot_type === SlotType.BLUE && ToolType[tool].startsWith("BLUE")) {
             return root + "BLUE/" + TOOL_ICONS[tool];
