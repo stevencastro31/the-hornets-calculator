@@ -11,5 +11,7 @@ export type UserInfo = {
     selected_slot_id: number,
     selected_slot_index: number,
 
-    current_tool_page_index: number,
+    current_loadout_page_type: SlotType,
+    current_tool_loadout: Set<ToolType>,
+    current_skill_loadout: Set<SkillType>,
 };

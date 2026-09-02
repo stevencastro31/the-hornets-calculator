@@ -35,13 +35,13 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <div class="w-full px-0 2xl:px-20" onclick={() => { user_info.selected_slot_id = 0; user_info.selected_slot_index = -1 }}>
-    <div bind:this={container} class="w-full flex flex-col flex-grow" style={`visibility: ${ready ? "visible" : "hidden"}`}>
+    <div bind:this={container} class="w-full flex flex-col flex-grow" style={`visibility: ${ready ? "visible" : "hidden"}`} draggable="false">
         <div class="pb-12" style={`height: ${720 * scale}px;`}>
             <div class="w-[1056px] flex flex-row origin-top-left" style={`transform: scale(${scale});`}>
 
                 <!-- Vesti Crest -->
                 <div class="w-100 h-180 min-w-80 min-h-180 justify-center pt-16 pl-32 relative">
-                    <img src="assets/CREST/VestiCrest3.png" alt={vesticrest_info.name} class="w-full h-full object-contain select-none brightness-50"/>
+                    <img src="assets/CREST/VestiCrest3.png" alt={vesticrest_info.name} class="w-full h-full object-contain select-none brightness-50" draggable="false"/>
 
                     <!-- Tool & Skill Slot UIs -->
                     {#each vesticrest_info.slots as slot, i}
@@ -50,7 +50,16 @@
                                 user_info.selected_slot_index = i; 
                                 e.stopPropagation() 
                             }} class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={user_info.selected_slot_id === slot.id} tool={slot.tool} skill={slot.skill}/>
+                            <ToolSlot 
+                                slot_type={slot.type} 
+                                slot_direction={slot.direction} 
+                                show_icon={slot.show_icon} 
+                                show_slot={slot.show_slot} 
+                                is_venom={slot.is_venom} 
+                                is_selected={user_info.selected_slot_id === slot.id} 
+                                tool={slot.tool} 
+                                skill={slot.skill} 
+                                is_glow={user_info.current_loadout_page_type === slot.type}/>
                         </div>
                     {/each}
                 </div>
@@ -58,16 +67,28 @@
                 <!-- Crest -->
                 <div class={`w-164 h-180 min-w-164 min-h-180 justify-center relative`} style={`padding: ${crest_info.padding * 0.25}rem`}>
                     <!-- Crest UI -->
-                    <img src={`assets/CREST/${CREST_UIS[crest_info.type]}`} alt={crest_info.name} class="w-full h-full object-contain select-none brightness-50"/>
+                    <img src={`assets/CREST/${CREST_UIS[crest_info.type]}`} alt={crest_info.name} class="w-full h-full object-contain select-none brightness-50" draggable="false"/>
 
                     <!-- Tool & Skill Slot UIs -->
                     {#each crest_info.slots as slot, i}
                         <div onclick={(e) => { 
+
+
+
                                 user_info.selected_slot_id = slot.id; 
                                 user_info.selected_slot_index = i; 
                                 e.stopPropagation() 
                             }} class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                            <ToolSlot slot_type={slot.type} show_icon={slot.show_icon} show_slot={slot.show_slot} is_venom={slot.is_venom} is_selected={user_info.selected_slot_id === slot.id} tool={slot.tool} skill={slot.skill}/>
+                            <ToolSlot 
+                                slot_type={slot.type} 
+                                slot_direction={slot.direction} 
+                                show_icon={slot.show_icon} 
+                                show_slot={slot.show_slot} 
+                                is_venom={slot.is_venom} 
+                                is_selected={user_info.selected_slot_id === slot.id} 
+                                tool={slot.tool} 
+                                skill={slot.skill} 
+                                is_glow={user_info.current_loadout_page_type === slot.type}/>
                         </div>
                     {/each}
                 </div>

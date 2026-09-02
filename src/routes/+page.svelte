@@ -2,29 +2,34 @@
     import EnemiesSection from "$lib/components/section/EnemiesSection.svelte";
     import StatisticSection from "$lib/components/section/StatisticSection.svelte";
     import LoadoutSection from "$lib/components/section/LoadoutSection.svelte";
-    import { SlotType } from "$lib/types/SlotType";
-    import { ToolType } from "$lib/types/ToolType";
-    import { SkillType } from "$lib/types/SkillType";
-    import ToolTab from "$lib/components/loadout/ToolTab.svelte";
-    import { CrestType } from "$lib/types/CrestType";
-    import CrestBoard from "$lib/components/crest/CrestBoard.svelte";
     import type { UserInfo } from "$lib/types/UserInfo";
+    import { CrestType } from "$lib/types/CrestType";
     import { CREST_DATA } from "$lib/objects/CrestData";
+    import { SkillType } from "$lib/types/SkillType";
+    import { ToolType } from "$lib/types/ToolType";
+
+    import { SvelteSet } from 'svelte/reactivity';
 
     let user_info: UserInfo = $state<UserInfo>({
         active_crest_info: CREST_DATA[CrestType.Hunter2],
         active_vesticrest_info: CREST_DATA[CrestType.Vesti],
+
         selected_slot_id: 0,
         selected_slot_index: -1,
-        current_tool_page_index: 1,
+
+        current_loadout_page_type: 0,
+
+        current_tool_loadout: new SvelteSet<ToolType>(),
+        current_skill_loadout: new SvelteSet<SkillType>(),
     });
 </script>
 
 <div class="font-roboto text-white bg-gray-800">
     <div class="h-16 w-screen"> nav bar 
-
-        <button onclick={ () => console.log(user_info.current_tool_page_index) }>CHECK</button>
-
+        <button onclick={ () => {
+            console.log(user_info.current_tool_loadout);
+            console.log(user_info.current_tool_loadout.has(ToolType.RED_STRAIGHT_PIN))
+        } }>CHECK</button>
     </div>
 
     <div class="bg-gray-950 w-screen xl:grid xl:grid-cols-10 xl:gap-8 xl:px-24 px-8">

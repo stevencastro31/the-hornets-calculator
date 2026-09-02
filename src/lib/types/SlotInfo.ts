@@ -1,10 +1,12 @@
 import { SlotType } from "./SlotType";
 import { ToolType } from "./ToolType";
 import { SkillType } from "./SkillType";
+import type { SlotDirection } from "./SlotDirection";
 
 export type SlotInfo {
     id: number,
     type: SlotType;
+    direction?: SlotDirection,
     x: number;
     y: number;
     show_icon?: boolean;

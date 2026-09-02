@@ -14,9 +14,13 @@
 <div class="py-12 flex flex-wrap flex-row place-content-center">
     {#each valid_crest_types as key}
         <div onclick={(e) => { 
+                    // reset crest loadout
                     user_info.active_crest_info = CREST_DATA[key];
+                    user_info.active_vesticrest_info = CREST_DATA[CrestType.Vesti];
                     user_info.selected_slot_id = 0;
                     user_info.selected_slot_index = -1;
+                    user_info.current_tool_loadout.clear();
+                    user_info.current_skill_loadout.clear();
                     e.stopPropagation() 
                 }}>
             <CrestSlot crest_type={key} is_selected={user_info.active_crest_info.type === key}/>
