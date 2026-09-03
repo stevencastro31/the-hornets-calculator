@@ -3,6 +3,7 @@ import { ToolType } from "./ToolType";
 import { SkillType } from "./SkillType";
 import type { CrestType } from "./CrestType";
 import type { CrestInfo } from "./CrestInfo";
+import type { NeedleType } from "./NeedleType";
 
 export type UserInfo = {
     active_crest_info: CrestInfo,
@@ -14,4 +15,5 @@ export type UserInfo = {
     current_loadout_page_type: SlotType,
     current_tool_loadout: Set<ToolType>,
     current_skill_loadout: Set<SkillType>,
+    current_needle: NeedleType,
 };

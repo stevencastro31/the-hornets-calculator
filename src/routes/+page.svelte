@@ -9,6 +9,7 @@
     import { ToolType } from "$lib/types/ToolType";
 
     import { SvelteSet } from 'svelte/reactivity';
+    import { NeedleType } from "$lib/types/NeedleType";
 
     let user_info: UserInfo = $state<UserInfo>({
         active_crest_info: CREST_DATA[CrestType.Hunter2],
@@ -21,14 +22,14 @@
 
         current_tool_loadout: new SvelteSet<ToolType>(),
         current_skill_loadout: new SvelteSet<SkillType>(),
+        current_needle: NeedleType.NEEDLE,
     });
 </script>
 
-<div class="font-roboto text-white bg-gray-950 h-screen">
+<div class="font-roboto text-white bg-gray-950 h-screen" draggable="false">
     <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
             console.log(user_info.current_tool_loadout);
-            console.log(user_info.current_tool_loadout.has(ToolType.RED_STRAIGHT_PIN))
         } }>CHECK</button>
     </div>
 

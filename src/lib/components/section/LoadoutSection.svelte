@@ -8,7 +8,6 @@
     import LoadoutTabs from "../loadout/LoadoutTabs.svelte";
 
     import CrestBoard from "../crest/CrestBoard.svelte";
-    import { CrestType } from "$lib/types/CrestType";
     import type { UserInfo } from "$lib/types/UserInfo";
 
     let { user_info = $bindable() } : { user_info: UserInfo } = $props();
@@ -21,12 +20,12 @@
     ];
 </script>
 
-<SectionHeader title="Loadout"/>
-<hr>
-
-<CrestBoard bind:user_info={user_info}/>
-
-<LoadoutTabs items={tab_items} activeTabValue={0} bind:user_info={user_info}/>
+<div>
+    <SectionHeader title="Loadout"/>
+    <hr>
+    <CrestBoard bind:user_info={user_info}/>
+    <LoadoutTabs items={tab_items} activeTabValue={1} bind:user_info={user_info}/>
+</div> 
 
 
 

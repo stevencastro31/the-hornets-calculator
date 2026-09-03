@@ -65,7 +65,7 @@
                 carousel.goToPrev();
                 selected_tool = -1;
                 e.stopPropagation();
-        }} class="arrow-container hidden md:block">
+        }} class="arrow-container hidden md:block"  draggable="false">
             <img src="assets/MENU/silksong_arrow.png" alt="arrow" class="rotate-180 arrows" draggable="false"/>
         </div>
 

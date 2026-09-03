@@ -10,4 +10,5 @@ export const CREST_UIS: Record<CrestType, string> = {
 	[CrestType.Shaman]: "Crest_Shaman.png",
 	[CrestType.Wanderer]: "Crest_Wanderer.png",
 	[CrestType.Witch]: "Crest_Witch.png",
+	[CrestType.Vesti]: "",
 };

@@ -75,7 +75,7 @@
 
     .header {
         width: 18rem;
-        padding-top: 2rem;
+        padding-top: 3rem;
         user-select: none;
     }
 
