@@ -5,6 +5,7 @@ export enum CrestType {
     Hunter2,
     Hunter3,
     Hunter4,
+    Reaper,
     Shaman,
     Wanderer,
     Witch,

@@ -3,6 +3,8 @@ import { CrestType } from "$lib/types/CrestType";
 import { SlotType } from "$lib/types/SlotType";
 import { SlotDirection } from "$lib/types/SlotDirection";
 
+// 132 or 33rem (crest width)
+
 export const CREST_DATA: Record<CrestType, CrestInfo> = {
     [CrestType.Architect]: {
         name: "architect",
@@ -78,6 +80,20 @@ export const CREST_DATA: Record<CrestType, CrestInfo> = {
             { id: 7, type: SlotType.YELLOW, x: 126, y: 100 },
         ], 
     },
+    [CrestType.Reaper]: {
+        name: "reaper",
+        type: CrestType.Reaper,
+        padding: 16,
+        slots: [
+            { id: 1, type: SlotType.WHITE, direction: SlotDirection.CENTER, x: 66, y: 71.5 },
+            { id: 2, type: SlotType.RED, direction: SlotDirection.UP, x: 66, y: 26 },
+            { id: 3, type: SlotType.RED, direction: SlotDirection.DOWN, x: 66, y: 118 },
+            { id: 4, type: SlotType.BLUE, x: 21.5, y: 49.5 },
+            { id: 5, type: SlotType.BLUE, x: 21.5, y: 95 },
+            { id: 6, type: SlotType.YELLOW, x: 110.5 , y: 49.5 },
+            { id: 7, type: SlotType.YELLOW, x: 110.5 , y: 95 },
+        ],
+    },
     [CrestType.Shaman]: {
         name: "shaman",
         type: CrestType.Shaman,
@@ -87,7 +103,7 @@ export const CREST_DATA: Record<CrestType, CrestInfo> = {
             { id: 2, type: SlotType.WHITE, direction: SlotDirection.CENTER, x: 64, y: 67.5 },
             { id: 3, type: SlotType.WHITE, direction: SlotDirection.DOWN, x: 64, y: 108 },
             { id: 4, type: SlotType.BLUE, x: 24.5, y: 67.5 },
-            { id: 5, type: SlotType.BLUE, x: 132 - 27 , y: 67.5 },
+            { id: 5, type: SlotType.BLUE, x: 105 , y: 67.5 },
         ],
     },
     [CrestType.Wanderer]:{

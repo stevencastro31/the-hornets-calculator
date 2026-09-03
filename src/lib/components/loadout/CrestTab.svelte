@@ -5,7 +5,7 @@
     import CrestSlot from "../crest/CrestSlot.svelte";
 
     let { user_info = $bindable() } : { user_info : UserInfo } = $props();
-    let valid_crest_types = [CrestType.Architect, CrestType.Beast, CrestType.Cursed, CrestType.Hunter2, CrestType.Hunter3, CrestType.Hunter4, CrestType.Shaman, CrestType.Wanderer, CrestType.Witch];
+    let valid_crest_types = [CrestType.Architect, CrestType.Beast, CrestType.Cursed, CrestType.Hunter2, CrestType.Hunter3, CrestType.Hunter4, CrestType.Reaper, CrestType.Shaman, CrestType.Wanderer, CrestType.Witch];
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->

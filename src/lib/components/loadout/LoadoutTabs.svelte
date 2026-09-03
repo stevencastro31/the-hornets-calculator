@@ -13,8 +13,8 @@
 <!-- Tab Buttons -->
 <ul class="flex flex-wrap border-b-1 pb-4 2xl:pb-0">
     {#each items as item}
-        <li class={`m-2 2xl:ml-0 2xl:mb-0 {activeTabValue === item.value ? 'active' : ''}`}>
-            <div class="border-1 hover:border-red-500 rounded-xl 2xl:rounded-b-none flex p-2 flex-row place-items-center" onclick={handleClick(item.value)}>
+        <li class={`m-2 2xl:ml-0 2xl:mb-0 {activeTabValue === item.value ? 'active' : ''}`} >
+            <div class="border-1 hover:border-t-2 hover:border-x-2 rounded-xl 2xl:rounded-b-none flex p-2 flex-row place-items-center" onclick={handleClick(item.value)}>
                 <img class="size-10 object-contain select-none" src={`assets/TABS/${LOADOUT_TAB_ICONS[item.value]}`} alt="tab icon" draggable="false"/>
                 <p class="px-2 text-xl">{item.label}</p>
             </div>  

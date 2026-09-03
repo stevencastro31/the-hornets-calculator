@@ -11,6 +11,7 @@
     import { SlotType } from "$lib/types/SlotType";
     import { ToolType } from "$lib/types/ToolType";
     import { SlotDirection } from "$lib/types/SlotDirection";
+    import { onMount } from "svelte";
 
     let carousel : SvelteCarousel;
     let { user_info = $bindable() }: { user_info: UserInfo } = $props();
@@ -19,6 +20,8 @@
     let id = $derived(user_info.selected_slot_id);
     let index = $derived(user_info.selected_slot_index);
     let active_slot = $derived(id < 0 ? user_info.active_vesticrest_info.slots[index] : (0 < id ? user_info.active_crest_info.slots[index] : null));
+
+    // onMount(() => { user_info.current_loadout_page_type = ; });
 
     // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
     let red_tools_info: { tool: ToolType; direction: SlotDirection }[] = $state(TOOLS_RED.map(tool => ({ tool: tool, direction: SlotDirection.CENTER })));

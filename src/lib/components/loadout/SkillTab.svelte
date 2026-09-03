@@ -4,6 +4,7 @@
     import { SlotDirection } from "$lib/types/SlotDirection";
     import { SkillType } from "$lib/types/SkillType";
     import ToolSlot from "../crest/ToolSlot.svelte";
+    import { onDestroy, onMount } from "svelte";
 
     let { user_info = $bindable() } : { user_info: UserInfo } = $props();
     let selected_skill = $state(-1);
@@ -14,6 +15,13 @@
 
     const SKILLS = [SkillType.SILK_SPEAR, SkillType.THREAD_STORM, SkillType.CROSS_STITCH, SkillType.SHARP_DART, SkillType.RUNE_RAGE, SkillType.PALE_NAILS];
     let skill_info: { skill: SkillType; direction: SlotDirection }[] = $state(SKILLS.map(skill => ({ skill: skill, direction: SlotDirection.CENTER  })));
+
+    let previous_loadout_page_type: SlotType;
+    onMount(() => { 
+        previous_loadout_page_type = user_info.current_loadout_page_type; 
+        user_info.current_loadout_page_type = SlotType.WHITE; 
+    });
+    onDestroy(() => { user_info.current_loadout_page_type = previous_loadout_page_type; })
 
     function SetSkillSlot(skill: SkillType) {
         if (id === 0) return;   // ignore if there is no selected crest slot
