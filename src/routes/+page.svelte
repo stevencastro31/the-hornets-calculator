@@ -10,6 +10,9 @@
 
     import { SvelteSet } from 'svelte/reactivity';
     import { NeedleType } from "$lib/types/NeedleType";
+    import { HUD_DATA } from "$lib/objects/HUDData";
+    import CrestBoard from "$lib/components/crest/CrestBoard.svelte";
+    import { HUDState } from "$lib/types/HUDState";
 
     let user_info: UserInfo = $state<UserInfo>({
         active_crest_info: CREST_DATA[CrestType.Reaper],
@@ -23,13 +26,15 @@
         current_tool_loadout: new SvelteSet<ToolType>(),
         current_skill_loadout: new SvelteSet<SkillType>(),
         current_needle: NeedleType.NEEDLE,
+        crest_passive_is_active: false,
     });
 </script>
 
 <div class="font-roboto text-white bg-gray-950 h-screen" draggable="false">
     <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
-            console.log(user_info.current_tool_loadout);
+            user_info.crest_passive_is_active = !user_info.crest_passive_is_active 
+            // console.log(HUD_DATA[CrestType.Architect][HUDState.ACTIVE]);
         } }>CHECK</button>
     </div>
 
@@ -38,7 +43,7 @@
             <EnemiesSection/>
         </div>
         <div class="col-span-3">
-            <StatisticSection/>
+            <StatisticSection bind:user_info={user_info}/>
         </div>
         <div class="col-span-4">
             <LoadoutSection bind:user_info={user_info}/>

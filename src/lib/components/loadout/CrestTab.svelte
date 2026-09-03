@@ -11,10 +11,6 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<!-- <div class="py-12 flex flex-wrap flex-row place-content-center">
-
-</div> -->
-
 <div class="w-full">
     <div class="page md:px-8">
         <img src="assets/MENU/crest_heading.png" class="header" alt="header" draggable="false"/>

@@ -16,4 +16,5 @@ export type UserInfo = {
     current_tool_loadout: Set<ToolType>,
     current_skill_loadout: Set<SkillType>,
     current_needle: NeedleType,
+    crest_passive_is_active: boolean,
 };
