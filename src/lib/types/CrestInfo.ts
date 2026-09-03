@@ -1,7 +1,7 @@
 import { CrestType } from "./CrestType";
 import type { SlotInfo } from "./SlotInfo";
 
-export type CrestInfo {
+export type CrestInfo = {
     name: string,
     type: CrestType,
     padding: number,
