@@ -6,7 +6,6 @@
 
 <!-- 8:11 ratio  32:44 -->
 <div class="size-16 flex items-center justify-center relative">
-
     {#if type == MaskType.MASK}
         {#if is_barbed}
             {#if index % 2 === 0}
@@ -17,9 +16,7 @@
         {:else}
             <img src="assets/HUD/mask.png" alt="mask" class="mask-slot"/>
         {/if}
-    {/if}
-
-    {#if type == MaskType.PLASMIUM}
+    {:else}
         {#if is_venom}
             <img src="assets/HUD/mask_plasmium_venom.png" alt="mask" class="plasmium-slot"/>
         {:else}

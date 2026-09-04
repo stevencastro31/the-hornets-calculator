@@ -13,14 +13,13 @@
 <SectionHeader title="Statistics"/>
 <hr>
 
-
-{#each valid_crest_types as crest}
-   <CrestHUD bind:user_info={user_info}/>
-{/each}
-
-
+<CrestHUD bind:user_info={user_info}/>
+<hr>
 
 <p class="text-3xl p-1">Pale Steel Needle</p>
+<p>dmg dmg 123</p>
+<hr>
+
 <SectionHeader title="Spells"/>
 
 
