@@ -13,6 +13,9 @@
     import { HUD_DATA } from "$lib/objects/HUDData";
     import CrestBoard from "$lib/components/crest/CrestBoard.svelte";
     import { HUDState } from "$lib/types/HUDState";
+    import CrestHUD from "$lib/components/hud/CrestHUD.svelte";
+    import MaskSlot from "$lib/components/hud/MaskSlot.svelte";
+    import { MaskType } from "$lib/types/MaskType";
 
     let user_info: UserInfo = $state<UserInfo>({
         active_crest_info: CREST_DATA[CrestType.Reaper],
@@ -29,6 +32,9 @@
         crest_passive_is_active: false,
     });
 </script>
+
+
+
 
 <div class="font-roboto text-white bg-gray-950 h-screen" draggable="false">
     <div class="h-16 w-screen bg-gray-800"> nav bar 

@@ -5,16 +5,16 @@
 </script>
 
 <!-- 8:11 ratio  32:44 -->
-<div class="size-16 flex items-center justify-center relative">
+<div class="h-24 w-14 flex items-center justify-center relative">
     {#if type == MaskType.MASK}
         {#if is_barbed}
             {#if index % 2 === 0}
-                <img src="assets/HUD/mask_barbed1.png" alt="mask" class="barbed-slot"/>
+                <img src="assets/HUD/mask_barbed1.png" alt="mask" class="barbed-slot1"/>
             {:else}
-                <img src="assets/HUD/mask_barbed2.png" alt="mask" class="barbed-slot"/>
+                <img src="assets/HUD/mask_barbed2.png" alt="mask" class="barbed-slot2"/>
             {/if}
         {:else}
-            <img src="assets/HUD/mask.png" alt="mask" class="mask-slot"/>
+            <img src="assets/HUD/mask2.png" alt="mask" class="mask-slot"/>
         {/if}
     {:else}
         {#if is_venom}
@@ -27,18 +27,24 @@
 
 <style>
     .mask-slot {
-        height: 44px;
-        width: 32px;
+        height: 50px;
+        width: 34px;
     }
 
-    .barbed-slot {
-        height: 66;
-        width: 48px;
+    .barbed-slot1 {
+        height: 80px;
+        width: 54px;
+        margin-top: 8px;
+    }
+
+    .barbed-slot2 {
+        height: 80px;
+        width: 54px;
+        margin-top: 6px;
     }
 
     .plasmium-slot {
-        height: 55px;
-        width: 42px;
+        height: 58px;
+        width: 44px;
     }
-
 </style>

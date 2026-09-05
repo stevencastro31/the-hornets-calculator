@@ -6,6 +6,8 @@
     import type { UserInfo } from "$lib/types/UserInfo";
     import { ToolType } from "$lib/types/ToolType";
     import { MaskType } from "$lib/types/MaskType";
+    import SpoolHUD from "./SpoolHUD.svelte";
+    import { CrestType } from "$lib/types/CrestType";
 
     let { user_info = $bindable() } : { user_info: UserInfo } = $props();
     let type = $derived(user_info.active_crest_info.type);
@@ -44,9 +46,9 @@
     // #endregion
 </script>
 
-<div class="w-full m-4" bind:this={container}>
+<div class="w-full md:m-4" bind:this={container}>
     <div class="origin-top-left" style={`transform: scale(${hud_scale}); visibilty: ${ready ? "visible" : "hidden"}`}>
-        <div class="hud">
+        <div class="hud relative min-w-[540px] md:h-48 h-28">
             <!-- align ment dev thing -->
             <div class="outer-circle absolute flex items-center justify-center"><div class="inner-circle"></div></div>
 
@@ -56,13 +58,18 @@
             </div>
 
             <!-- Masks -->
-            <div class="absolute flex flex-row top-[48px] left-24.5">
+            <div class="absolute flex flex-row top-[24px] left-26">
                 {#each { length: 5 }, i}
                     <MaskSlot is_barbed={has_barbed} index={i}/>
                 {/each}
                 {#if has_plasmium}
                     <MaskSlot type={MaskType.PLASMIUM} is_venom={has_venom}/>
                 {/if}
+            </div>
+
+            <!-- Spool  scale 80 -->
+            <div class="absolute top-[140px] left-8 scale-80 origin-top-left">
+                <SpoolHUD bind:user_info={user_info}/>
             </div>
         </div>
     </div>
@@ -72,8 +79,6 @@
 <style>
     .hud {
         min-width: 540px;
-        min-height: 160px;
-        max-height: 160px;
         position: relative;
     }
 
