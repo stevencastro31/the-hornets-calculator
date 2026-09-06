@@ -50,7 +50,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<div class="w-full md:m-4" bind:this={container}>
+<div class="w-full md:m-4" bind:this={container} style={`height: ${hud_scale * 200}px`}>
     <div class="origin-top-left" style={`transform: scale(${hud_scale}); visibilty: ${ready ? "visible" : "hidden"}`}>
         <div class="hud relative min-w-[540px] md:h-48 h-28">
             <!-- align ment dev thing -->

@@ -10,12 +10,6 @@
 
     import { SvelteSet } from 'svelte/reactivity';
     import { NeedleType } from "$lib/types/NeedleType";
-    import { HUD_DATA } from "$lib/objects/HUDData";
-    import CrestBoard from "$lib/components/crest/CrestBoard.svelte";
-    import { HUDState } from "$lib/types/HUDState";
-    import CrestHUD from "$lib/components/hud/CrestHUD.svelte";
-    import MaskSlot from "$lib/components/hud/MaskSlot.svelte";
-    import { MaskType } from "$lib/types/MaskType";
 
     let user_info: UserInfo = $state<UserInfo>({
         active_crest_info: CREST_DATA[CrestType.Reaper],
@@ -33,15 +27,12 @@
     });
 </script>
 
-
-
-
 <div class="font-roboto text-white bg-gray-950 h-screen" draggable="false">
     <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
-            // user_info.crest_passive_is_active = !user_info.crest_passive_is_active 
-            console.log(user_info.current_loadout_page_type);
-        } }>CHECK</button>
+            console.log("CHECKING!");
+            console.log(user_info.current_tool_loadout);
+        } }> CHECK </button>
     </div>
 
     <div class="bg-gray-950 w-screen xl:grid xl:grid-cols-10 xl:gap-8 xl:px-24 px-8">
@@ -56,10 +47,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-

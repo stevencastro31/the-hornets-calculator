@@ -17,10 +17,14 @@
 <hr>
 
 <p class="text-3xl p-1">Pale Steel Needle</p>
-<p>dmg dmg 123</p>
-<hr>
+<p>damage</p>
+<p>dps</p>
+<p>swing speed</p>
+<p>needle strike</p>
 
-<SectionHeader title="Spells"/>
+<hr/>
+
+<SectionHeader title="Spells & Tools"/>
 
 
 
