@@ -66,15 +66,14 @@
     let glowYOffset = $derived(slot_direction === SlotDirection.UP  ? "top-4" : slot_direction === SlotDirection.DOWN ? "bottom-4" : "top-2");
     let toolTypeIconYOffset = $derived(slot_direction === SlotDirection.UP  ? "top-9" : slot_direction === SlotDirection.DOWN ? "bottom-9" : "top-8");
 
-    let brightness = $derived(is_selected || is_glow ? 100 : 50);
+    let brightness = $derived(is_selected || is_glow ? 1 : 0.5);
 </script>
 
 <div class="h-36 w-32 min-h-36 min-w-32 relative">
     <!-- Slot -->
     {#if show_slot}
-        <img src={slotPath} alt="slot ui" class="general brightness-{brightness}" draggable="false"/>
+        <img src={slotPath} alt="slot ui" class="general" draggable="false" style={`filter: brightness(${brightness});`}/>
     {/if}
-
 
     <!-- Icon -->
     {#if show_icon}

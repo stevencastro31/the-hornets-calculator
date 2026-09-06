@@ -8,7 +8,7 @@ export const HUD_DATA: Record<CrestType, Partial<Record<HUDState, HUDInfo>>> = {
     },
     [CrestType.Beast]: {
         [HUDState.INACTIVE]: { top: 9, left: 8.75, scale: 100 },
-        [HUDState.ACTIVE]: { top: 3.25, left: 14.25, scale: 140 }
+        [HUDState.ACTIVE]: { top: 3.25, left: 15, scale: 144 }
     },
     [CrestType.Cursed]: {
         [HUDState.INACTIVE]: { top: 8.25, left: 9.25, scale: 90 }

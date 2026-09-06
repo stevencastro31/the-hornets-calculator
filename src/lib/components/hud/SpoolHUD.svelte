@@ -3,14 +3,13 @@
     import { ToolType } from "$lib/types/ToolType";
     import type { UserInfo } from "$lib/types/UserInfo";
 
-    // OPTIONAL: EGG OF FLEALIA SPOOL ENDS
+    // MISSING: FLEA SPOOL (COULD NOT FIND ART ASSET)
 
     let { user_info = $bindable() } : { user_info: UserInfo } = $props();
     let is_extended = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_SPOOL_EXTENDER));
     let is_cursed = $derived(user_info.active_crest_info.type === CrestType.Cursed);
     let has_reserve_bind = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_RESERVE_BIND));
     let has_wreath = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_WREATH_OF_PURITY));
-
     let silk_bar_count = $derived(is_extended ? 21 : 18 );
 </script>
 
@@ -23,7 +22,11 @@
         {/each}
     {:else}
         <img src="assets/HUD/spool_start.png" alt="spool" class="spool"/>
-        <img src="assets/HUD/spool_end.png" alt="spool" class="spool ml-63.25" style={`margin-left: ${(-8 + (silk_bar_count * 3.75)) * 0.25}rem`}/>
+        {#if is_extended}
+            <img src="assets/HUD/spool_end_extended.png" alt="spool" class="spool ml-63.25" style={`margin-left: ${74.25 * 0.25}rem`}/>
+        {:else}
+            <img src="assets/HUD/spool_end.png" alt="spool" class="spool ml-63.25" style={`margin-left: ${59.5 * 0.25}rem`}/>
+        {/if}
         {#each { length: silk_bar_count }, i}       <!-- 3.75 intervals -->
             <img src="assets/HUD/silkbar crop.png" alt="spool" class="silk-bar" style={`left: ${(4 + (i * 3.75)) * 0.25}rem`}/>
         {/each}
@@ -37,9 +40,6 @@
         <img src="assets/HUD/wreath_hud.png" alt="spool" class="h-16 w-18 ml-2"/>
     {/if}
 </div>
-
-
-
 
 <style>
     .silk-bar {

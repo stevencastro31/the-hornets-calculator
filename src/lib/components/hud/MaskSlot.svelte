@@ -16,6 +16,8 @@
         {:else}
             <img src="assets/HUD/mask2.png" alt="mask" class="mask-slot"/>
         {/if}
+    {:else if type == MaskType.FRACTURED}
+        <img src="assets/HUD/mask_fractured.png" alt="mask" class="fractured-slot"/>
     {:else}
         {#if is_venom}
             <img src="assets/HUD/mask_plasmium_venom.png" alt="mask" class="plasmium-slot"/>
@@ -46,5 +48,10 @@
     .plasmium-slot {
         height: 58px;
         width: 44px;
+    }
+
+    .fractured-slot {
+        height: 58px;
+        width: 48px;
     }
 </style>

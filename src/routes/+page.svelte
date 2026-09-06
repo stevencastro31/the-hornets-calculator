@@ -39,8 +39,8 @@
 <div class="font-roboto text-white bg-gray-950 h-screen" draggable="false">
     <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
-            user_info.crest_passive_is_active = !user_info.crest_passive_is_active 
-            // console.log(HUD_DATA[CrestType.Architect][HUDState.ACTIVE]);
+            // user_info.crest_passive_is_active = !user_info.crest_passive_is_active 
+            console.log(user_info.current_loadout_page_type);
         } }>CHECK</button>
     </div>
 

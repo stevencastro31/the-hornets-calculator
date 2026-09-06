@@ -15,6 +15,7 @@
     let has_venom = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_POLLIP_POUCH));
     let has_barbed = $derived(user_info.current_tool_loadout.has(ToolType.YELLOW_BARBED_BRACELET));
     let has_plasmium = $derived(user_info.current_tool_loadout.has(ToolType.RED_PLASMIUM_PHIAL));
+    let has_fractured = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_FRACTUED_MASK));
 
     let { hud_info, hud_path }: { hud_info: any; hud_path: string } = $derived.by(() => {
         let info: any;
@@ -46,11 +47,17 @@
     // #endregion
 </script>
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+
 <div class="w-full md:m-4" bind:this={container}>
     <div class="origin-top-left" style={`transform: scale(${hud_scale}); visibilty: ${ready ? "visible" : "hidden"}`}>
         <div class="hud relative min-w-[540px] md:h-48 h-28">
             <!-- align ment dev thing -->
-            <div class="outer-circle absolute flex items-center justify-center"><div class="inner-circle"></div></div>
+            <div class="outer-circle absolute flex items-center justify-center" onclick={() => {
+                user_info.crest_passive_is_active = !user_info.crest_passive_is_active;
+                console.log("check!");
+            }}><div class="inner-circle"></div></div>
 
             <!-- HUD -->
             <div class="absolute" style={`top: ${hud_info.top * 0.25}rem; left: ${(hud_info.left * 0.25) - 2}rem; scale: ${hud_info.scale}%;`}>
@@ -59,7 +66,10 @@
 
             <!-- Masks -->
             <div class="absolute flex flex-row top-[24px] left-26">
-                {#each { length: 5 }, i}
+                {#if has_fractured}
+                    <MaskSlot type={MaskType.FRACTURED}/>
+                {/if}
+                {#each { length: has_fractured ? 4 : 5 }, i}
                     <MaskSlot is_barbed={has_barbed} index={i}/>
                 {/each}
                 {#if has_plasmium}
@@ -74,7 +84,6 @@
         </div>
     </div>
 </div>
-
 
 <style>
     .hud {
@@ -95,9 +104,10 @@
         left: 2rem;
         position: absolute;
         top: 3rem;
-        visibility: hidden;
+        visibility: visible;
         width: 4rem;
         z-index: 10;
+        opacity: 0;
     }
 
     .inner-circle {
