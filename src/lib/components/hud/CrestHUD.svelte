@@ -61,7 +61,7 @@
 
             <!-- HUD -->
             <div class="absolute" style={`top: ${hud_info.top * 0.25}rem; left: ${(hud_info.left * 0.25) - 2}rem; scale: ${hud_info.scale}%;`}>
-                <img src={hud_path} alt="HUD" class="object-contain">
+                <img src={hud_path} alt="HUD" class="object-contain select-none">
             </div>
 
             <!-- Masks -->

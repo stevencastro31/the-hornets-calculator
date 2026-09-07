@@ -12,7 +12,7 @@
     import { NeedleType } from "$lib/types/NeedleType";
 
     let user_info: UserInfo = $state<UserInfo>({
-        active_crest_info: CREST_DATA[CrestType.Reaper],
+        active_crest_info: CREST_DATA[CrestType.Hunter4],
         active_vesticrest_info: CREST_DATA[CrestType.Vesti],
 
         selected_slot_id: 0,

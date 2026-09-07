@@ -28,4 +28,8 @@
 </div> 
 
 
-
+<style>
+    hr {
+        filter: brightness(0.5)
+    }
+</style>

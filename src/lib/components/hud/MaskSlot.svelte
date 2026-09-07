@@ -31,27 +31,32 @@
     .mask-slot {
         height: 50px;
         width: 34px;
+        user-select: none;
     }
 
     .barbed-slot1 {
         height: 80px;
         width: 54px;
         margin-top: 8px;
+        user-select: none;
     }
 
     .barbed-slot2 {
         height: 80px;
         width: 54px;
         margin-top: 6px;
+        user-select: none;
     }
 
     .plasmium-slot {
         height: 58px;
         width: 44px;
+        user-select: none;
     }
 
     .fractured-slot {
         height: 58px;
         width: 48px;
+        user-select: none;
     }
 </style>

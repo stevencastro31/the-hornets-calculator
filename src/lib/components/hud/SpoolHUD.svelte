@@ -36,7 +36,7 @@
     
     <!-- Silk Bars -->
     {#each { length: silk_bar_count }, i}
-        <img src="assets/HUD/silkbar crop.png" alt="silk" class="absolute" draggable="false" style={`left: ${(8.75 + (3.75 * i)) * 0.25}rem`}/>
+        <img src="assets/HUD/silkbar crop.png" alt="silk" class="absolute select-none" draggable="false" style={`left: ${(8.75 + (3.75 * i)) * 0.25}rem`}/>
     {/each}
     </div>  
 
@@ -53,23 +53,28 @@
         height: 44px;
         width: 32px;
         margin-top: 9px;
-        margin-left: 19px
+        margin-left: 19px;
+        user-select: none;
     }
 
     .spool-cursed {
         height: 48px;
         margin-top: 8px;
-        margin-left: 19px
+        margin-left: 19px;
+        user-select: none;
     }
 
     .spool-flea {
         height: 56px;
         margin-top: 5px;
         margin-right: 12px;
+        user-select: none;
+
     }
 
     .spool-extender {
         height: 44px;
         margin-top: 10px;
+        user-select: none;
     }
 </style>
