@@ -1,4 +1,4 @@
-import { CrestType } from "./CrestType";
+import { CrestType } from "../enums/CrestType";
 
 export type HUDInfo {
     top: number,

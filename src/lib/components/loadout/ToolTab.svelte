@@ -1,64 +1,73 @@
 <script lang="ts">
-    import type { UserInfo } from "$lib/types/UserInfo";
-    import ToolSlot from "../crest/ToolSlot.svelte";
+    // import type { UserInfo } from "$lib/types/UserInfo";
+    // import ToolSlot from "../crest/ToolSlot.svelte";
 
-    // @ts-expect-error The package is a JavaScript-only dependency.
-    import SvelteCarousel from 'svelte-carousel';
+    // // @ts-expect-error The package is a JavaScript-only dependency.
+    // import SvelteCarousel from 'svelte-carousel';
 
-    import { TOOLS_RED } from "$lib/objects/ToolsRed";
-    import { TOOLS_BLUE } from "$lib/objects/ToolsBlue";
-    import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
-    import { SlotType } from "$lib/types/SlotType";
-    import { ToolType } from "$lib/types/ToolType";
-    import { SlotDirection } from "$lib/types/SlotDirection";
-    import { onMount } from "svelte";
+    // import { TOOLS_RED } from "$lib/objects/ToolsRed";
+    // import { TOOLS_BLUE } from "$lib/objects/ToolsBlue";
+    // import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
+    // import { SlotType } from "$lib/types/SlotType";
+    // import { ToolType } from "../../enums/ToolType";
+    // import { SlotDirection } from "$lib/types/SlotDirection";
+    // import { onDestroy } from "svelte";
 
-    let carousel : SvelteCarousel;
-    let { user_info = $bindable() }: { user_info: UserInfo } = $props();
-    let selected_tool = $state(-1);
+    // let carousel : SvelteCarousel;
+    // let { user_info = $bindable() }: { user_info: UserInfo } = $props();
+    // let selected_tool = $state(-1);
 
-    let id = $derived(user_info.selected_slot_id);
-    let index = $derived(user_info.selected_slot_index);
-    let active_slot = $derived(id < 0 ? user_info.active_vesticrest_info.slots[index] : (0 < id ? user_info.active_crest_info.slots[index] : null));
+    // let id = $derived(user_info.selected_slot_id);
+    // let index = $derived(user_info.selected_slot_index);
+    // let active_slot = $derived(id < 0 ? user_info.active_vesticrest_info.slots[index] : (0 < id ? user_info.active_crest_info.slots[index] : null));
 
-    // onMount(() => { user_info.current_loadout_page_type = ; });
+    // // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
+    // let red_tools_info: { tool: ToolType; direction: SlotDirection }[] = $state(TOOLS_RED.map(tool => ({ tool: tool, direction: SlotDirection.CENTER })));
 
-    // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
-    let red_tools_info: { tool: ToolType; direction: SlotDirection }[] = $state(TOOLS_RED.map(tool => ({ tool: tool, direction: SlotDirection.CENTER })));
+    // // to ensure the direction indicator persists between tab changes
+    // user_info.tool_direction_info.forEach(info => {
+    //     red_tools_info.find(item => item.tool === info.tool)!.direction = info.direction;
+    // });
+    // user_info.tool_direction_info.length = 0;  // clear
+    // onDestroy(() => {
+    //     user_info.tool_direction_info.push(...red_tools_info);
+    // });
 
-    function SetToolSlot(tool: ToolType) {
-        if (id === 0) return;   // ignore if there is no selected crest slot
+    // function SetToolSlot(tool: ToolType) {
+    //     if (id === 0) return;   // ignore if there is no selected crest slot
 
-        // ignore if tool is already equipped
-        if (user_info.current_tool_loadout.has(tool)) return;
+    //     // ignore if tool is already equipped
+    //     if (user_info.current_tool_loadout.has(tool)) return;
 
-        // remove old tool from set
-        let old_tool: ToolType | undefined = user_info.active_crest_info.slots[index].tool;
-        if (old_tool && user_info.current_tool_loadout.has(old_tool)) {
-            user_info.current_tool_loadout.delete(old_tool);
+    //     // remove old tool from set
+    //     let old_tool: ToolType | undefined = user_info.active_crest_info.slots[index].tool;
+    //     if (old_tool && user_info.current_tool_loadout.has(old_tool)) {
+    //         user_info.current_tool_loadout.delete(old_tool);
 
-            // will break if you reorder the ToolType enum, changes the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
-            if (active_slot?.type === SlotType.RED) { red_tools_info[old_tool - 23].direction = SlotDirection.CENTER }
-        }
+    //         // will break if you reorder the ToolType enum, changes the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
+    //         if (active_slot?.type === SlotType.RED) { red_tools_info[old_tool - 23].direction = SlotDirection.CENTER }
+    //     }
         
-        // equip tool to current loadout
-        selected_tool = tool;   // select tool
-        if (0 < id)
-            user_info.active_crest_info.slots[index].tool = tool;
-        else if (id < 0)
-            user_info.active_vesticrest_info.slots[index].tool = tool;
+    //     // equip tool to current loadout
+    //     selected_tool = tool;   // select tool
+    //     if (0 < id)
+    //         user_info.active_crest_info.slots[index].tool = tool;
+    //     else if (id < 0)
+    //         user_info.active_vesticrest_info.slots[index].tool = tool;
 
-        user_info.current_tool_loadout.add(tool);
+    //     user_info.current_tool_loadout.add(tool);
 
-        // will break if you reorder the ToolType enum, revert the appearance of the tool tab item that show the direction in which the tool is equipped on the crest board
-        if (active_slot?.type === SlotType.RED) { red_tools_info[tool - 23].direction = active_slot.direction || SlotDirection.UP  }
-    };
+    //     // will break if you reorder the ToolType enum, revert the appearance of the tool tab item that show the direction in which the tool is equipped on the crest board
+    //     if (active_slot?.type === SlotType.RED) { 
+    //         red_tools_info[tool - 23].direction = active_slot.direction || SlotDirection.UP;
+    //     }
+    // };
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<div class="flex flex-col w-full pt-2 pb-8" onclick={ () => selected_tool = -1 } >
+<!-- <div class="flex flex-col w-full pt-2 pb-8" onclick={ () => selected_tool = -1 } >
     <SvelteCarousel bind:this={carousel} let:goToPrev let:showNextPage initialPageIndex={user_info.current_loadout_page_type} on:pageChange={ (event: { detail: number; }) => { 
                 if (event.detail !== null)  // event is called before mount (which sets the current_tool_page_index to null)
                     user_info.current_loadout_page_type = event.detail;                  
@@ -119,7 +128,7 @@
             <img src="assets/MENU/silksong_arrow.png" alt="arrow" class="arrows" draggable="false"/>
         </div>
     </SvelteCarousel>
-</div>
+</div> -->
 
 <!--  -->
 

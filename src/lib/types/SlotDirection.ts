@@ -1,5 +1,5 @@
 export enum SlotDirection {
-    UP,
-    CENTER,
-    DOWN,
+    Up,
+    Center,
+    Down,
 }

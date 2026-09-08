@@ -1,25 +1,23 @@
-import { SlotType } from "$lib/types/SlotType";
+import { SlotType } from "../enums/SlotType";
 import { SlotDirection } from "$lib/types/SlotDirection";
 
-export const SLOT_UIS: Record<SlotType, Record<SlotDirection, string>> = {
-    [SlotType.RED]: {
-        [SlotDirection.UP]: "tool_attack_slot_up.png",
-        [SlotDirection.CENTER]: "tool_attack_slot_center.png",
-        [SlotDirection.DOWN]: "tool_attack_slot_down.png",
+const base = "assets/menu/";
+
+export const SLOT_UIS: Record<SlotType, Partial<Record<SlotDirection, string>>> = {
+    [SlotType.Attack]: {
+        [SlotDirection.Up]: base + "tool_attack_slot_up.png",
+        [SlotDirection.Center]: base + "tool_attack_slot_center.png",
+        [SlotDirection.Down]: base + "tool_attack_slot_down.png",
     },
-    [SlotType.BLUE]: {
-        [SlotDirection.UP]: "",
-        [SlotDirection.CENTER]: "tool_defense_slot.png",
-        [SlotDirection.DOWN]: "",
+    [SlotType.Defense]: {
+        [SlotDirection.Center]: base + "tool_defense_slot.png",
     },
-    [SlotType.YELLOW]: {
-        [SlotDirection.UP]: "",
-        [SlotDirection.CENTER]: "tool_explore_slot.png",
-        [SlotDirection.DOWN]: "",
+    [SlotType.Explore]: {
+        [SlotDirection.Center]: base + "tool_explore_slot.png",
     },
-    [SlotType.WHITE]: {
-        [SlotDirection.UP]: "tool_skill_slot_up.png",
-        [SlotDirection.CENTER]: "tool_skill_slot_center.png",
-        [SlotDirection.DOWN]: "tool_skill_slot_down.png",
+    [SlotType.Skill]: {
+        [SlotDirection.Up]: base + "tool_skill_slot_up.png",
+        [SlotDirection.Center]: base + "tool_skill_slot_center.png",
+        [SlotDirection.Down]: base + "tool_skill_slot_down.png",
     },
 };

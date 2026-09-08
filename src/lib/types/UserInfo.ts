@@ -1,9 +1,10 @@
-import { SlotType } from "./SlotType";
-import { ToolType } from "./ToolType";
-import { SkillType } from "./SkillType";
-import type { CrestType } from "./CrestType";
+import { SlotType } from "../enums/SlotType";
+import { ToolType } from "../enums/ToolType";
+import { SkillType } from "../enums/SkillType";
+import type { CrestType } from "../enums/CrestType";
 import type { CrestInfo } from "./CrestInfo";
-import type { NeedleType } from "./NeedleType";
+import type { NeedleType } from "../enums/NeedleType";
+import type { SkillDirectionInfo, ToolDirectionInfo } from "./DirectionInfo";
 
 export type UserInfo = {
     active_crest_info: CrestInfo,
@@ -17,4 +18,7 @@ export type UserInfo = {
     current_skill_loadout: Set<SkillType>,
     current_needle: NeedleType,
     crest_passive_is_active: boolean,
+
+    tool_direction_info: Array<ToolDirectionInfo>,
+    skill_direction_info: Array<SkillDirectionInfo>,
 };

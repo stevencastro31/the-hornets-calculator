@@ -1,4 +1,4 @@
-import { CrestType } from "$lib/types/CrestType";
+import { CrestType } from "../enums/CrestType";
 
 export const HUD_UIS: Record<CrestType, string> = {
         [CrestType.Architect]: "architect_hud.png",

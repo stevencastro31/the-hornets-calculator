@@ -2,9 +2,9 @@
     import ToolSlot from "./ToolSlot.svelte";
     import { CREST_DATA } from "$lib/objects/CrestData";
     import { CREST_UIS } from "$lib/objects/CrestUI";
-    import { CrestType } from "$lib/types/CrestType";
-    import { ToolType } from "$lib/types/ToolType";
-    import { SkillType } from "$lib/types/SkillType";
+    import { ToolType } from "../../enums/ToolType";
+    import { CrestType } from "$lib/enums/CrestType";
+    import { SkillType } from "$lib/enums/SkillType";
     import type { UserInfo } from "$lib/types/UserInfo";
 
     // props
@@ -34,20 +34,20 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<div class="w-full px-0 2xl:px-20" onclick={() => { // slot selection logic
+<!-- <div class="w-full px-0 2xl:px-20" onclick={() => { // slot selection logic
             user_info.selected_slot_id = 0; 
             user_info.selected_slot_index = -1 
         }}>
     <div bind:this={container} class="w-full flex flex-col flex-grow" style={`visibility: ${ready ? "visible" : "hidden"}`}>
         <div class="pb-12" style={`height: ${720 * scale}px;`} draggable="false">
-            <div class="w-264 flex flex-row origin-top-left" style={`transform: scale(${scale});`}>
+            <div class="w-264 flex flex-row origin-top-left" style={`transform: scale(${scale});`}> -->
                 <!-- Vesti Crest -->
-                <div class={`w-100 h-180 min-w-80 min-h-180 justify-center relative ${crest_info.type !== CrestType.Cursed ? "vesticrest" : ""}`}>
+                <!-- <div class={`w-100 h-180 min-w-80 min-h-180 justify-center relative ${crest_info.type !== CrestType.Cursed ? "vesticrest" : ""}`}>
                 {#if crest_info.type != CrestType.Cursed}
-                    <img src="assets/CREST/VestiCrest3.png" alt={vesticrest_info.name} class="crest" draggable="false"/>
+                    <img src="assets/CREST/VestiCrest3.png" alt={vesticrest_info.name} class="crest" draggable="false"/> -->
 
                     <!-- Tool & Skill Slot UIs -->
-                    {#each vesticrest_info.slots as slot, i}
+                    <!-- {#each vesticrest_info.slots as slot, i}
                         <div onclick={(e) => { 
                                 user_info.selected_slot_id = slot.id; 
                                 user_info.selected_slot_index = i; 
@@ -71,15 +71,15 @@
                         <p class="text-5xl py-8">Hornet is Cursed</p>
                     </div>
                 {/if}
-                </div>
+                </div> -->
 
                 <!-- Crest -->
-                <div class={`w-164 h-180 min-w-164 min-h-180 justify-center relative`} style={`padding: ${crest_info.padding * 0.25}rem`} draggable="false">
+                <!-- <div class={`w-164 h-180 min-w-164 min-h-180 justify-center relative`} style={`padding: ${crest_info.padding * 0.25}rem`} draggable="false"> -->
                     <!-- Crest UI -->
-                    <img src={`assets/CREST/${CREST_UIS[crest_info.type]}`} alt={crest_info.name} class="crest" draggable="false"/>
+                    <!-- <img src={`assets/CREST/${CREST_UIS[crest_info.type]}`} alt={crest_info.name} class="crest" draggable="false"/> -->
 
                     <!-- Tool & Skill Slot UIs -->
-                    {#each crest_info.slots as slot, i}
+                    <!-- {#each crest_info.slots as slot, i}
                         <div onclick={(e) => { 
                                 user_info.selected_slot_id = slot.id; 
                                 user_info.selected_slot_index = i; 
@@ -101,7 +101,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <style>
     .vesticrest {

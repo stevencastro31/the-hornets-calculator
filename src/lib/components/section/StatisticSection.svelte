@@ -1,75 +1,52 @@
 <script lang="ts">
-    import { CrestType } from "$lib/types/CrestType";
-    import SectionHeader from "../common/SectionHeader.svelte";
-    import CrestHUD from "../hud/CrestHUD.svelte";
-    import type { UserInfo } from "$lib/types/UserInfo";
-    import StatLabel from "../common/StatLabel.svelte";
+    // import { CrestType } from "$lib/types/CrestType";
+    // import SectionHeader from "../common/SectionHeader.svelte";
+    // import CrestHUD from "../hud/CrestHUD.svelte";
+    // import type { UserInfo } from "$lib/types/UserInfo";
+    // import StatLabel from "../stats/StatLabel.svelte";
+    // import { ToolType } from "../../enums/ToolType";
+    // import SkillStatLabel from "../stats/SkillStatLabel.svelte";
+    // import NeedleStatLabel from "../stats/NeedleStatLabel.svelte";
 
-    let { user_info = $bindable() } : { user_info: UserInfo } = $props();
+    // let { user_info = $bindable() } : { user_info: UserInfo } = $props();
 
-    let active_crest_type = $derived(user_info.active_crest_info.type);
+    // let active_crest_type = $derived(user_info.active_crest_info.type);
+    // let has_volt_filament = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_VOLT_FILAMENT));
 
-    let needle_damage = $derived(5 + 4 * user_info.current_needle);
-    let needle_strike = $derived(0);
+    // let silk_count = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_SPOOL_EXTENDER) ? 21 : 18);
+    // let silk_cost = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_EGG_OF_FLEALIA) ? 3 : 4);
 </script>
 
-<div>
+<!-- <div>
     <SectionHeader title="Statistics"/>
     <hr>
 
     <CrestHUD bind:user_info={user_info}/>
     <hr>
 
-    <h2 class="text-4xl py-4 px-2">Pale Steel Needle</h2>
-    <div class="flex flex-wrap">
-        <!-- Base Needle Stats -->
-        <div class="w-full flex flex-wrap items-center">
-            <StatLabel label={"DPS"} text={"9.2"}/>
-            <StatLabel label={"Base"} text={`${needle_damage}`} subtext={"DMG"}/>
-            <StatLabel label={"Swing Speed"} text={"0.41"} subtext={"s"}/>
-        </div>
-
-        <!-- Modifiers -->
-        <div class="w-full flex flex-wrap items-center">
-            <StatLabel label={"Challenge Hit"} text={"20"} subtext={"DMG"}/>
-            <!-- <StatLabel label={"Critical Hit"} text={"20"} subtext={"DMG"}/> -->
-        </div>
-
-        <!-- Needle Art -->
-        <div class="w-full flex items-center">
-            <img src="assets/HUD/needle_strike.png" alt="needle strike" draggable="false" class="h-16 w-24 object-contain select-none"/>
-            <StatLabel label={"Needle Strike"} text={"20"} subtext={"DMG"}/>
-        </div>
-    </div>
+    <NeedleStatLabel bind:user_info={user_info}/>    
 
     {#if active_crest_type !== CrestType.Cursed}
     <hr class="mt-8"/>
     <h2 class="text-4xl py-4 px-2">Spells & Tools</h2>
 
     <div class="flex flex-wrap">
-        <!-- Base Skill Stats -->
-        <StatLabel label={"Max"} text={"9.2"} subtext={"SILK"}/>
-        <StatLabel label={"Spell Cost"} text={"9.2"} subtext={"SILK"}/>
-        <StatLabel label={"Regen"} text={"0.41"} subtext={"SILK"}/>
+        <StatLabel label={"Max"} text={`${silk_count}`} subtext={"SILK"}/>
+        <StatLabel label={"Spell Cost"} text={`${silk_cost}`} subtext={"SILK"}/>
+        <StatLabel label={"Regen"} text={"1"} subtext={"SILK"}/>
 
         <div class="w-full items-center">
-            <div class="flex items-center">
-                <img src="assets/SKILLS/01_silkspear_icon.png" alt="needle strike" draggable="false" class="size-20 p-2 object-contain select-none"/>
-                <StatLabel label={"Silk Spear"} text={"100"} subtext={"DMG"}/>
-            </div>
-            <div class="flex items-center">
-                <img src="assets/SKILLS/01_silkspear_icon.png" alt="needle strike" draggable="false" class="size-20 p-2 object-contain select-none"/>
-                <StatLabel label={"Silk Spear"} text={"100"} subtext={"DMG"}/>
-            </div>
+            {#each user_info.current_skill_loadout as skill_type: SkillType}
+                <SkillStatLabel skill_type={skill_type} needle_level={user_info.current_needle} has_shaman_crest={active_crest_type === CrestType.Shaman} has_volt_filament={has_volt_filament}/>
+            {/each}
 
-            <div class="flex items-center">
-                <img src="assets/TOOLS/RED/01_straight_pin.png" alt="needle strike" draggable="false" class="size-20 p-2 object-contain select-none"/>
-                <StatLabel label={"Straight Pin"} text={"17"} subtext={"DMG"}/>
-            </div>
+            {#each user_info.current_tool_loadout as tool_Type: ToolType}
+                <p>tool stat label</p>
+            {/each}
         </div>
     </div>
     {/if}
-</div>
+</div> -->
 
 <style>
     hr {

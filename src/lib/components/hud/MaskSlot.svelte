@@ -1,12 +1,12 @@
 <script lang="ts">
-    import { MaskType } from "$lib/types/MaskType";
+    import { MaskType } from "$lib/enums/MaskType";
 
-    let { type = MaskType.MASK, is_barbed = false, is_venom = false, index = 0 }: { type?: MaskType, is_barbed?: boolean, is_venom?: boolean, index?: number } = $props();
+    let { type = MaskType.Mask, is_barbed = false, is_venom = false, index = 0 }: { type?: MaskType, is_barbed?: boolean, is_venom?: boolean, index?: number } = $props();
 </script>
 
 <!-- 8:11 ratio  32:44 -->
 <div class="h-24 w-14 flex items-center justify-center relative">
-    {#if type == MaskType.MASK}
+    {#if type == MaskType.Mask}
         {#if is_barbed}
             {#if index % 2 === 0}
                 <img src="assets/HUD/mask_barbed1.png" alt="mask" class="barbed-slot1"/>
@@ -16,7 +16,7 @@
         {:else}
             <img src="assets/HUD/mask2.png" alt="mask" class="mask-slot"/>
         {/if}
-    {:else if type == MaskType.FRACTURED}
+    {:else if type == MaskType.Fractured}
         <img src="assets/HUD/mask_fractured.png" alt="mask" class="fractured-slot"/>
     {:else}
         {#if is_venom}

@@ -1,4 +1,4 @@
-import { CrestType } from "$lib/types/CrestType";
+import { CrestType } from "../enums/CrestType";
 import type { HUDInfo } from "$lib/types/HUDInfo";
 import { HUDState } from "$lib/types/HUDState";
 

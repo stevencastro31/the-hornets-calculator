@@ -1,6 +1,6 @@
-import { SlotType } from "./SlotType";
-import { ToolType } from "./ToolType";
-import { SkillType } from "./SkillType";
+import { SlotType } from "../enums/SlotType";
+import { ToolType } from "../enums/ToolType";
+import { SkillType } from "../enums/SkillType";
 import type { SlotDirection } from "./SlotDirection";
 
 export type SlotInfo {
