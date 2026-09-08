@@ -125,7 +125,7 @@ export const CREST_DATA: Record<CrestType, CrestInfo> = {
         type: CrestType.Witch,
         padding: 0,
         slots: [
-            { id: 1, type: SlotType.Skill, direction: SlotDirection.Center, x: 55.5, y: 61.5 },
+            { id: 1, type: SlotType.Skill, direction: SlotDirection.Center, x: 55, y: 60.5 },
             { id: 2, type: SlotType.Attack, direction: SlotDirection.Up, x: 45, y: 10.75 },
             { id: 3, type: SlotType.Attack, direction: SlotDirection.Down, x: 56, y: 107.75 },
             { id: 4, type: SlotType.Defense, x: 5, y: 77.75 },

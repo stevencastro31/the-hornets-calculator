@@ -10,7 +10,6 @@
 
     let crestData = $derived(CREST_DATA[CrestType.Witch]);
     let vesticrestData = $derived(CREST_DATA[CrestType.Vesti]);
-
 </script>
 
 <div class="flex w-fit h-fit px-12 pb-12">

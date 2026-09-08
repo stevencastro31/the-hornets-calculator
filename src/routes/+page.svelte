@@ -12,7 +12,8 @@
 
 
     import { SvelteSet } from 'svelte/reactivity';
-    import CrestMenu from "$lib/components/crest/CrestMenu.svelte";
+    import CrestMenuContainer from "$lib/components/crest/CrestMenuContainer.svelte";
+
     // import { NeedleType } from "$lib/types/NeedleType";
 
     let user_info: UserInfo = $state<UserInfo>({
@@ -32,16 +33,20 @@
         tool_direction_info: [],
         skill_direction_info: [],
     });
+
+
+
 </script>
 
-<div class="font-roboto text-white bg-gray-950 h-screen p-30" draggable="false">
+<div class="font-roboto text-white bg-gray-950 h-screen m-30" draggable="false">
     <!-- <div class="h-16 w-screen bg-gray-800"> nav bar 
         <button onclick={ () => {
         } }> CHECK </button>
     </div> -->
 
+    <CrestMenuContainer/>
+    
 
-    <CrestMenu/>
 
 
     <!-- <div class="bg-gray-950 w-screen xl:grid xl:grid-cols-10 xl:gap-8 xl:px-24 px-8">

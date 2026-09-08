@@ -26,12 +26,6 @@
         isGlow? : boolean,
     } = $props();
 
-    iconVisible = false;
-    skillType = SkillType.SilkSpear;
-    toolType = ToolType.StraightPin;
-    isVenom =true;
-    isSelected = true;
-
     // icon paths
     let slotUIPath: string | undefined  = $derived(SLOT_UIS[slotType][slotDirection]);
     let slotIconPath: string | undefined = $derived(SLOT_ICONS[slotType][slotDirection]);
@@ -40,6 +34,7 @@
         if (toolType === undefined) return;
         let path: string;
 
+        // @ts-expect-error
         if (slotType === SlotType.Attack && TOOLS_RED.includes(toolType)) {
             path = TOOL_ICONS[toolType];
             if (isVenom)
@@ -47,7 +42,9 @@
             return path;
         }
 
+        // @ts-expect-error
         if (slotType === SlotType.Defense && TOOLS_BLUE.includes(toolType)) return TOOL_ICONS[toolType];
+        // @ts-expect-error
         if (slotType === SlotType.Explore && TOOLS_YELLOW.includes(toolType))  return TOOL_ICONS[toolType];
         return;
     });
@@ -117,11 +114,11 @@
             <img src={glowIconPath} alt="glow" class="common" draggable="false"/>
         </div>
 
-        <div class="absolute -left-8 -top-6 z-10">
+        <div class="absolute -left-8 -top-6">
             <img src="assets/menu/silksong_cursor.png" alt="slot" class="cursor" draggable="false"/>
         </div>
 
-        <div class="absolute -bottom-6 -right-8 rotate-180 z-10">
+        <div class="absolute -bottom-6 -right-8 rotate-180">
             <img src="assets/menu/silksong_cursor.png" alt="slot" class="cursor" draggable="false"/>
         </div>
     {/if}
