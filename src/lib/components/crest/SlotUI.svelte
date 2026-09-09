@@ -37,7 +37,7 @@
         // @ts-expect-error
         if (slotType === SlotType.Attack && TOOLS_RED.includes(toolType)) {
             path = TOOL_ICONS[toolType];
-            if (isVenom)
+            if (isVenom && toolType !== ToolType.NeedlePhial)   // only red tool with no venom variant
                 path = path.slice(0, 17) + "venom/" + path.slice(17);
             return path;
         }
@@ -67,7 +67,7 @@
     });
     let slotTypeIconYOffset: number = $derived.by(() => {
         if (slotDirection === SlotDirection.Up) return 9;
-        if (slotDirection === SlotDirection.Down) return 3;
+        if (slotDirection === SlotDirection.Down) return 6;
         return 8;
     });
     let glowIconYOffset = $derived.by(() => {
@@ -87,8 +87,12 @@
     <!-- Slot Type Icon -->
     {#if iconVisible}
         {#if itemVisible}
-            {#if slotType === SlotType.Attack && !(slotDirection === SlotDirection.Center)} <!-- Directional Icons -->
-                <img src={slotIconPath} alt="slot icon" class="absolute w-20 h-24 left-6" draggable="false" style={`top: ${slotTypeIconYOffset * 0.25}rem`}/>
+            {#if (slotType === SlotType.Attack) && !(slotDirection === SlotDirection.Center)} <!-- Directional Icons -->
+                {#if slotDirection === SlotDirection.Down}
+                    <img src={slotIconPath} alt="slot icon" class="absolute w-20 h-24 left-6" draggable="false" style={`top: ${(slotTypeIconYOffset - 3) * 0.25}rem`}/> <!-- attack down requires a small offset -->
+                {:else}
+                    <img src={slotIconPath} alt="slot icon" class="absolute w-20 h-24 left-6" draggable="false" style={`top: ${slotTypeIconYOffset * 0.25}rem`}/>
+                {/if}
             {:else}
                 <img src={slotIconPath} alt="slot icon" class="absolute size-20 left-6" draggable="false" style={`top: ${slotTypeIconYOffset * 0.25}rem`}/>
             {/if}

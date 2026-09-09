@@ -1,6 +1,10 @@
 <script lang="ts">
-    // import { CrestType } from "$lib/types/CrestType";
-    // import SectionHeader from "../common/SectionHeader.svelte";
+    import SectionHeader from "../common/SectionHeader.svelte";
+    import { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    import CrestHUD from "$lib/components/hud/CrestHUD.svelte";
+    import CrestHUDContainer from "../hud/CrestHUDContainer.svelte";
+    
+
     // import CrestHUD from "../hud/CrestHUD.svelte";
     // import type { UserInfo } from "$lib/types/UserInfo";
     // import StatLabel from "../stats/StatLabel.svelte";
@@ -15,19 +19,27 @@
 
     // let silk_count = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_SPOOL_EXTENDER) ? 21 : 18);
     // let silk_cost = $derived(user_info.current_tool_loadout.has(ToolType.BLUE_EGG_OF_FLEALIA) ? 3 : 4);
+
+
+    let { data } : { data: UserLoadout } = $props();
+
 </script>
 
-<!-- <div>
+<div>
     <SectionHeader title="Statistics"/>
     <hr>
 
-    <CrestHUD bind:user_info={user_info}/>
+    <div class="my-4">
+        <CrestHUDContainer loadout={data}/>
+    </div>
     <hr>
+
+    <!-- 
 
     <NeedleStatLabel bind:user_info={user_info}/>    
 
     {#if active_crest_type !== CrestType.Cursed}
-    <hr class="mt-8"/>
+    <hr class="mt-8"/> 
     <h2 class="text-4xl py-4 px-2">Spells & Tools</h2>
 
     <div class="flex flex-wrap">
@@ -45,8 +57,8 @@
             {/each}
         </div>
     </div>
-    {/if}
-</div> -->
+    {/if} -->
+</div>
 
 <style>
     hr {

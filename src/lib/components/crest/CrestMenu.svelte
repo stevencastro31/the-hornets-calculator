@@ -1,33 +1,70 @@
+<script lang="ts">
+    import { CREST_UIS } from "$lib/objects/CrestUI";
+    import type { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    import SlotUI from "./SlotUI.svelte";
+    import { ToolType } from "$lib/enums/ToolType";
+    import { CrestType } from "$lib/enums/CrestType";
+
+    let { data } : { data: UserLoadout } = $props();
+
+    let crestData = $derived(data.crestInfo);
+    let vesticrestData = $derived(data.vesticrestInfo);
+    let crestUIPath = $derived(CREST_UIS[data.crest]);
+    let vesticrestUIPath = "assets/crests/VestiCrest3.png";
+
+    let crestMenuState = $derived(data.crestMenuState);
+
+    function SelectCrestSlot(e: any, id: number, index: number) {
+        crestMenuState.selectedSlotID = id;
+        crestMenuState.selectedSlotIndex = index;
+        e.stopPropagation();
+    }
+</script>
+
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<script lang="ts">
-    import { CrestType } from "$lib/enums/CrestType";
-    import { CREST_DATA } from "$lib/objects/CrestData";   
-    import { CREST_UIS } from "$lib/objects/CrestUI";
-
-    import SlotUI from "./SlotUI.svelte";
-
-    let crestData = $derived(CREST_DATA[CrestType.Witch]);
-    let vesticrestData = $derived(CREST_DATA[CrestType.Vesti]);
-</script>
-
-<div class="flex w-fit h-fit px-12 pb-12">
+<div class="flex w-fit h-fit px-12 py-12" onclick={(e) => { SelectCrestSlot(e, 0, -1); }} >
+    <!-- Vesticrest -->
     <div class="relative w-76 h-152 aspect-[76/152]">
-        <img src={`assets/crests/VestiCrest3.png`} alt={crestData.name} class="crest" draggable="false" style={`padding: ${vesticrestData.padding * 0.25}rem;`}/>
-        {#each vesticrestData.slots as slot} 
-            <div class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                <SlotUI slotType={slot.type} slotDirection={slot.direction}/>
+
+        {#if data.crest !== CrestType.Cursed}
+            <img src={vesticrestUIPath} alt={crestData.name} class="crest" draggable="false" style={`padding: ${vesticrestData.padding * 0.25}rem;`}/>
+            {#each vesticrestData.slots as slotInfo, index} 
+                <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
+                    <SlotUI 
+                        slotType={slotInfo.type} 
+                        slotDirection={slotInfo.direction} 
+                        isSelected={crestMenuState.selectedSlotID === slotInfo.id}
+                        toolType={slotInfo.toolType}
+                        skillType={slotInfo.skillType}
+                        isVenom={data.HasTool(ToolType.PollipPouch)}
+                        isGlow={slotInfo.type === data.loadoutTabMenuState.activeToolPageType}
+                    />
+                </div>
+            {/each}
+        {:else}
+            <div class="h-full flex flex-col justify-center items-center">
+                <img src="assets/menu/cursed_prompt.png" alt="cursed" class="w-full object-contain select-none" draggable="false"/>
+                <p class="text-5xl py-8 text-center">Hornet is Cursed</p>
             </div>
-        {/each}
+        {/if}
     </div>
 
-    <!-- 16p 16x 14.25y -->
+    <!-- Crest -->
     <div class="relative w-132 h-152 aspect-[132/152]">
-        <img src={`assets/crests/${CREST_UIS[crestData.type]}`} alt={crestData.name} class="crest" draggable="false" style={`padding: ${crestData.padding * 0.25}rem;`}/>
-        {#each crestData.slots as slot} 
-            <div class="absolute" style={`left: ${slot.x * 0.25}rem; top: ${slot.y * 0.25}rem;`}>
-                <SlotUI slotType={slot.type} slotDirection={slot.direction}/>
+        <img src={crestUIPath} alt={crestData.name} class="crest" draggable="false" style={`padding: ${crestData.padding * 0.25}rem;`}/>
+        {#each crestData.slots as slotInfo, index} 
+            <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
+                <SlotUI 
+                    slotType={slotInfo.type} 
+                    slotDirection={slotInfo.direction} 
+                    isSelected={crestMenuState.selectedSlotID === slotInfo.id}
+                    toolType={slotInfo.toolType}
+                    skillType={slotInfo.skillType}
+                    isVenom={data.HasTool(ToolType.PollipPouch)}
+                    isGlow={slotInfo.type === data.loadoutTabMenuState.activeToolPageType}
+                />
             </div>
         {/each}
     </div>

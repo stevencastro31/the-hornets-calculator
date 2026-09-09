@@ -1,93 +1,74 @@
 <script lang="ts">
-    // import type { UserInfo } from "$lib/types/UserInfo";
-    // import ToolSlot from "../crest/ToolSlot.svelte";
+    // @ts-expect-error The package is a JavaScript-only dependency.
+    import SvelteCarousel from 'svelte-carousel';
+    import { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    
+    import { ToolType } from '$lib/enums/ToolType';
 
-    // // @ts-expect-error The package is a JavaScript-only dependency.
-    // import SvelteCarousel from 'svelte-carousel';
+    import { TOOLS_BLUE } from "$lib/objects/ToolsBlue";
+    import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
 
-    // import { TOOLS_RED } from "$lib/objects/ToolsRed";
-    // import { TOOLS_BLUE } from "$lib/objects/ToolsBlue";
-    // import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
-    // import { SlotType } from "$lib/types/SlotType";
-    // import { ToolType } from "../../enums/ToolType";
-    // import { SlotDirection } from "$lib/types/SlotDirection";
-    // import { onDestroy } from "svelte";
+    import SlotUI from '../crest/SlotUI.svelte';
+    import { SlotType } from '$lib/enums/SlotType';
+    import { LoadoutTabMenuState } from '$lib/class/LoadoutTabMenuState.svelte';
+    import type { CrestMenuState } from '$lib/class/CrestMenuState.svelte';
 
-    // let carousel : SvelteCarousel;
-    // let { user_info = $bindable() }: { user_info: UserInfo } = $props();
-    // let selected_tool = $state(-1);
+    let { data } : { data: UserLoadout } = $props();
+    let toolCarousel: SvelteCarousel;
 
-    // let id = $derived(user_info.selected_slot_id);
-    // let index = $derived(user_info.selected_slot_index);
-    // let active_slot = $derived(id < 0 ? user_info.active_vesticrest_info.slots[index] : (0 < id ? user_info.active_crest_info.slots[index] : null));
+    let loadoutTabMenuState: LoadoutTabMenuState = $derived(data.loadoutTabMenuState);
+    let crestMenuState: CrestMenuState = $derived(data.crestMenuState);
 
-    // // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
-    // let red_tools_info: { tool: ToolType; direction: SlotDirection }[] = $state(TOOLS_RED.map(tool => ({ tool: tool, direction: SlotDirection.CENTER })));
+    // modified data needed to change the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
+    let redToolInfo = $derived(loadoutTabMenuState.redToolInfo);
 
-    // // to ensure the direction indicator persists between tab changes
-    // user_info.tool_direction_info.forEach(info => {
-    //     red_tools_info.find(item => item.tool === info.tool)!.direction = info.direction;
-    // });
-    // user_info.tool_direction_info.length = 0;  // clear
-    // onDestroy(() => {
-    //     user_info.tool_direction_info.push(...red_tools_info);
-    // });
+    function HandleArrowClick(e: any, isPrev: boolean) {
+        if (isPrev)
+            toolCarousel.goToPrev();
+        else
+            toolCarousel.goToNext();
+        e.stopPropagation();
+    }
 
-    // function SetToolSlot(tool: ToolType) {
-    //     if (id === 0) return;   // ignore if there is no selected crest slot
-
-    //     // ignore if tool is already equipped
-    //     if (user_info.current_tool_loadout.has(tool)) return;
-
-    //     // remove old tool from set
-    //     let old_tool: ToolType | undefined = user_info.active_crest_info.slots[index].tool;
-    //     if (old_tool && user_info.current_tool_loadout.has(old_tool)) {
-    //         user_info.current_tool_loadout.delete(old_tool);
-
-    //         // will break if you reorder the ToolType enum, changes the appearance of the tool tab item to show the direction in which the tool is equipped on the crest board
-    //         if (active_slot?.type === SlotType.RED) { red_tools_info[old_tool - 23].direction = SlotDirection.CENTER }
-    //     }
-        
-    //     // equip tool to current loadout
-    //     selected_tool = tool;   // select tool
-    //     if (0 < id)
-    //         user_info.active_crest_info.slots[index].tool = tool;
-    //     else if (id < 0)
-    //         user_info.active_vesticrest_info.slots[index].tool = tool;
-
-    //     user_info.current_tool_loadout.add(tool);
-
-    //     // will break if you reorder the ToolType enum, revert the appearance of the tool tab item that show the direction in which the tool is equipped on the crest board
-    //     if (active_slot?.type === SlotType.RED) { 
-    //         red_tools_info[tool - 23].direction = active_slot.direction || SlotDirection.UP;
-    //     }
-    // };
+    function HandleToolClick(e: any, toolType: ToolType) {
+        if (loadoutTabMenuState.selectedTool === toolType)
+            loadoutTabMenuState.EquipTool();
+        else
+            loadoutTabMenuState.SelectTool(toolType);
+        e.stopPropagation();
+    }
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<!-- <div class="flex flex-col w-full pt-2 pb-8" onclick={ () => selected_tool = -1 } >
-    <SvelteCarousel bind:this={carousel} let:goToPrev let:showNextPage initialPageIndex={user_info.current_loadout_page_type} on:pageChange={ (event: { detail: number; }) => { 
-                if (event.detail !== null)  // event is called before mount (which sets the current_tool_page_index to null)
-                    user_info.current_loadout_page_type = event.detail;                  
-            } }>
+<div class="w-full pt-2 pb-8">
+    <SvelteCarousel bind:this={toolCarousel} initialPageIndex={loadoutTabMenuState.activeToolPageType}  on:pageChange={ (event: { detail: number; }) => { 
+            if (event.detail !== null)  // event is called before mount (which sets the current_tool_page_index to null)
+                loadoutTabMenuState.activeToolPageType = event.detail;                  
+        }}>
 
-        <div slot="prev" onclick={ (e) => {
-                carousel.goToPrev();
-                selected_tool = -1;
-                e.stopPropagation();
-        }} class="arrow-container hidden md:block"  draggable="false">
-            <img src="assets/MENU/silksong_arrow.png" alt="arrow" class="rotate-180 arrows" draggable="false"/>
+        <!-- Left Carousel Arrow -->
+        <div slot="prev" class="arrow-container hidden md:block arrow-container"  draggable="false" onclick={(e) => { HandleArrowClick(e, true); }}>
+            <img src="assets/menu/silksong_arrow.png" alt="arrow" class="rotate-180 arrows" draggable="false"/>
         </div>
 
+        <!-- Red Tools -->
         <div class="page">
-            <img src="assets/MENU/red_tools_heading.png" class="header" alt="header" draggable="false"/>
-            <div class={`tools ${active_slot?.type === SlotType.RED ? "" : "pointer-events-none"}`}>
-            {#each red_tools_info as tool_info}
-                <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool_info.tool) }>
+            <img src="assets/menu/red_tools_heading.png" class="red tool header" alt="header" draggable="false"/>
+
+            <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Attack ? "auto" : "none"};`}>
+            {#each redToolInfo as info}
+                <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, info.toolType )}}>
                     <div class="origin-top-left scale-60">
-                        <ToolSlot slot_type={SlotType.RED} slot_direction={tool_info.direction} tool={tool_info.tool} is_selected={selected_tool === tool_info.tool} is_glow={user_info.current_tool_loadout.has(tool_info.tool)} is_venom={user_info.current_tool_loadout.has(ToolType.BLUE_POLLIP_POUCH)}/>
+                        <SlotUI 
+                            slotType={SlotType.Attack} 
+                            toolType={info.toolType} 
+                            slotDirection={info.direction}
+                            isSelected={loadoutTabMenuState.selectedTool === info.toolType} 
+                            isGlow={data.HasTool(info.toolType)} 
+                            isVenom={data.HasTool(ToolType.PollipPouch)}
+                            />
                     </div>
                 </div>
             {/each}
@@ -95,12 +76,20 @@
         </div>
 
         <div class="page">
-            <img src="assets/MENU/blue_tools_heading.png" class="header" alt="header" draggable="false"/>
-            <div class={`tools ${active_slot?.type === SlotType.BLUE ? "" : "pointer-events-none"}`}>
-            {#each TOOLS_BLUE as tool}
-                <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool) }>
+            <img src="assets/menu/blue_tools_heading.png" class="blue tool header" alt="header" draggable="false"/>
+
+            <!-- <div class="tools-container" style={`pointer-events: ${toolTabMenuState.activeToolPageType === SlotType.Defense ? "all" : "none"};`}> -->
+            <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Defense ? "auto" : "none"};`}>
+            {#each TOOLS_BLUE as toolType}
+                <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, toolType )}}>
                     <div class="origin-top-left scale-60">
-                        <ToolSlot slot_type={SlotType.BLUE} tool={tool} is_selected={selected_tool === tool} is_glow={user_info.current_tool_loadout.has(tool)}/>
+                        <SlotUI 
+                            slotType={SlotType.Defense} 
+                            toolType={toolType} 
+                            isSelected={loadoutTabMenuState.selectedTool === toolType} 
+                            isGlow={data.HasTool(toolType)} 
+                            isVenom={data.HasTool(ToolType.PollipPouch)}
+                            />
                     </div>
                 </div>
             {/each}
@@ -108,29 +97,32 @@
         </div>
 
         <div class="page">
-            <img src="assets/MENU/yellow_tool_heading.png" class="header" alt="header" draggable="false"/>
-            <div class={`tools ${active_slot?.type === SlotType.YELLOW ? "" : "pointer-events-none"}`}>
-            {#each TOOLS_YELLOW as tool}
-                <div class="w-20 h-22 m-2 my-1" onclick={ () => SetToolSlot(tool) }>
+            <img src="assets/menu/yellow_tools_heading.png" class="yellow tool header" alt="header" draggable="false"/>
+
+            <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Explore ? "auto" : "none"};`}>
+            {#each TOOLS_YELLOW as toolType}
+                <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, toolType )}}>
                     <div class="origin-top-left scale-60">
-                        <ToolSlot slot_type={SlotType.YELLOW} tool={tool} is_selected={selected_tool === tool} is_glow={user_info.current_tool_loadout.has(tool)}/>
+                        <SlotUI 
+                            slotType={SlotType.Explore} 
+                            toolType={toolType} 
+                            isSelected={loadoutTabMenuState.selectedTool === toolType} 
+                            isGlow={data.HasTool(toolType)} 
+                            isVenom={data.HasTool(ToolType.PollipPouch)}
+                            />
                     </div>
                 </div>
             {/each}
             </div>
         </div>
 
-        <div slot="next" onclick={ (e) => {
-            carousel.goToNext();
-            selected_tool = -1;
-            e.stopPropagation();
-        }} class="arrow-container hidden md:block">
-            <img src="assets/MENU/silksong_arrow.png" alt="arrow" class="arrows" draggable="false"/>
+        <!-- Left Carousel Arrow -->
+        <div slot="next" class="arrow-container hidden md:block arrow-container"  draggable="false" onclick={(e) => { HandleArrowClick(e, false); }}>
+            <img src="assets/menu/silksong_arrow.png" alt="arrow" class="arrows" draggable="false"/>
         </div>
+
     </SvelteCarousel>
-</div> -->
-
-<!--  -->
+</div>
 
 <style>
     .page {
@@ -139,33 +131,28 @@
         width: 100%;
     }
 
-    .tools {
-        display: flex; 
-        flex-wrap: wrap; 
-        width: 95%; 
-        place-content: center;
-    }
-
     .header {
         width: 18rem;
         padding-top: 2rem;
-        user-select: none;
     }
 
     .arrows {
-        user-select: none;
         width: 3rem;
         height: 3rem;
+    }
+
+    img {
+        user-select: none;
     }
 
     .arrow-container {
         place-content: center;
     }
+
+    .tools-container {
+        display: flex; 
+        flex-wrap: wrap; 
+        width: 95%; 
+        place-content: center;
+    }
 </style>
-
-
-
-
-
-
-

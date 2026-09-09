@@ -1,38 +1,29 @@
 <script lang="ts">
-    // import { CREST_DATA } from "$lib/objects/CrestData";
-    // import { CrestType } from "$lib/types/CrestType";
-    // import type { UserInfo } from "$lib/types/UserInfo";
-    // import CrestSlot from "../crest/CrestSlot.svelte";
+    import { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    import { CrestType } from "$lib/enums/CrestType";
+    import CrestSlot from "../crest/CrestSlot.svelte";
 
-    // let { user_info = $bindable() } : { user_info : UserInfo } = $props();
-    // let valid_crest_types = [CrestType.Architect, CrestType.Beast, CrestType.Cursed, CrestType.Hunter2, CrestType.Hunter3, CrestType.Hunter4, CrestType.Reaper, CrestType.Shaman, CrestType.Wanderer, CrestType.Witch];
+    let { data } : { data: UserLoadout } = $props();
+    let crests = [CrestType.Architect, CrestType.Beast, CrestType.Cursed, CrestType.Hunter2, CrestType.Hunter3, CrestType.Hunter4, CrestType.Reaper, CrestType.Shaman, CrestType.Wanderer, CrestType.Witch];
 </script>
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-<!-- <div class="w-full">
+<div class="w-full">
     <div class="page md:px-8">
-        <img src="assets/MENU/crest_heading.png" class="header" alt="header" draggable="false"/>
+        <img src="assets/menu/crest_heading.png" class="header" alt="header" draggable="false"/>
         <div class="flex flex-wrap flex-row place-content-center">
-        {#each valid_crest_types as key}
-            <div onclick={(e) => { 
-                        // reset crest loadout
-                        user_info.active_crest_info = CREST_DATA[key];
-                        user_info.active_vesticrest_info = CREST_DATA[CrestType.Vesti];
-                        user_info.selected_slot_id = 0;
-                        user_info.selected_slot_index = -1;
-                        user_info.current_tool_loadout.clear();
-                        user_info.current_skill_loadout.clear();
-                        e.stopPropagation() 
-                    }}>
-                <CrestSlot crest_type={key} is_selected={user_info.active_crest_info.type === key}/>
+        {#each crests as crestType}
+            <div onclick={(e) => { data.SetCrestType(crestType); }}>
+                <CrestSlot crestType={crestType} isSelected={crestType === data.crest}/>
             </div>
         {/each}
         </div>
-    </div>
-</div> -->
 
+        <!-- maybe add glow -->
+    </div>
+</div>
 
 <style>
     .header {

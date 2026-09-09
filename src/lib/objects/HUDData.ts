@@ -41,3 +41,5 @@ export const HUD_DATA: Record<CrestType, Partial<Record<HUDState, HUDInfo>>> = {
     }
 };
 
+// left-22.5 top-3.25
+// left-15   top-3.25

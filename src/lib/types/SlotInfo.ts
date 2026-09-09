@@ -9,10 +9,10 @@ export type SlotInfo {
     direction?: SlotDirection,
     x: number;
     y: number;
-    show_icon?: boolean;
-    show_slot?: boolean;
-    is_venom?: boolean;
-    is_selected?: boolean;
-    tool?: ToolType;
-    skill?: SkillType;
+    iconVisible?: boolean;
+    slotVisible?: boolean;
+    isVenom?: boolean;
+    isSelected?: boolean;
+    toolType?: ToolType;
+    skillType?: SkillType;
 };
