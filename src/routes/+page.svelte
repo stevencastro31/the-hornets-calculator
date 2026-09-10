@@ -5,9 +5,11 @@
 
     import { CrestType } from "$lib/enums/CrestType";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    import { NeedleType } from "$lib/enums/NeedleType";
 
     let loadout: UserLoadout = new UserLoadout();
-    loadout.SetCrestType(CrestType.Hunter3);
+    loadout.SetCrestType(CrestType.Wanderer);
+    loadout.SetNeedle(NeedleType.PaleSteel);
     loadout.crestIsActive = false;
 </script>
 

@@ -1,6 +1,6 @@
 import type { UserLoadout } from "./UserLoadout.svelte";
 import { TOOLS_RED } from "$lib/objects/ToolsRed";
-import { SlotDirection } from "$lib/types/SlotDirection";
+import { SlotDirection } from "$lib/enums/SlotDirection";
 import { ToolType } from "$lib/enums/ToolType";
 import { SkillType } from "$lib/enums/SkillType";
 import { SlotType } from "$lib/enums/SlotType";

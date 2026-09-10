@@ -1,6 +1,6 @@
 import { ToolType } from "../enums/ToolType";
 import { SkillType } from "../enums/SkillType";
-import { SlotDirection } from "./SlotDirection";
+import { SlotDirection } from "../enums/SlotDirection";
 
 export type ToolDirectionInfo = {
     tool: ToolType,

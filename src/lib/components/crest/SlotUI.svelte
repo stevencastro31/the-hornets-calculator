@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { SlotDirection } from "$lib/types/SlotDirection";
+    import { SlotDirection } from "$lib/enums/SlotDirection";
     import { SlotType } from "$lib/enums/SlotType";
     import { SkillType } from "$lib/enums/SkillType";
     import { ToolType } from "$lib/enums/ToolType";
@@ -34,7 +34,7 @@
         if (toolType === undefined) return;
         let path: string;
 
-        // @ts-expect-error
+        // @ts-expect-error 123
         if (slotType === SlotType.Attack && TOOLS_RED.includes(toolType)) {
             path = TOOL_ICONS[toolType];
             if (isVenom && toolType !== ToolType.NeedlePhial)   // only red tool with no venom variant
@@ -42,9 +42,9 @@
             return path;
         }
 
-        // @ts-expect-error
+        // @ts-expect-error 123
         if (slotType === SlotType.Defense && TOOLS_BLUE.includes(toolType)) return TOOL_ICONS[toolType];
-        // @ts-expect-error
+        // @ts-expect-error 123
         if (slotType === SlotType.Explore && TOOLS_YELLOW.includes(toolType))  return TOOL_ICONS[toolType];
         return;
     });

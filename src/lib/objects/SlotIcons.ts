@@ -1,4 +1,4 @@
-import { SlotDirection } from "$lib/types/SlotDirection";
+import { SlotDirection } from "$lib/enums/SlotDirection";
 import { SlotType } from "../enums/SlotType";
 
 let base = "assets/menu/"

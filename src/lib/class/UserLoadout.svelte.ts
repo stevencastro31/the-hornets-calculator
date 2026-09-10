@@ -2,15 +2,19 @@ import { NeedleType } from "../enums/NeedleType";
 import { CrestType } from "../enums/CrestType";
 import { ToolType } from "$lib/enums/ToolType";
 import { SkillType } from "$lib/enums/SkillType";
+import { SlotType } from "$lib/enums/SlotType";
+import { SlotDirection } from "$lib/enums/SlotDirection";
+
 import { CREST_DATA } from "$lib/objects/CrestData";
+import { NEEDLE_DATA } from "$lib/objects/NeedleData";
 
 import type { CrestInfo } from "$lib/types/CrestInfo";
-import { SlotType } from "$lib/enums/SlotType";
+import type { NeedleInfo } from "$lib/types/DamageInfo";
 
 import { CrestMenuState } from "./CrestMenuState.svelte";
 import { LoadoutTabMenuState } from "./LoadoutTabMenuState.svelte";
 import { SvelteSet } from "svelte/reactivity";
-import { SlotDirection } from "$lib/types/SlotDirection";
+import { DamageCalculator } from "./DamageCalculator.svelte";
 
 export class UserLoadout {
     // Page States
@@ -20,14 +24,25 @@ export class UserLoadout {
     // Attributes
     crest: CrestType = $state(CrestType.Hunter2);
     needle: NeedleType = $state(NeedleType.Needle);
+    crestIsActive: boolean = $state(false);
+
+    maxSilk: number = $derived.by(() => {
+        if (this.crest === CrestType.Cursed) return 3;
+        if (this.HasTool(ToolType.SpoolExtender)) return 21;
+        return 18;
+    });
+    spellCost: number = $derived(this.HasTool(ToolType.EggOfFlealia) ? 3: 4);
 
     crestInfo: CrestInfo = $state(CREST_DATA[this.crest]);
     vesticrestInfo: CrestInfo = $state(CREST_DATA[CrestType.Vesti]);
+    needleInfo: NeedleInfo = $derived(NEEDLE_DATA[this.needle]);
 
+    // Objects
     equippedTools: SvelteSet<ToolType> = new SvelteSet();
     equippedSkills: SvelteSet<SkillType> = new SvelteSet();
+    damageCalculator: DamageCalculator = new DamageCalculator(this);
 
-    crestIsActive: boolean = $state(false);
+    private activeCrests = [CrestType.Beast, CrestType.Hunter3, CrestType.Hunter4, CrestType.Reaper, CrestType.Wanderer];
 
     // Constructors
     constructor() { }
@@ -76,10 +91,6 @@ export class UserLoadout {
         }
     }
 
-    ToggleCrest() {
-        this.crestIsActive = !this.crestIsActive;
-    }
-
     EquipSkill(type: SkillType) {
         if (this.crestMenuState.selectedSlotID === 0) return;    // ignore if there is no selected crest slot
         if (this.HasSkill(type)) return;                         // ignore if the skill is already equipped
@@ -103,7 +114,17 @@ export class UserLoadout {
         }
     }
 
+    ToggleCrest() {
+        this.crestIsActive = !this.crestIsActive;
+        console.log("!");
+    }
+
+    HasCrestActive() {
+        return this.activeCrests.includes(this.crest);
+    }
+
     Reset() {
         this.SetCrestType(CrestType.Hunter2);
     }
 };
+

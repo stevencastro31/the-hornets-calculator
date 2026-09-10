@@ -4,7 +4,7 @@ export type SkillDamageInfo = {
     name: string,
 }
 
-export type NeedleDamageInfo = {
+export type NeedleInfo = {
     damage: number,
     name: string,
 };

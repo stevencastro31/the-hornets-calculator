@@ -1,5 +1,5 @@
 import { SlotType } from "../enums/SlotType";
-import { SlotDirection } from "$lib/types/SlotDirection";
+import { SlotDirection } from "$lib/enums/SlotDirection";
 
 const base = "assets/menu/";
 

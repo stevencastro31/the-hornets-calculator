@@ -26,10 +26,15 @@
 
 <div class="flex w-fit h-fit px-12 py-12" onclick={(e) => { SelectCrestSlot(e, 0, -1); }} >
     <!-- Vesticrest -->
-    <div class="relative w-76 h-152 aspect-[76/152]">
+    <div class="relative w-76 h-152 aspect-76/152">
 
         {#if data.crest !== CrestType.Cursed}
-            <img src={vesticrestUIPath} alt={crestData.name} class="crest" draggable="false" style={`padding: ${vesticrestData.padding * 0.25}rem;`}/>
+            <img src={vesticrestUIPath} alt={vesticrestData.name} class="crest" draggable="false" style={`
+                    padding-top: ${vesticrestData.padding[0] * 0.25}rem; 
+                    padding-right: ${vesticrestData.padding[1] * 0.25}rem; 
+                    padding-bottom: ${vesticrestData.padding[2] * 0.25}rem; 
+                    padding-left: ${vesticrestData.padding[3] * 0.25}rem
+                `}/>
             {#each vesticrestData.slots as slotInfo, index} 
                 <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
                     <SlotUI 
@@ -52,8 +57,13 @@
     </div>
 
     <!-- Crest -->
-    <div class="relative w-132 h-152 aspect-[132/152]">
-        <img src={crestUIPath} alt={crestData.name} class="crest" draggable="false" style={`padding: ${crestData.padding * 0.25}rem;`}/>
+    <div class="relative w-132 h-152 aspect-132/152">
+        <img src={crestUIPath} alt={crestData.name} class="crest" draggable="false" style={`
+                padding-top: ${crestData.padding[0] * 0.25}rem; 
+                padding-right: ${crestData.padding[1] * 0.25}rem; 
+                padding-bottom: ${crestData.padding[2] * 0.25}rem; 
+                padding-left: ${crestData.padding[3] * 0.25}rem
+            `}/>
         {#each crestData.slots as slotInfo, index} 
             <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
                 <SlotUI 

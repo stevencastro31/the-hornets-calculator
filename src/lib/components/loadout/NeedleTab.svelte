@@ -11,11 +11,11 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <div class="w-full">
-    <div class="page md:px-12 px-8">
+    <div class="page md:px-10 px-8">
         <img src="assets/menu/needle_heading.png" class="header" alt="header" draggable="false"/>
         <div class="flex flex-wrap flex-row place-content-center">
         {#each needles as needleType} 
-            <div class="px-6 xl:px-14 mb-4" onclick={ () => { data.SetNeedle(needleType); } }>
+            <div class="px-4 xl:px-14 mb-4" onclick={ () => { data.SetNeedle(needleType); } }>
                 <NeedleSlot needleType={needleType} isSelected={data.needle === needleType}/>
             </div>
         {/each}
