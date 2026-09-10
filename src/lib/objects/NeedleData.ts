@@ -1,4 +1,4 @@
-import type { NeedleInfo } from "$lib/types/DamageInfo";
+import type { NeedleInfo } from "$lib/types/ItemInfo";
 import { NeedleType } from "../enums/NeedleType";
 
 export const NEEDLE_DATA: Record<NeedleType, NeedleInfo> = {

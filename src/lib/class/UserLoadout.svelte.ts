@@ -9,7 +9,7 @@ import { CREST_DATA } from "$lib/objects/CrestData";
 import { NEEDLE_DATA } from "$lib/objects/NeedleData";
 
 import type { CrestInfo } from "$lib/types/CrestInfo";
-import type { NeedleInfo } from "$lib/types/DamageInfo";
+import type { NeedleInfo } from "$lib/types/ItemInfo";
 
 import { CrestMenuState } from "./CrestMenuState.svelte";
 import { LoadoutTabMenuState } from "./LoadoutTabMenuState.svelte";

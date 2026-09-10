@@ -4,13 +4,17 @@ import { UserLoadout } from "./UserLoadout.svelte"
 import { RoundToEven } from "$lib/utils";
 
 import { NEEDLE_STRIKE_HITS, NEEDLE_STRIKE_MULTIPLIER } from "$lib/objects/NeedleStrikeData";
+import { SKILL_DATA } from "$lib/objects/SkillData";
+import type { SkillToolStatInfo } from "$lib/types/SkillToolStatInfo";
+import type { SkillType } from "$lib/enums/SkillType";
+import { SKILL_ICONS } from "$lib/objects/SkillIcons";
 
 export class DamageCalculator {
     // Attributes
     loadout: UserLoadout; 
     challenged: boolean = $state(false);
 
-    // Damage Stats
+    // Needle Damage Stats
     swingSpeed: number;
     base: number;
     modified: number;
@@ -19,6 +23,9 @@ export class DamageCalculator {
     needleStrikeDamage: number;
     needleStrikeHits: number;
     totalNeedleStrikeDamage: number;
+
+    // Skill & Tool Damage Stats
+    skillDamageInfoDetail: Array<SkillToolStatInfo>;
 
     // Constructors
     constructor(loadout: UserLoadout) { 
@@ -32,6 +39,8 @@ export class DamageCalculator {
         this.needleStrikeDamage = $derived(this.modified * NEEDLE_STRIKE_MULTIPLIER[this.loadout.crest]);
         this.needleStrikeHits = $derived(NEEDLE_STRIKE_HITS[this.loadout.crest]);
         this.totalNeedleStrikeDamage = $derived(RoundToEven(this.needleStrikeDamage * this.needleStrikeHits));
+
+        this.skillDamageInfoDetail = $derived(this.CalculateSpellDamage());
     }
 
     // Methods
@@ -62,7 +71,34 @@ export class DamageCalculator {
     }
 
     CalculateSpellDamage() {
-        
+        let data: Array<SkillToolStatInfo> = [];
+
+        this.loadout.equippedSkills.forEach(skillType => {
+            let skillData = SKILL_DATA[skillType];
+            let base = skillData.damage[this.loadout.needle];
+            let modifier = 1;
+
+            if (this.loadout.crest === CrestType.Shaman) modifier += 0.4;
+            if (this.loadout.HasTool(ToolType.VoltFilament)) modifier += 0.25;
+
+            let modifiedDamage = RoundToEven(base * modifier);
+            if (this.loadout.HasTool(ToolType.VoltFilament)) modifiedDamage += 15;
+
+            data.push({
+                name: skillData.name,
+                damage: modifiedDamage,
+                subtext: skillData.hits > 1 ? ` (${skillData.hits} HITS)` : "",
+                type: skillType,
+                iconPath: SKILL_ICONS[skillType],
+            });
+        });
+        return data;
+    }
+
+    CalculateToolDamage() {
+        let data: Array<SkillToolStatInfo> = [];
+
+        return data;
     }
 }
 

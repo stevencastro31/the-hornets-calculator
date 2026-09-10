@@ -15,9 +15,8 @@
     <StatLabel label="Regen" text="1" subtext="SILK"/>
 
     <div class="w-full items-center">
-        {#each data.equippedSkills as skill_type: SkillType}
-            <!-- <SkillStatLabel skill_type={skill_type} needle_level={data.needle} has_shaman_crest={false} has_volt_filament={true}/> -->
+        {#each calculator.skillDamageInfoDetail as detail}
+            <SkillStatLabel info={detail}/>
         {/each}
-
     </div>
 </div>
