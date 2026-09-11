@@ -54,6 +54,7 @@ export class UserLoadout {
         this.vesticrestInfo = CREST_DATA[CrestType.Vesti];
         this.equippedSkills.clear();
         this.equippedTools.clear();
+        this.loadoutTabMenuState.disabledTools.clear();
     }
 
     SetNeedle(type: NeedleType) {  
@@ -74,7 +75,7 @@ export class UserLoadout {
 
          // unequip old tool
         let oldTool: ToolType | undefined = this.crestMenuState.activeSlot?.toolType;
-        if (oldTool && this.HasTool(oldTool)) {
+        if (oldTool !== undefined && this.HasTool(oldTool)) {
             this.equippedTools.delete(oldTool);
 
             if (this.crestMenuState.activeSlot?.type === SlotType.Attack)
@@ -88,6 +89,8 @@ export class UserLoadout {
 
             if (this.crestMenuState.activeSlot?.type === SlotType.Attack)
                 this.loadoutTabMenuState.SetRedToolDirection(type, this.crestMenuState.activeSlot.direction ?? SlotDirection.Up);
+            this.loadoutTabMenuState.UpdateToolSelection();
+            this.loadoutTabMenuState.Deselect();
         }
     }
 
@@ -97,7 +100,7 @@ export class UserLoadout {
 
          // unequip old skill
         let oldSkill: SkillType | undefined = this.crestMenuState.activeSlot?.skillType;
-        if (oldSkill && this.HasSkill(oldSkill)) {
+        if (oldSkill !== undefined && this.HasSkill(oldSkill)) {
             this.equippedSkills.delete(oldSkill);
 
             if (this.crestMenuState.activeSlot?.type === SlotType.Skill)
@@ -116,7 +119,6 @@ export class UserLoadout {
 
     ToggleCrest() {
         this.crestIsActive = !this.crestIsActive;
-        console.log("!");
     }
 
     HasCrestActive() {

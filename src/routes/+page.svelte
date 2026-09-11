@@ -8,24 +8,13 @@
     import { SkillType } from "$lib/enums/SkillType";
 
     let loadout: UserLoadout = new UserLoadout();
-    loadout.SetCrestType(CrestType.Shaman);
-
-    // loadout.crestMenuState.selectedSlotID = 1;
-    // loadout.crestMenuState.selectedSlotIndex = 0;
-    // loadout.EquipSkill(SkillType.PaleNails);
-    // loadout.crestMenuState.selectedSlotID = 2;
-    // loadout.crestMenuState.selectedSlotIndex = 1;
-    // loadout.EquipSkill(SkillType.ThreadStorm);
-    // loadout.crestMenuState.selectedSlotID = 3;
-    // loadout.crestMenuState.selectedSlotIndex = 2;
-    // loadout.EquipSkill(SkillType.CrossStitch);
+    loadout.SetCrestType(CrestType.Architect);
 </script>
 
-<div class="font-roboto text-white bg-[#0A0A0C] flex flex-col" draggable="false">
+<div class="font-roboto text-white flex flex-col" draggable="false">
     <div class="h-12 w-screen bg-gray-800"> 
         <button class="px-8 py-2" onclick={ () => {
-
-            console.log("HELLOW ORLD!");
+            console.log(loadout.crestMenuState.activeSlot?.type );
         }}> CHECK SOMETHING </button>
     </div>
 
@@ -42,3 +31,10 @@
         </div>
     </div>
 </div>
+
+
+<style>
+    :global(body) {
+		background-color: #0A0A0C;
+	}
+</style>

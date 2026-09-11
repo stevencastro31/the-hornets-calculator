@@ -15,8 +15,7 @@
     let crestMenuState = $derived(data.crestMenuState);
 
     function SelectCrestSlot(e: any, id: number, index: number) {
-        crestMenuState.selectedSlotID = id;
-        crestMenuState.selectedSlotIndex = index;
+        crestMenuState.SelectSlot(id, index);
         e.stopPropagation();
     }
 </script>

@@ -1,6 +1,6 @@
 import { ToolType } from "../enums/ToolType";
 
-export const TOOLS_YELLOW = [
+export const TOOLS_YELLOW: ToolType[] = [
     ToolType.Compass,
     ToolType.ShardPendant,
     ToolType.MagneticBrooch,

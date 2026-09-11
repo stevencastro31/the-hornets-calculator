@@ -1,6 +1,6 @@
 import { ToolType } from "../enums/ToolType";
 
-export const TOOLS_RED = [
+export const TOOLS_RED: ToolType[] = [
     ToolType.StraightPin,
     ToolType.ThreefoldPin,
     ToolType.StringShard,

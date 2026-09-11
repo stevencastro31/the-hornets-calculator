@@ -14,7 +14,7 @@
     import { TOOLS_BLUE } from "$lib/objects/ToolsBlue";
     import { TOOLS_YELLOW } from "$lib/objects/ToolsYellow";
 
-    let { slotType, slotDirection = SlotDirection.Center, iconVisible = true, slotVisible = true, skillType, toolType, isVenom = false, isSelected = false, isGlow = false }: { 
+    let { slotType, slotDirection = SlotDirection.Center, iconVisible = true, slotVisible = true, skillType, toolType, isVenom = false, isSelected = false, isGlow = false, isDisabled = false }: { 
         slotType: SlotType, 
         slotDirection?: SlotDirection,
         iconVisible?: boolean, 
@@ -24,6 +24,7 @@
         isVenom?: boolean,
         isSelected? : boolean,
         isGlow? : boolean,
+        isDisabled?: boolean,
     } = $props();
 
     // icon paths
@@ -34,7 +35,6 @@
         if (toolType === undefined) return;
         let path: string;
 
-        // @ts-expect-error 123
         if (slotType === SlotType.Attack && TOOLS_RED.includes(toolType)) {
             path = TOOL_ICONS[toolType];
             if (isVenom && toolType !== ToolType.NeedlePhial)   // only red tool with no venom variant
@@ -42,9 +42,7 @@
             return path;
         }
 
-        // @ts-expect-error 123
         if (slotType === SlotType.Defense && TOOLS_BLUE.includes(toolType)) return TOOL_ICONS[toolType];
-        // @ts-expect-error 123
         if (slotType === SlotType.Explore && TOOLS_YELLOW.includes(toolType))  return TOOL_ICONS[toolType];
         return;
     });
@@ -53,6 +51,7 @@
     // flags
     let itemVisible = $derived((!skillIconPath && slotType === SlotType.Skill) || (!toolIconPath && !(slotType === SlotType.Skill)));
     let brightness = $derived(isSelected || isGlow ? 1 : 0.5);
+    let iconBrightness = $derived(isDisabled ? 0.5 : 1);
 
     // offsets
     let toolIconYOffset = $derived.by(() => {
@@ -78,7 +77,7 @@
 </script>
 
 
-<div class="relative w-32 h-36 aspect-[32/36]">
+<div class="relative w-32 h-36 aspect-32/36">
     <!-- Slot UI  -->
     {#if slotVisible}
         <img src={slotUIPath} alt="slot ui" class="common" draggable="false" style={`filter: brightness(${brightness})`}/>
@@ -103,11 +102,11 @@
     {#if !itemVisible}
         {#if slotType === SlotType.Skill}
             <div class="absolute size-26 left-3" style={`top: ${skillIconYOffset * 0.25}rem`}>
-                <img src={skillIconPath} alt="skill icon" class="common" draggable="false"/>
+                <img src={skillIconPath} alt="skill icon" class="common" draggable="false" style={`filter: brightness(${iconBrightness})`}/>
             </div>
         {:else}
             <div class="absolute size-30 left-1" style={`top: ${toolIconYOffset * 0.25}rem`}>
-                <img src={toolIconPath} alt="tool icon" class="common" draggable="false"/>
+                <img src={toolIconPath} alt="tool icon" class="common" draggable="false" style={`filter: brightness(${iconBrightness})`}/>
             </div>
         {/if}            
     {/if}

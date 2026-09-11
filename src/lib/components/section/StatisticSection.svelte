@@ -20,11 +20,9 @@
 
 <NeedleStatSection data={data}/>    
 
-{#if data.crest !== CrestType.Cursed}
-    <hr class="mt-6">
-    <h2 class="text-4xl py-4 px-2">Spells & Tools</h2>
-    <SkillToolStatSection data={data}/>
-{/if}
+<hr class="mt-6">
+<h2 class="text-4xl py-4 px-2">Spells & Tools</h2>
+<SkillToolStatSection data={data}/>
 
 <style>
     hr {

@@ -3,11 +3,16 @@ import { ToolType } from "$lib/enums/ToolType";
 import { UserLoadout } from "./UserLoadout.svelte"
 import { RoundToEven } from "$lib/utils";
 
+import { TOOLS_WITH_DAMAGE } from "$lib/objects/ToolsWithDamage";
 import { NEEDLE_STRIKE_HITS, NEEDLE_STRIKE_MULTIPLIER } from "$lib/objects/NeedleStrikeData";
 import { SKILL_DATA } from "$lib/objects/SkillData";
+import { TOOL_DATA } from "$lib/objects/ToolData";
+
 import type { SkillToolStatInfo } from "$lib/types/SkillToolStatInfo";
-import type { SkillType } from "$lib/enums/SkillType";
+import { SkillType } from "$lib/enums/SkillType";
 import { SKILL_ICONS } from "$lib/objects/SkillIcons";
+import type { SkillInfo, ToolInfo } from "$lib/types/ItemInfo";
+import { TOOL_ICONS } from "$lib/objects/ToolIcons";
 
 export class DamageCalculator {
     // Attributes
@@ -26,6 +31,7 @@ export class DamageCalculator {
 
     // Skill & Tool Damage Stats
     skillDamageInfoDetail: Array<SkillToolStatInfo>;
+    toolDamageInfoDetail: Array<SkillToolStatInfo>;
 
     // Constructors
     constructor(loadout: UserLoadout) { 
@@ -41,6 +47,7 @@ export class DamageCalculator {
         this.totalNeedleStrikeDamage = $derived(RoundToEven(this.needleStrikeDamage * this.needleStrikeHits));
 
         this.skillDamageInfoDetail = $derived(this.CalculateSpellDamage());
+        this.toolDamageInfoDetail = $derived(this.CalculateToolDamage());
     }
 
     // Methods
@@ -74,9 +81,9 @@ export class DamageCalculator {
         let data: Array<SkillToolStatInfo> = [];
 
         this.loadout.equippedSkills.forEach(skillType => {
-            let skillData = SKILL_DATA[skillType];
-            let base = skillData.damage[this.loadout.needle];
-            let modifier = 1;
+            let skillData: SkillInfo = SKILL_DATA[skillType];
+            let base: number = skillData.damage[this.loadout.needle];
+            let modifier: number = 1;
 
             if (this.loadout.crest === CrestType.Shaman) modifier += 0.4;
             if (this.loadout.HasTool(ToolType.VoltFilament)) modifier += 0.25;
@@ -84,10 +91,14 @@ export class DamageCalculator {
             let modifiedDamage = RoundToEven(base * modifier);
             if (this.loadout.HasTool(ToolType.VoltFilament)) modifiedDamage += 15;
 
+            let subtext = skillData.hits > 1 ? ` (${skillData.hits} HITS)` : "";
+            if (skillType ===  SkillType.RuneRage)
+                subtext = " (1st HIT)";
+
             data.push({
                 name: skillData.name,
                 damage: modifiedDamage,
-                subtext: skillData.hits > 1 ? ` (${skillData.hits} HITS)` : "",
+                subtext: subtext,
                 type: skillType,
                 iconPath: SKILL_ICONS[skillType],
             });
@@ -98,27 +109,25 @@ export class DamageCalculator {
     CalculateToolDamage() {
         let data: Array<SkillToolStatInfo> = [];
 
+        this.loadout.equippedTools.forEach(toolType => {
+            if (!TOOLS_WITH_DAMAGE.includes(toolType)) return;
+
+            let toolData: ToolInfo = TOOL_DATA[toolType];
+            let subtext = toolData.hits > 1 ? ` (${toolData.hits} HITS)` : "";
+
+            if (toolType === ToolType.RosaryCannon) subtext = " (MAX)";
+            else if (toolType === ToolType.Flintslate || toolType === ToolType.PollipPouch) subtext = ` (${toolData.hits} TICKS)`;
+            else if (toolType === ToolType.FleaBrew) subtext = ` (EMPTY)`;
+            // else if (toolType === ToolType.VoltVesselBola || toolType === ToolType.VoltVesselSpear) subtext = ` (${toolData.hits - 1} ZAPS)`;
+
+            data.push({
+                name: toolData.name,
+                damage: toolData.damage[this.loadout.needle],
+                subtext: subtext,
+                type: toolType,
+                iconPath: TOOL_ICONS[toolType], 
+            });
+        });
         return data;
     }
 }
-
-
-
-
-    // let active_crest_type = $derived(user_info.active_crest_info.type);
-    // let active_passive = $derived(user_info.crest_passive_is_active);
-    // let needle_info = $derived(NEEDLE_DAMAGE[user_info.current_needle]);
-    // let has_barbed_bracelet = $derived(user_info.current_tool_loadout.has(ToolType.BarbedBracelet));
-    // let has_flintslate = $derived(user_info.current_tool_loadout.has(ToolType.Flintslate));
-
-    // let calculated_damage: number = $derived(CalculateDamage(false));
-    // let calculated_challenge_damage: number = $derived(CalculateDamage(true));
-
-    // function CalculateDamage(is_challenge: boolean) {
-    //     let base: number = needle_info.damage;
-    //     let modifier: number = 1;
-
-
-
-    //     return RoundToEven(base * modifier);
-    // }

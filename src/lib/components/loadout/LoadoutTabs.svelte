@@ -39,10 +39,10 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <!-- Tab Buttons -->
-<ul class="flex flex-wrap border-b-1 border-b-white/50 pb-4 2xl:pb-0">
+<ul class="flex flex-wrap border-b border-b-white/50 pb-4 2xl:pb-0">
     {#each tabItems as tab}
         <li class="m-2 2xl:ml-0 2xl:mb-0" >
-            <div class="border-1 border-gray-400 hover:border-white transition-colors duration-250 rounded-xl 2xl:rounded-b-none flex p-2 flex-row place-items-center" onclick={handleClick(tab.value)}>
+            <div class="border border-gray-400 hover:border-white transition-colors duration-250 rounded-xl 2xl:rounded-b-none flex p-2 flex-row place-items-center" class:border-white={activeTabValue === tab.value} onclick={handleClick(tab.value)} >
                 <img class="size-8 md:size-10" src={`${LOADOUT_TAB_ICONS[tab.value]}`} alt="tab icon" draggable="false"/>
                 <p class="px-2 text-lg lg:text-xl">{tab.label}</p>
             </div>  

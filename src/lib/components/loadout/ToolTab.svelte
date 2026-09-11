@@ -31,6 +31,7 @@
     }
 
     function HandleToolClick(e: any, toolType: ToolType) {
+        if (loadoutTabMenuState.IsToolDisabled(toolType)) return;   // ignore disabled tools
         if (loadoutTabMenuState.selectedTool === toolType)
             loadoutTabMenuState.EquipTool();
         else
@@ -68,6 +69,7 @@
                             isSelected={loadoutTabMenuState.selectedTool === info.toolType} 
                             isGlow={data.HasTool(info.toolType)} 
                             isVenom={data.HasTool(ToolType.PollipPouch)}
+                            isDisabled={loadoutTabMenuState.IsToolDisabled(info.toolType)}
                             />
                     </div>
                 </div>
@@ -89,6 +91,7 @@
                             isSelected={loadoutTabMenuState.selectedTool === toolType} 
                             isGlow={data.HasTool(toolType)} 
                             isVenom={data.HasTool(ToolType.PollipPouch)}
+                            isDisabled={loadoutTabMenuState.IsToolDisabled(toolType)}
                             />
                     </div>
                 </div>
@@ -109,6 +112,7 @@
                             isSelected={loadoutTabMenuState.selectedTool === toolType} 
                             isGlow={data.HasTool(toolType)} 
                             isVenom={data.HasTool(ToolType.PollipPouch)}
+                            isDisabled={loadoutTabMenuState.IsToolDisabled(toolType)}
                             />
                     </div>
                 </div>
