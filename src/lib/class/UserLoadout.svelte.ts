@@ -15,11 +15,13 @@ import { CrestMenuState } from "./CrestMenuState.svelte";
 import { LoadoutTabMenuState } from "./LoadoutTabMenuState.svelte";
 import { SvelteSet } from "svelte/reactivity";
 import { DamageCalculator } from "./DamageCalculator.svelte";
+import { EnemiesSectionState } from "./EnemiesSectionState.svelte";
 
 export class UserLoadout {
     // Page States
     crestMenuState: CrestMenuState = new CrestMenuState(this);
     loadoutTabMenuState: LoadoutTabMenuState = new LoadoutTabMenuState(this);
+    enemiesSectionState: EnemiesSectionState = new EnemiesSectionState(this);
 
     // Attributes
     crest: CrestType = $state(CrestType.Hunter2);

@@ -1,0 +1,4663 @@
+[
+  {
+    "id": 5,
+    "type": "UNIT",
+    "name": "Aknid",
+    "hp": [
+      15,
+      60
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Aknid-AspidCollector.png",
+    "art": "Aknid-AspidCollector4267219.png"
+  },
+  {
+    "id": 137,
+    "type": "UNIT",
+    "name": "Alita",
+    "hp": [
+      80,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Alita-CoralHunter.png",
+    "art": "Alita-CoralHunter4267124.png"
+  },
+  {
+    "id": 96,
+    "type": "UNIT",
+    "name": "Barnak",
+    "hp": [
+      35,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Barnak-SwampBarnacle4266933.png",
+    "art": "Barnak-SwampBarnacle.png"
+  },
+  {
+    "id": 11,
+    "type": "UNIT",
+    "name": "Beastfly",
+    "hp": [
+      15,
+      60
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Beastfly-BoneFlyer.png",
+    "art": "Beastfly-BoneFlyer4267155.png"
+  },
+  {
+    "id": 11,
+    "type": "UNIT",
+    "name": "Beastfly (Savage Beastfly)",
+    "hp": [
+      15,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Beastfly-BoneFlyer.png",
+    "art": "Beastfly-BoneFlyer4267155.png"
+  },
+  {
+    "id": 25,
+    "type": "BOSS",
+    "name": "Bell Beast",
+    "hp": [
+      150,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "BellBeast-BoneBeast4266856.png",
+    "art": "BellBeast-BoneBeast.png"
+  },
+  {
+    "id": 226,
+    "type": "BOSS",
+    "name": "Bell Eater",
+    "hp": [
+      800,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.35,
+      1.2,
+      1,
+      1
+    ],
+    "icon": "BellEater-GiantCentipede.png",
+    "art": "BellEater-GiantCentipede4267217.png"
+  },
+  {
+    "id": 82,
+    "type": "UNIT",
+    "name": "Bloatroach",
+    "hp": [
+      80,
+      160
+    ],
+    "modifiers": [
+      1.75,
+      1.2,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "Bloatroach-BloatRoach.png",
+    "art": "Bloatroach-BloatRoach4267166.png"
+  },
+  {
+    "id": 194,
+    "type": "BOSS",
+    "name": "Broodmother",
+    "hp": [
+      700,
+      0
+    ],
+    "modifiers": [
+      1.35,
+      1.1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Broodmother-SlabFlyBroodmother4266942.png",
+    "art": "Broodmother-SlabFlyBroodmother.png"
+  },
+  {
+    "id": 49,
+    "type": "UNIT",
+    "name": "Brushflit",
+    "hp": [
+      1,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Brushflit-FieldsFlockFlyers.png",
+    "art": "Brushflit-FieldsFlockFlyers4267294.png"
+  },
+  {
+    "id": 70,
+    "type": "UNIT",
+    "name": "Burning Bug",
+    "hp": [
+      90,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "BurningBug-FarmerWisp4267034.png",
+    "art": "BurningBug-FarmerWisp.png"
+  },
+  {
+    "id": 13,
+    "type": "UNIT",
+    "name": "Caranid",
+    "hp": [
+      14,
+      56
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "Caranid-BoneCircler4266876.png",
+    "art": "Caranid-BoneCircler.png"
+  },
+  {
+    "id": 155,
+    "type": "UNIT",
+    "name": "Choir Bellbearer",
+    "hp": [
+      35,
+      70
+    ],
+    "modifiers": [
+      1.4,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirBellbearer-Pilgrim03Song4267057.png",
+    "art": "ChoirBellbearer-Pilgrim03Song.png"
+  },
+  {
+    "id": 161,
+    "type": "MINIBOSS",
+    "name": "Choir Clapper",
+    "hp": [
+      230,
+      460
+    ],
+    "modifiers": [
+      1.5,
+      1.15,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "ChoirClapper-SongHeavySentry4266859.png",
+    "art": "ChoirClapper-SongHeavySentry.png"
+  },
+  {
+    "id": 157,
+    "type": "UNIT",
+    "name": "Choir Elder",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirElder-PilgrimStomperSong.png",
+    "art": "ChoirElder-PilgrimStomperSong4267283.png"
+  },
+  {
+    "id": 156,
+    "type": "UNIT",
+    "name": "Choir Flyer",
+    "hp": [
+      30,
+      60
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirFlyer-Pilgrim04Song.png",
+    "art": "ChoirFlyer-Pilgrim04Song4267314.png"
+  },
+  {
+    "id": 156,
+    "type": "UNIT",
+    "name": "Choir Flyer (Fighting Second Sentinel)",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirFlyer-Pilgrim04Song.png",
+    "art": "ChoirFlyer-Pilgrim04Song4267314.png"
+  },
+  {
+    "id": 154,
+    "type": "UNIT",
+    "name": "Choir Hornhead",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirHornhead-Pilgrim02Song4267082.png",
+    "art": "ChoirHornhead-Pilgrim02Song.png"
+  },
+  {
+    "id": 154,
+    "type": "UNIT",
+    "name": "Choir Hornhead (Fighting Second Sentinel)",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirHornhead-Pilgrim02Song4267082.png",
+    "art": "ChoirHornhead-Pilgrim02Song.png"
+  },
+  {
+    "id": 153,
+    "type": "UNIT",
+    "name": "Choir Pouncer",
+    "hp": [
+      30,
+      60
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.8,
+      0.8
+    ],
+    "icon": "ChoirPouncer-Pilgrim01Song4266878.png",
+    "art": "ChoirPouncer-Pilgrim01Song.png"
+  },
+  {
+    "id": 158,
+    "type": "UNIT",
+    "name": "Choristor",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Choristor-SongPilgrim034266977.png",
+    "art": "Choristor-SongPilgrim03.png"
+  },
+  {
+    "id": 158,
+    "type": "UNIT",
+    "name": "Choristor (Fighting Garmond)",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Choristor-SongPilgrim034266977.png",
+    "art": "Choristor-SongPilgrim03.png"
+  },
+  {
+    "id": 162,
+    "type": "UNIT",
+    "name": "Clawmaiden",
+    "hp": [
+      48,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Clawmaiden-SongHandmaiden4267069.png",
+    "art": "Clawmaiden-SongHandmaiden.png"
+  },
+  {
+    "id": 214,
+    "type": "BOSS",
+    "name": "Clover Dancers",
+    "hp": [
+      1160,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.25,
+      1.15,
+      1,
+      1
+    ],
+    "icon": "CloverDancers-CloverDancer.png",
+    "art": "CloverDancers-CloverDancer4267109.png"
+  },
+  {
+    "id": 209,
+    "type": "UNIT",
+    "name": "Cloverstag",
+    "hp": [
+      62,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.5,
+      1,
+      1,
+      1
+    ],
+    "icon": "Cloverstag-Cloverstag.png",
+    "art": "Cloverstag-Cloverstag4267234.png"
+  },
+  {
+    "id": 177,
+    "type": "UNIT",
+    "name": "Cogwork Choirbug",
+    "hp": [
+      35,
+      70
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkChoirbug-SongAutomaton014267074.png",
+    "art": "CogworkChoirbug-SongAutomaton01.png"
+  },
+  {
+    "id": 180,
+    "type": "MINIBOSS",
+    "name": "Cogwork Clapper",
+    "hp": [
+      145,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "icon": "CogworkClapper-SongAutomatonBall4266895.png",
+    "art": "CogworkClapper-SongAutomatonBall.png"
+  },
+  {
+    "id": 180,
+    "type": "MINIBOSS",
+    "name": "Cogwork Clapper (Pair)",
+    "hp": [
+      190,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "icon": "CogworkClapper-SongAutomatonBall4266895.png",
+    "art": "CogworkClapper-SongAutomatonBall.png"
+  },
+  {
+    "id": 178,
+    "type": "UNIT",
+    "name": "Cogwork Cleanser",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkCleanser-SongAutomaton02.png",
+    "art": "CogworkCleanser-SongAutomaton024267150.png"
+  },
+  {
+    "id": 174,
+    "type": "UNIT",
+    "name": "Cogwork Crawler",
+    "hp": [
+      35,
+      70
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkCrawler-SongAutomatonGoomba4267028.png",
+    "art": "CogworkCrawler-SongAutomatonGoomba.png"
+  },
+  {
+    "id": 181,
+    "type": "BOSS",
+    "name": "Cogwork Dancers",
+    "hp": [
+      810,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkDancers-ClockworkDancer.png",
+    "art": "CogworkDancers-ClockworkDancer4267321.png"
+  },
+  {
+    "id": 179,
+    "type": "UNIT",
+    "name": "Cogwork Defender",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkDefender-SongAutomatonShield.png",
+    "art": "CogworkDefender-SongAutomatonShield4267218.png"
+  },
+  {
+    "id": 173,
+    "type": "UNIT",
+    "name": "Cogwork Hauler",
+    "hp": [
+      20,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkHauler-UnderstoreAutomatonEX.png.png",
+    "art": "CogworkHauler-UnderstoreAutomatonEX.png"
+  },
+  {
+    "id": 176,
+    "type": "UNIT",
+    "name": "Cogwork Spine",
+    "hp": [
+      21,
+      42
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkSpine-SongAutomatonFlySpike.png"
+  },
+  {
+    "id": 172,
+    "type": "UNIT",
+    "name": "Cogwork Underfly",
+    "hp": [
+      4,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CogworkUnderfly-UnderstoreAutomaton4266974.png",
+    "art": "CogworkUnderfly-UnderstoreAutomaton.png"
+  },
+  {
+    "id": 175,
+    "type": "UNIT",
+    "name": "Cogworker",
+    "hp": [
+      28,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Cogworker-SongAutomatonFly4266929.png",
+    "art": "Cogworker-SongAutomatonFly.png"
+  },
+  {
+    "id": 124,
+    "type": "UNIT",
+    "name": "Conchfly",
+    "hp": [
+      45,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Conchfly-CoralConchDriller.png",
+    "art": "Conchfly-CoralConchDriller4267164.png"
+  },
+  {
+    "id": 124,
+    "type": "UNIT",
+    "name": "Conchfly (Coral Tower)",
+    "hp": [
+      55,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Conchfly-CoralConchDriller.png",
+    "art": "Conchfly-CoralConchDriller4267164.png"
+  },
+  {
+    "id": 120,
+    "type": "UNIT",
+    "name": "Coral Furm",
+    "hp": [
+      45,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "CoralFurm-CoralSpikeGoomba4266986.png",
+    "art": "CoralFurm-CoralSpikeGoomba.png"
+  },
+  {
+    "id": 138,
+    "type": "MINIBOSS",
+    "name": "Corrcrust Karaka",
+    "hp": [
+      105,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      0.9
+    ],
+    "icon": "CorrcrustKaraka-CoralBubbleBrute4267020.png",
+    "art": "CorrcrustKaraka-CoralBubbleBrute.png"
+  },
+  {
+    "id": 37,
+    "type": "MINIBOSS",
+    "name": "Covetous Pilgrim",
+    "hp": [
+      85,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.7,
+      0.6,
+      0.6
+    ],
+    "icon": "CovetousPilgrim-RosaryPilgrim4266887.png",
+    "art": "CovetousPilgrim-RosaryPilgrim.png"
+  },
+  {
+    "id": 37,
+    "type": "MINIBOSS",
+    "name": "Covetous Pilgrim (Bilewater)",
+    "hp": [
+      130,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.7,
+      0.6,
+      0.6
+    ],
+    "icon": "CovetousPilgrim-RosaryPilgrim4266887.png",
+    "art": "CovetousPilgrim-RosaryPilgrim.png"
+  },
+  {
+    "id": 48,
+    "type": "MINIBOSS",
+    "name": "Craggler",
+    "hp": [
+      200,
+      400
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Craggler-RoofCrab.png",
+    "art": "Craggler-RoofCrab4267181.png"
+  },
+  {
+    "id": 47,
+    "type": "UNIT",
+    "name": "Cragglite",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Cragglite-SmallCrab4266941.png",
+    "art": "Cragglite-SmallCrab.png"
+  },
+  {
+    "id": 72,
+    "type": "UNIT",
+    "name": "Craw",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1,
+      0.74,
+      0.74,
+      0.74,
+      0.74
+    ],
+    "icon": "Craw-Crow.png",
+    "art": "Craw-Crow4267116.png"
+  },
+  {
+    "id": 75,
+    "type": "UNIT",
+    "name": "Craw Juror",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      0.95,
+      0.95,
+      0.95
+    ],
+    "icon": "CrawJuror-CrowmanJurorTiny4266952.png",
+    "art": "CrawJuror-CrowmanJurorTiny.png"
+  },
+  {
+    "id": 78,
+    "type": "BOSS",
+    "name": "Crawfather",
+    "hp": [
+      1300,
+      0
+    ],
+    "modifiers": [
+      1.6,
+      1.25,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Crawfather.png",
+    "art": "Crawfather4267260.png"
+  },
+  {
+    "id": 139,
+    "type": "BOSS",
+    "name": "Crust King Khann",
+    "hp": [
+      1650,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.35,
+      1.15,
+      1,
+      0.95
+    ],
+    "icon": "CrustKingKhann-CoralKing.png",
+    "art": "CrustKingKhann-CoralKing4267201.png"
+  },
+  {
+    "id": 127,
+    "type": "UNIT",
+    "name": "Crustcrag",
+    "hp": [
+      80,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Crustcrag-CoralGoombaLarge.png",
+    "art": "Crustcrag-CoralGoombaLarge4267288.png"
+  },
+  {
+    "id": 126,
+    "type": "UNIT",
+    "name": "Crustcrawler",
+    "hp": [
+      25,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Crustcrawler-CoralGoombas.png",
+    "art": "Crustcrawler-CoralGoombas4267226.png"
+  },
+  {
+    "id": 45,
+    "type": "UNIT",
+    "name": "Deep Diver",
+    "hp": [
+      90,
+      180
+    ],
+    "modifiers": [
+      1.25,
+      0.95,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "icon": "DeepDiver-DockCharger4267102.png",
+    "art": "DeepDiver-DockCharger.png"
+  },
+  {
+    "id": 87,
+    "type": "BOSS",
+    "name": "Disgraced Chef Lugoli",
+    "hp": [
+      600,
+      1200
+    ],
+    "modifiers": [
+      1.7,
+      1.2,
+      1,
+      0.9,
+      0.85
+    ],
+    "icon": "DisgracedChefLugoli-RoachkeeperChef4266971.png",
+    "art": "DisgracedChefLugoli-RoachkeeperChef.png"
+  },
+  {
+    "id": 142,
+    "type": "UNIT",
+    "name": "Drapefly",
+    "hp": [
+      25,
+      50
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "icon": "Drapefly-CitadelBat4266860.png",
+    "art": "Drapefly-CitadelBat.png"
+  },
+  {
+    "id": 143,
+    "type": "UNIT",
+    "name": "Drapelord",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "icon": "Drapelord-CitadelBatLarge.png",
+    "art": "Drapelord-CitadelBatLarge4267153.png"
+  },
+  {
+    "id": 144,
+    "type": "UNIT",
+    "name": "Drapemite",
+    "hp": [
+      25,
+      50
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "icon": "Drapemite-MiteHeavy.png",
+    "art": "Drapemite-MiteHeavy4267174.png"
+  },
+  {
+    "id": 65,
+    "type": "UNIT",
+    "name": "Dreg Catcher",
+    "hp": [
+      21,
+      42
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "DregCatcher-FarmerCatcher.png",
+    "art": "DregCatcher-FarmerCatcher4267320.png"
+  },
+  {
+    "id": 65,
+    "type": "UNIT",
+    "name": "Dreg Catcher (Greymoor Arena)",
+    "hp": [
+      0,
+      74
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "DregCatcher-FarmerCatcher.png",
+    "art": "DregCatcher-FarmerCatcher4267320.png"
+  },
+  {
+    "id": 167,
+    "type": "UNIT",
+    "name": "Dreg Husk",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "icon": "DregHusk-SongThreadedHusk.png",
+    "art": "DregHusk-SongThreadedHusk4267167.png"
+  },
+  {
+    "id": 167,
+    "type": "UNIT",
+    "name": "Dreg Husk (The Unravelled)",
+    "hp": [
+      65,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "DregHusk-SongThreadedHusk.png",
+    "art": "DregHusk-SongThreadedHusk4267167.png"
+  },
+  {
+    "id": 168,
+    "type": "UNIT",
+    "name": "Dregwheel",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "icon": "Dregwheel-SongThreadedHuskSpin.png",
+    "art": "Dregwheel-SongThreadedHuskSpin4267306.png"
+  },
+  {
+    "id": 195,
+    "type": "UNIT",
+    "name": "Driftlin",
+    "hp": [
+      4,
+      8
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Driftlin-PeaksDrifter.png",
+    "art": "Driftlin-PeaksDrifter4267356.png"
+  },
+  {
+    "id": 122,
+    "type": "UNIT",
+    "name": "Driznarga",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Driznarga-CoralConchShooterHeavy4267078.png",
+    "art": "Driznarga-CoralConchShooterHeavy.png"
+  },
+  {
+    "id": 121,
+    "type": "UNIT",
+    "name": "Driznit",
+    "hp": [
+      29,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.85,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "icon": "Driznit-CoralConchShooter4267013.png",
+    "art": "Driznit-CoralConchShooter.png"
+  },
+  {
+    "id": 97,
+    "type": "UNIT",
+    "name": "Ductsucker",
+    "hp": [
+      100,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1.1,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "Ductsucker-SwampDuctsucker4267008.png",
+    "art": "Ductsucker-SwampDuctsucker.png"
+  },
+  {
+    "id": 32,
+    "type": "UNIT",
+    "name": "Elder Pilgrim",
+    "hp": [
+      30,
+      120
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "ElderPilgrim-Pilgrim054267009.png",
+    "art": "ElderPilgrim-Pilgrim05.png"
+  },
+  {
+    "id": 32,
+    "type": "UNIT",
+    "name": "Elder Pilgrim (Fighting Shakra)",
+    "hp": [
+      0,
+      105
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "ElderPilgrim-Pilgrim054267009.png",
+    "art": "ElderPilgrim-Pilgrim05.png"
+  },
+  {
+    "id": 152,
+    "type": "UNIT",
+    "name": "Envoy",
+    "hp": [
+      38,
+      76
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Envoy-SongPilgrim01.png",
+    "art": "Envoy-SongPilgrim014267324.png"
+  },
+  {
+    "id": 152,
+    "type": "UNIT",
+    "name": "Envoy (Fighting Second Sentinel)",
+    "hp": [
+      48,
+      96
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Envoy-SongPilgrim01.png",
+    "art": "Envoy-SongPilgrim014267324.png"
+  },
+  {
+    "id": 213,
+    "type": "UNIT",
+    "name": "Escalion",
+    "hp": [
+      100,
+      0
+    ],
+    "modifiers": [
+      1.35,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "Escalion-GrasshopperFly4266963.png",
+    "art": "Escalion-GrasshopperFly.png"
+  },
+  {
+    "id": 71,
+    "type": "BOSS",
+    "name": "Father of the Flame",
+    "hp": [
+      650,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "FatheroftheFlame-WispPyreEffigy.png",
+    "art": "FatheroftheFlame-WispPyreEffigy4267131.png"
+  },
+  {
+    "id": 50,
+    "type": "UNIT",
+    "name": "Fertid",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "Fertid-FieldsGoomba4266883.png",
+    "art": "Fertid-FieldsGoomba.png"
+  },
+  {
+    "id": 233,
+    "type": "BOSS",
+    "name": "First Sinner",
+    "hp": [
+      1300,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.25,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "FirstSinner-FirstWeaver4266910.png",
+    "art": "FirstSinner-FirstWeaver.png"
+  },
+  {
+    "id": 51,
+    "type": "UNIT",
+    "name": "Flapping Fertid",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "FlappingFertid-FieldsFlyer.png",
+    "art": "FlappingFertid-FieldsFlyer4267152.png"
+  },
+  {
+    "id": 21,
+    "type": "MINIBOSS",
+    "name": "Flintbeetle",
+    "hp": [
+      95,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.7,
+      0.7
+    ],
+    "icon": "Flintbeetle-RockRoller.png",
+    "art": "Flintbeetle-RockRoller4267108.png"
+  },
+  {
+    "id": 43,
+    "type": "UNIT",
+    "name": "Flintflame Flyer",
+    "hp": [
+      60,
+      120
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      0.9,
+      0.85,
+      0.85
+    ],
+    "icon": "FlintflameFlyer-DockBomber4266909.png",
+    "art": "FlintflameFlyer-DockBomber.png"
+  },
+  {
+    "id": 42,
+    "type": "UNIT",
+    "name": "Flintstone Flyer",
+    "hp": [
+      30,
+      120
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.85,
+      0.85
+    ],
+    "icon": "FlintstoneFlyer-DockFlyer.png",
+    "art": "FlintstoneFlyer-DockFlyer4267143.png"
+  },
+  {
+    "id": 42,
+    "type": "UNIT",
+    "name": "Flintstone Flyer (Cutscene)",
+    "hp": [
+      20,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "FlintstoneFlyer-DockFlyer.png",
+    "art": "FlintstoneFlyer-DockFlyer4267143.png"
+  },
+  {
+    "id": 63,
+    "type": "UNIT",
+    "name": "Fluttermite",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Fluttermite-Mitefly4266951.png",
+    "art": "Fluttermite-Mitefly.png"
+  },
+  {
+    "id": 46,
+    "type": "BOSS",
+    "name": "Forebrothers Signis & Gron",
+    "hp": [
+      1240,
+      0
+    ],
+    "modifiers": [
+      1.6,
+      1.25,
+      1,
+      0.95,
+      0.9
+    ],
+    "icon": "ForebrothersSignis&Gron-DockGuardThrower.png",
+    "art": "ForebrothersSignis&Gron-DockGuardThrower4267289.png"
+  },
+  {
+    "id": 52,
+    "type": "BOSS",
+    "name": "Fourth Chorus",
+    "hp": [
+      500,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.65,
+      0.5,
+      0.45,
+      0.45
+    ],
+    "icon": "FourthChorus-SongGolem4266912.png",
+    "art": "FourthChorus-SongGolem.png"
+  },
+  {
+    "id": 190,
+    "type": "UNIT",
+    "name": "Freshfly",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Freshfly-SlabFlySmallFresh.png",
+    "art": "Freshfly-SlabFlySmallFresh4267130.png"
+  },
+  {
+    "id": 111,
+    "type": "UNIT",
+    "name": "Furm",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "Furm-BellGoomba.png",
+    "art": "Furm-BellGoomba4267146.png"
+  },
+  {
+    "id": 108,
+    "type": "UNIT",
+    "name": "Gahlia",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "Gahlia-BloomPuncher.png",
+    "art": "Gahlia-BloomPuncher4267239.png"
+  },
+  {
+    "id": 218,
+    "type": "UNIT",
+    "name": "Gargant Gloom",
+    "hp": [
+      200,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.5,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "GargantGloom-GloomBeast.png",
+    "art": "GargantGloom-GloomBeast4267136.png"
+  },
+  {
+    "id": 229,
+    "type": "BOSS",
+    "name": "Garmond & Zaza",
+    "hp": [
+      460,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Garmond&Zaza-Garmond_Zaza4266959.png",
+    "art": "Garmond&Zaza-Garmond_Zaza.png"
+  },
+  {
+    "id": 223,
+    "type": "UNIT",
+    "name": "Garpid",
+    "hp": [
+      999999,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Garpid-Centipede_Trap4267022.png",
+    "art": "Garpid-Centipede_trap.png"
+  },
+  {
+    "id": 145,
+    "type": "UNIT",
+    "name": "Giant Drapemite",
+    "hp": [
+      100,
+      200
+    ],
+    "modifiers": [
+      1.25,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "GiantDrapemite-UnderstoreMiteGiant4267056.png",
+    "art": "GiantDrapemite-UnderstoreMiteGiant.png"
+  },
+  {
+    "id": 217,
+    "type": "UNIT",
+    "name": "Gloomsac",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "Gloomsac-Gloomfly4267084.png",
+    "art": "Gloomsac-Gloomfly.png"
+  },
+  {
+    "id": 236,
+    "type": "BOSS",
+    "name": "Grand Mother Silk",
+    "hp": [
+      1224,
+      0
+    ],
+    "modifiers": [
+      1.1,
+      1,
+      1,
+      0.88,
+      0.88
+    ],
+    "icon": "GrandMotherSilk-SilkBoss4266984.png",
+    "art": "GrandMotherSilk-SilkBoss.png"
+  },
+  {
+    "id": 160,
+    "type": "UNIT",
+    "name": "Grand Reed",
+    "hp": [
+      130,
+      260
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "GrandReed-SongReedGrand.png",
+    "art": "GrandReed-SongReedGrand4267120.png"
+  },
+  {
+    "id": 125,
+    "type": "BOSS",
+    "name": "Great Conchfly",
+    "hp": [
+      400,
+      0
+    ],
+    "modifiers": [
+      1.3,
+      1,
+      0.825,
+      0.7,
+      0.6
+    ],
+    "icon": "GreatConchfly-CoralConchDrillerGiant.png",
+    "art": "GreatConchfly-CoralConchDrillerGiant4267185.png"
+  },
+  {
+    "id": 95,
+    "type": "BOSS",
+    "name": "Groal the Great",
+    "hp": [
+      650,
+      0
+    ],
+    "modifiers": [
+      1.8,
+      1.2,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "GroaltheGreat-SwampShaman.png",
+    "art": "GroaltheGreat-SwampShaman4267139.png"
+  },
+  {
+    "id": 24,
+    "type": "UNIT",
+    "name": "Grom",
+    "hp": [
+      30,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Grom-BoneWorm4266926.png",
+    "art": "Grom-BoneWorm.png"
+  },
+  {
+    "id": 23,
+    "type": "UNIT",
+    "name": "Gromling",
+    "hp": [
+      30,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Gromling-CryptWorm4266930.png",
+    "art": "Gromling-CryptWorm.png"
+  },
+  {
+    "id": 192,
+    "type": "UNIT",
+    "name": "Guardfly",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      0.85,
+      0.85,
+      0.85
+    ],
+    "icon": "Guardfly-SlabFlyMid.png",
+    "art": "Guardfly-SlabFlyMid4267193.png"
+  },
+  {
+    "id": 59,
+    "type": "BOSS",
+    "name": "Gurr the Outcast",
+    "hp": [
+      1000,
+      0
+    ],
+    "modifiers": [
+      1.7,
+      1.25,
+      "\"",
+      1,
+      0.95
+    ],
+    "icon": "GurrtheOutcast-BoneHunterTrapper4267097.png",
+    "art": "GurrtheOutcast-BoneHunterTrapper.png"
+  },
+  {
+    "id": 16,
+    "type": "UNIT",
+    "name": "Hardbone Elder",
+    "hp": [
+      110,
+      220
+    ],
+    "modifiers": [
+      1.75,
+      1.4,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "HardboneElder-BoneHopperGiant.png",
+    "art": "HardboneElder-BoneHopperGiant4267292.png"
+  },
+  {
+    "id": 16,
+    "type": "UNIT",
+    "name": "Hardbone Elder (First Room)",
+    "hp": [
+      90,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.4,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "HardboneElder-BoneHopperGiant.png",
+    "art": "HardboneElder-BoneHopperGiant4267292.png"
+  },
+  {
+    "id": 15,
+    "type": "UNIT",
+    "name": "Hardbone Hopper",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "HardboneHopper-BoneHopper4266989.png",
+    "art": "HardboneHopper-BoneHopper.png"
+  },
+  {
+    "id": 20,
+    "type": "UNIT",
+    "name": "Hoker",
+    "hp": [
+      15,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.55,
+      0.55,
+      0.8
+    ],
+    "icon": "Hoker-SpineFloater4267093.png",
+    "art": "Hoker-SpineFloater.png"
+  },
+  {
+    "id": 227,
+    "type": "MINIBOSS",
+    "name": "Huge Flea",
+    "hp": [
+      200,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "HugeFlea-GiantFlea.png",
+    "art": "HugeFlea-GiantFlea4267157.png"
+  },
+  {
+    "id": 224,
+    "type": "UNIT",
+    "name": "Imoba",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1.1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Imoba-SpikeLazyFlyer.png",
+    "art": "Imoba-SpikeLazyFlyer4267310.png"
+  },
+  {
+    "id": 118,
+    "type": "UNIT",
+    "name": "Judge",
+    "hp": [
+      75,
+      150
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Judge-CoralJudge4267104.png",
+    "art": "Judge-CoralJudge.png"
+  },
+  {
+    "id": 128,
+    "type": "UNIT",
+    "name": "Kai",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Kai-CoralSwimmerFat4267076.png",
+    "art": "Kai-CoralSwimmerFat.png"
+  },
+  {
+    "id": 134,
+    "type": "UNIT",
+    "name": "Kakri",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "Kakri-CoralFlyer4267092.png",
+    "art": "Kakri-CoralFlyer.png"
+  },
+  {
+    "id": 136,
+    "type": "MINIBOSS",
+    "name": "Karak Gor",
+    "hp": [
+      140,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      0.9
+    ],
+    "icon": "KarakGor-CoralBrawler.png",
+    "art": "KarakGor-CoralBrawler4267247.png"
+  },
+  {
+    "id": 133,
+    "type": "UNIT",
+    "name": "Karaka",
+    "hp": [
+      90,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "Karaka-CoralWarrior.png",
+    "art": "Karaka-CoralWarrior4267144.png"
+  },
+  {
+    "id": 10,
+    "type": "UNIT",
+    "name": "Kilik",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.76,
+      0.9,
+      1
+    ],
+    "icon": "Kilik-BoneCrawler.png",
+    "art": "Kilik-BoneCrawler4267231.png"
+  },
+  {
+    "id": 211,
+    "type": "UNIT",
+    "name": "Kindanir",
+    "hp": [
+      55,
+      0
+    ],
+    "modifiers": [
+      1.35,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "Kindanir-GrasshopperChild4267103.png",
+    "art": "Kindanir-GrasshopperChild.png"
+  },
+  {
+    "id": 235,
+    "type": "BOSS",
+    "name": "Lace",
+    "hp": [
+      250,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Lace.png",
+    "art": "Lace4267252.png"
+  },
+  {
+    "id": 235,
+    "type": "BOSS",
+    "name": "Lace 2",
+    "hp": [
+      800,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.2,
+      1,
+      0.85,
+      0.85
+    ],
+    "icon": "Lace.png",
+    "art": "Lace4267252.png"
+  },
+  {
+    "id": 183,
+    "type": "UNIT",
+    "name": "Lampbearer",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Lampbearer-Lightbearer4266866.png",
+    "art": "Lampbearer-Lightbearer.png"
+  },
+  {
+    "id": 60,
+    "type": "MINIBOSS",
+    "name": "Last Claw",
+    "hp": [
+      130,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "LastClaw-BoneHunterChief4266997.png",
+    "art": "LastClaw-BoneHunterChief.png"
+  },
+  {
+    "id": 119,
+    "type": "BOSS",
+    "name": "Last Judge",
+    "hp": [
+      720,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "icon": "LastJudge4266877.png",
+    "art": "LastJudge.png"
+  },
+  {
+    "id": 40,
+    "type": "UNIT",
+    "name": "Lavalarga",
+    "hp": [
+      85,
+      170
+    ],
+    "modifiers": [
+      1.75,
+      1.2,
+      1.1,
+      0.9,
+      0.9
+    ],
+    "icon": "Lavalarga-TarSlugHuge4267081.png",
+    "art": "Lavalarga-TarSlugHuge.png"
+  },
+  {
+    "id": 39,
+    "type": "UNIT",
+    "name": "Lavalug",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Lavalug-TarSlug.png",
+    "art": "Lavalug-TarSlug4267241.png"
+  },
+  {
+    "id": 204,
+    "type": "UNIT",
+    "name": "Leaf Glider",
+    "hp": [
+      1,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "LeafGlider-LilypadFly.png",
+    "art": "LeafGlider-LilypadFly4267278.png"
+  },
+  {
+    "id": 205,
+    "type": "UNIT",
+    "name": "Leaf Roller",
+    "hp": [
+      42,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.25,
+      1,
+      1,
+      1
+    ],
+    "icon": "LeafRoller-GrassGoomba.png",
+    "art": "LeafRoller-GrassGoomba4267274.png"
+  },
+  {
+    "id": 230,
+    "type": "BOSS",
+    "name": "Lost Garmond",
+    "hp": [
+      0,
+      900
+    ],
+    "modifiers": [
+      2,
+      1.5,
+      1.2,
+      1.1,
+      1
+    ],
+    "icon": "LostGarmond-Garmond.png",
+    "art": "LostGarmond-Garmond4267350.png"
+  },
+  {
+    "id": 237,
+    "type": "BOSS",
+    "name": "Lost Lace",
+    "hp": [
+      1800,
+      0
+    ],
+    "modifiers": [
+      1.7,
+      1.25,
+      1.1,
+      1.05,
+      0.95
+    ],
+    "icon": "LostLace.png",
+    "art": "Lost_Lace.png"
+  },
+  {
+    "id": 165,
+    "type": "UNIT",
+    "name": "Maestro",
+    "hp": [
+      65,
+      130
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "icon": "Maestro-SongPilgrimMaestro.png",
+    "art": "Maestro-SongPilgrimMaestro4267204.png"
+  },
+  {
+    "id": 19,
+    "type": "UNIT",
+    "name": "Marrowmaw",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "icon": "Marrowmaw-BoneThumper.png",
+    "art": "Marrowmaw-BoneThumper4267210.png"
+  },
+  {
+    "id": 19,
+    "type": "UNIT",
+    "name": "Marrowmaw (Moss Grotto)",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.75,
+      0.65,
+      0.6
+    ],
+    "icon": "Marrowmaw-BoneThumper.png",
+    "art": "Marrowmaw-BoneThumper4267210.png"
+  },
+  {
+    "id": 2,
+    "type": "UNIT",
+    "name": "Massive Mossgrub",
+    "hp": [
+      80,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "MassiveMossgrub-MossBoneCrawlerFat4266867.png",
+    "art": "MassiveMossgrub-MossBoneCrawlerFat.png"
+  },
+  {
+    "id": 18,
+    "type": "UNIT",
+    "name": "Mawling",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Mawling-BoneRoller4266918.png",
+    "art": "Mawling-BoneRoller.png"
+  },
+  {
+    "id": 163,
+    "type": "UNIT",
+    "name": "Memoria",
+    "hp": [
+      70,
+      140
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Memoria-ArboriumKeeper4266967.png",
+    "art": "Memoria-ArboriumKeeper.png"
+  },
+  {
+    "id": 164,
+    "type": "UNIT",
+    "name": "Minister",
+    "hp": [
+      60,
+      120
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Minister-SongAdministrator4266976.png",
+    "art": "Minister-SongAdministrator.png"
+  },
+  {
+    "id": 90,
+    "type": "UNIT",
+    "name": "Miremite",
+    "hp": [
+      30,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Miremite-SwampGoomba4267071.png",
+    "art": "Miremite-SwampGoomba.png"
+  },
+  {
+    "id": 62,
+    "type": "UNIT",
+    "name": "Mite",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Mite.png",
+    "art": "Mite4267230.png"
+  },
+  {
+    "id": 64,
+    "type": "UNIT",
+    "name": "Mitemother",
+    "hp": [
+      60,
+      120
+    ],
+    "modifiers": [
+      1.2,
+      0.95,
+      0.95,
+      0.95,
+      0.95
+    ],
+    "icon": "Mitemother-GnatGiant.png",
+    "art": "Mitemother-GnatGiant4267229.png"
+  },
+  {
+    "id": 196,
+    "type": "UNIT",
+    "name": "Mnemonid",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Mnemonid-CrystalDrifter.png",
+    "art": "Mnemonid-CrystalDrifter4267129.png"
+  },
+  {
+    "id": 197,
+    "type": "UNIT",
+    "name": "Mnemonord",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "Mnemonord-CrystalDrifterGiant4266919.png",
+    "art": "Mnemonord-CrystalDrifterGiant.png"
+  },
+  {
+    "id": 68,
+    "type": "BOSS",
+    "name": "Moorwing",
+    "hp": [
+      600,
+      1200
+    ],
+    "modifiers": [
+      2,
+      1.3,
+      1,
+      0.9,
+      0.85
+    ],
+    "icon": "Moorwing-VampireGnat.png",
+    "art": "Moorwing-VampireGnat4267224.png"
+  },
+  {
+    "id": 170,
+    "type": "UNIT",
+    "name": "Mortician",
+    "hp": [
+      95,
+      190
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Mortician-SongCreeper4266927.png",
+    "art": "Mortician-SongCreeper.png"
+  },
+  {
+    "id": 4,
+    "type": "BOSS",
+    "name": "Moss Mother (Act 3 Moss Grotto)",
+    "hp": [
+      0,
+      700
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "MossMother-MossboneMother.png",
+    "art": "MossMother-MossboneMother4267313.png"
+  },
+  {
+    "id": 4,
+    "type": "BOSS",
+    "name": "Moss Mother (Ruined Chapel)",
+    "hp": [
+      120,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "MossMother-MossboneMother.png",
+    "art": "MossMother-MossboneMother4267313.png"
+  },
+  {
+    "id": 4,
+    "type": "BOSS",
+    "name": "Moss Mother (Weavenest Atla)",
+    "hp": [
+      350,
+      700
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "icon": "MossMother-MossboneMother.png",
+    "art": "MossMother-MossboneMother4267313.png"
+  },
+  {
+    "id": 1,
+    "type": "UNIT",
+    "name": "Mossgrub",
+    "hp": [
+      10,
+      20
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Mossgrub-MossBoneCrawler.png",
+    "art": "Mossgrub-MossBoneCrawler4267158.png"
+  },
+  {
+    "id": 3,
+    "type": "UNIT",
+    "name": "Mossmir",
+    "hp": [
+      12,
+      24
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Mossmir-MossBoneFly4266903.png",
+    "art": "Mossmir-MossBoneFly.png"
+  },
+  {
+    "id": 89,
+    "type": "UNIT",
+    "name": "Mothleaf Lagnia",
+    "hp": [
+      1,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "MothleafLagnia-SwampDrifter4267100.png",
+    "art": "MothleafLagnia-SwampDrifter.png"
+  },
+  {
+    "id": 81,
+    "type": "UNIT",
+    "name": "Muckroach",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Muckroach-Dustroach4267063.png",
+    "art": "Muckroach-Dustroach.png"
+  },
+  {
+    "id": 81,
+    "type": "UNIT",
+    "name": "Muckroach (In Cage)",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Muckroach-Dustroach4267063.png",
+    "art": "Muckroach-Dustroach.png"
+  },
+  {
+    "id": 208,
+    "type": "UNIT",
+    "name": "Nuphar",
+    "hp": [
+      70,
+      0
+    ],
+    "modifiers": [
+      1.35,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "Nuphar-LilypadTrap4267042.png",
+    "art": "Nuphar-LilypadTrap.png"
+  },
+  {
+    "id": 110,
+    "type": "BOSS",
+    "name": "Nyleth",
+    "hp": [
+      1250,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.25,
+      1.1,
+      1,
+      0.91
+    ],
+    "icon": "Nyleth-FlowerQueen.png",
+    "art": "Nyleth-FlowerQueen4267354.png"
+  },
+  {
+    "id": 36,
+    "type": "UNIT",
+    "name": "Overgrown Pilgrim",
+    "hp": [
+      23,
+      92
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "OvergrownPilgrim-PilgrimMossSpitter4266946.png",
+    "art": "OvergrownPilgrim-PilgrimMossSpitter.png"
+  },
+  {
+    "id": 210,
+    "type": "BOSS",
+    "name": "Palestag",
+    "hp": [
+      480,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.15,
+      1,
+      1
+    ],
+    "icon": "Palestag-CloverstagWhite4267105.png",
+    "art": "Palestag-CloverstagWhite.png"
+  },
+  {
+    "id": 206,
+    "type": "UNIT",
+    "name": "Pendra",
+    "hp": [
+      22,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Pendra-HornetDragonfly.png",
+    "art": "Pendra-HornetDragonfly4267186.png"
+  },
+  {
+    "id": 207,
+    "type": "UNIT",
+    "name": "Pendragor",
+    "hp": [
+      70,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Pendragor-DragonflyLarge4267054.png",
+    "art": "Pendragor-DragonflyLarge.png"
+  },
+  {
+    "id": 206,
+    "type": "UNIT",
+    "name": "Pendra (First Room)",
+    "hp": [
+      35,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Pendra-HornetDragonfly.png",
+    "art": "Pendra-HornetDragonfly4267186.png"
+  },
+  {
+    "id": 188,
+    "type": "UNIT",
+    "name": "Penitent",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.25,
+      1,
+      1,
+      1
+    ],
+    "icon": "Penitent-SlabPrisonerLeaperNew.png",
+    "art": "Penitent-SlabPrisonerLeaperNew4267317.png"
+  },
+  {
+    "id": 106,
+    "type": "UNIT",
+    "name": "Phacia",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.75,
+      0.75,
+      0.75
+    ],
+    "icon": "Phacia-FlowerDrifter4266968.png",
+    "art": "Phacia-FlowerDrifter.png"
+  },
+  {
+    "id": 234,
+    "type": "BOSS",
+    "name": "Phantom",
+    "hp": [
+      650,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.85,
+      0.75,
+      0.7
+    ],
+    "icon": "Phantom.png",
+    "art": "Phantom4267162.png"
+  },
+  {
+    "id": 113,
+    "type": "UNIT",
+    "name": "Pharlid",
+    "hp": [
+      25,
+      50
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "icon": "Pharlid-BladeSpider.png",
+    "art": "Pharlid-BladeSpider4267251.png"
+  },
+  {
+    "id": 114,
+    "type": "UNIT",
+    "name": "Pharlid Diver",
+    "hp": [
+      25,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.7,
+      0.7
+    ],
+    "icon": "PharlidDiver-BladeSpiderHang.png",
+    "art": "PharlidDiver-BladeSpiderHang4267338.png"
+  },
+  {
+    "id": 30,
+    "type": "UNIT",
+    "name": "Pilgrim Bellbearer",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimBellbearer-PilgrimBellThrower4267068.png",
+    "art": "PilgrimBellbearer-PilgrimBellThrower.png"
+  },
+  {
+    "id": 26,
+    "type": "UNIT",
+    "name": "Pilgrim Groveller",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimGroveller-Pilgrim034266861.png",
+    "art": "PilgrimGroveller-Pilgrim03.png"
+  },
+  {
+    "id": 35,
+    "type": "UNIT",
+    "name": "Pilgrim Guide",
+    "hp": [
+      30,
+      120
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimGuide-PilgrimStaffWeilder.png",
+    "art": "PilgrimGuide-PilgrimStaffWeilder4267307.png"
+  },
+  {
+    "id": 34,
+    "type": "UNIT",
+    "name": "Pilgrim Hiker",
+    "hp": [
+      30,
+      90
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimHiker4266923.png",
+    "art": "PilgrimHiker.png"
+  },
+  {
+    "id": 28,
+    "type": "UNIT",
+    "name": "Pilgrim Hornfly",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimHornfly-Pilgrim04.png",
+    "art": "PilgrimHornfly-Pilgrim044266899.png"
+  },
+  {
+    "id": 29,
+    "type": "UNIT",
+    "name": "Pilgrim Hulk",
+    "hp": [
+      30,
+      120
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimHulk-Pilgrim02.png",
+    "art": "PilgrimHulk-Pilgrim024267332.png"
+  },
+  {
+    "id": 27,
+    "type": "UNIT",
+    "name": "Pilgrim Pouncer",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "PilgrimPouncer-Pilgrim01.png",
+    "art": "PilgrimPouncer-Pilgrim014267122.png"
+  },
+  {
+    "id": 231,
+    "type": "BOSS",
+    "name": "Pinstress",
+    "hp": [
+      910,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.1,
+      1,
+      1,
+      0.9
+    ],
+    "icon": "PinstressBoss4267030.png",
+    "art": "PinstressBoss.png"
+  },
+  {
+    "id": 201,
+    "type": "UNIT",
+    "name": "Plasmid",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      0.9
+    ],
+    "icon": "Plasmid-BoneWormBlueBlood4266872.png",
+    "art": "Plasmid-BoneWormBlueBlood.png"
+  },
+  {
+    "id": 202,
+    "type": "UNIT",
+    "name": "Plasmidas",
+    "hp": [
+      80,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "Plasmidas-BoneWormBlueTurret.png",
+    "art": "Plasmidas-BoneWormBlueTurret4267276.png"
+  },
+  {
+    "id": 203,
+    "type": "BOSS",
+    "name": "Plasmified Zango",
+    "hp": [
+      1000,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.25,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "PlasmifiedZango-BlueAssistant4266965.png",
+    "art": "PlasmifiedZango-BlueAssistant.png"
+  },
+  {
+    "id": 123,
+    "type": "UNIT",
+    "name": "Pokenabbin",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Pokenabbin-CoralConchStabber.png",
+    "art": "Pokenabbin-CoralConchStabber4267127.png"
+  },
+  {
+    "id": 107,
+    "type": "UNIT",
+    "name": "Pollenica",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.75,
+      0.75,
+      1
+    ],
+    "icon": "Pollenica-BloomShooter4267178.png",
+    "art": "Pollenica-BloomShooter.png"
+  },
+  {
+    "id": 98,
+    "type": "UNIT",
+    "name": "Pond Skipper",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "PondSkipper-PondSkater.png",
+    "art": "PondSkipper-PondSkater4267236.png"
+  },
+  {
+    "id": 99,
+    "type": "UNIT",
+    "name": "Pondcatcher",
+    "hp": [
+      25,
+      100
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "Pondcatcher-PilgrimFisher4266944.png",
+    "art": "Pondcatcher-PilgrimFisher.png"
+  },
+  {
+    "id": 99,
+    "type": "UNIT",
+    "name": "Pondcatcher (Fighting Shakra)",
+    "hp": [
+      0,
+      88
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "icon": "Pondcatcher-PilgrimFisher4266944.png",
+    "art": "Pondcatcher-PilgrimFisher.png"
+  },
+  {
+    "id": 189,
+    "type": "UNIT",
+    "name": "Puny Penitent",
+    "hp": [
+      40,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.25,
+      1,
+      1,
+      1
+    ],
+    "icon": "PunyPenitent-SlabPrisonerFlyNew.png",
+    "art": "PunyPenitent-SlabPrisonerFlyNew4267161.png"
+  },
+  {
+    "id": 125,
+    "type": "BOSS",
+    "name": "Raging Conchfly",
+    "hp": [
+      820,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1.05,
+      0.85,
+      0.75
+    ],
+    "icon": "GreatConchfly-CoralConchDrillerGiant.png",
+    "art": "GreatConchfly-CoralConchDrillerGiant4267185.png"
+  },
+  {
+    "id": 159,
+    "type": "UNIT",
+    "name": "Reed",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1,
+      1,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Reed-SongReed4267007.png",
+    "art": "Reed-SongReed.png"
+  },
+  {
+    "id": 22,
+    "type": "MINIBOSS",
+    "name": "Rhinogrund",
+    "hp": [
+      150,
+      300
+    ],
+    "modifiers": [
+      1.3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Rhinogrund-Rhino.png",
+    "art": "Rhinogrund-Rhino4267198.png"
+  },
+  {
+    "id": 83,
+    "type": "UNIT",
+    "name": "Roachcatcher",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Roachcatcher-RoachfeederShort.png",
+    "art": "Roachcatcher-RoachfeederShort4267345.png"
+  },
+  {
+    "id": 83,
+    "type": "UNIT",
+    "name": "Roachcatcher (Greymoor Arena)",
+    "hp": [
+      0,
+      140
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Roachcatcher-RoachfeederShort.png",
+    "art": "Roachcatcher-RoachfeederShort4267345.png"
+  },
+  {
+    "id": 84,
+    "type": "UNIT",
+    "name": "Roachfeeder",
+    "hp": [
+      45,
+      90
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Roachfeeder-RoachfeederTall.png",
+    "art": "Roachfeeder-RoachfeederTall4267154.png"
+  },
+  {
+    "id": 85,
+    "type": "UNIT",
+    "name": "Roachkeeper",
+    "hp": [
+      100,
+      200
+    ],
+    "modifiers": [
+      1.3,
+      1.1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Roachkeeper4267094.png",
+    "art": "Roachkeeper.png"
+  },
+  {
+    "id": 86,
+    "type": "MINIBOSS",
+    "name": "Roachserver",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Roachserver-RoachkeeperChefTiny.png",
+    "art": "Roachserver-RoachkeeperChefTiny4267325.png"
+  },
+  {
+    "id": 12,
+    "type": "BOSS",
+    "name": "Savage Beastfly (Chapel of the Beast)",
+    "hp": [
+      550,
+      1100
+    ],
+    "modifiers": [
+      1.7,
+      1.2,
+      1,
+      0.9,
+      0.8
+    ],
+    "icon": "SavageBeastfly-BoneFlyerGiant4266890.png",
+    "art": "SavageBeastfly-BoneFlyerGiant.png"
+  },
+  {
+    "id": 12,
+    "type": "BOSS",
+    "name": "Savage Beastfly (Far Fields)",
+    "hp": [
+      650,
+      1300
+    ],
+    "modifiers": [
+      1.7,
+      1.2,
+      1,
+      0.9,
+      0.8
+    ],
+    "icon": "SavageBeastfly-BoneFlyerGiant4266890.png",
+    "art": "SavageBeastfly-BoneFlyerGiant.png"
+  },
+  {
+    "id": 191,
+    "type": "UNIT",
+    "name": "Scabfly",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.75,
+      0.85,
+      1
+    ],
+    "icon": "Scabfly-SlabFlySmall4266955.png",
+    "art": "Scabfly-SlabFlySmall.png"
+  },
+  {
+    "id": 184,
+    "type": "UNIT",
+    "name": "Scrollreader",
+    "hp": [
+      100,
+      200
+    ],
+    "modifiers": [
+      1.3,
+      1.1,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "icon": "Scrollreader-Scrollkeeper.png",
+    "art": "Scrollreader-Scrollkeeper4267151.png"
+  },
+  {
+    "id": 166,
+    "type": "BOSS",
+    "name": "Second Sentinel",
+    "hp": [
+      800,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1.1,
+      0.85,
+      0.7,
+      0.65
+    ],
+    "icon": "SecondSentinel-SongKnight4266882.png",
+    "art": "SecondSentinel-SongKnight.png"
+  },
+  {
+    "id": 199,
+    "type": "UNIT",
+    "name": "Servitor Boran",
+    "hp": [
+      70,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "ServitorBoran-WeaverServitorLarge.png",
+    "art": "ServitorBoran-WeaverServitorLarge4267207.png"
+  },
+  {
+    "id": 198,
+    "type": "UNIT",
+    "name": "Servitor Ignim",
+    "hp": [
+      1,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "ServitorIgnim-WeaverServitor4266935.png",
+    "art": "ServitorIgnim-WeaverServitor.png"
+  },
+  {
+    "id": 216,
+    "type": "UNIT",
+    "name": "Shadow Charger",
+    "hp": [
+      80,
+      0
+    ],
+    "modifiers": [
+      2.5,
+      1.5,
+      1.3,
+      1,
+      1
+    ],
+    "icon": "ShadowCharger-AbyssCrawlerLarge.png",
+    "art": "ShadowCharger-AbyssCrawlerLarge4267341.png"
+  },
+  {
+    "id": 215,
+    "type": "UNIT",
+    "name": "Shadow Creeper",
+    "hp": [
+      40,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "ShadowCreeper-AbyssCrawler.png",
+    "art": "ShadowCreeper-AbyssCrawler4267287.png"
+  },
+  {
+    "id": 228,
+    "type": "BOSS",
+    "name": "Shakra",
+    "hp": [
+      600,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.15,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "Shakra.png",
+    "art": "Shakra4267195.png"
+  },
+  {
+    "id": 115,
+    "type": "UNIT",
+    "name": "Shardillard",
+    "hp": [
+      50,
+      0
+    ],
+    "modifiers": [
+      1.3,
+      1.1,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "icon": "Shardillard-ShellFossilMimic.png",
+    "art": "Shardillard-ShellFossilMimic4267128.png"
+  },
+  {
+    "id": 100,
+    "type": "UNIT",
+    "name": "Shellwood Gnat",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "ShellwoodGnat4266879.png",
+    "art": "ShellwoodGnat.png"
+  },
+  {
+    "id": 100,
+    "type": "UNIT",
+    "name": "Shellwood Gnat (Inner)",
+    "hp": [
+      10,
+      30
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "ShellwoodGnat4266879.png",
+    "art": "ShellwoodGnat.png"
+  },
+  {
+    "id": 109,
+    "type": "BOSS",
+    "name": "Shrine Guardian Seth",
+    "hp": [
+      1185,
+      0
+    ],
+    "modifiers": [
+      1.7,
+      1.25,
+      1.1,
+      1,
+      0.95
+    ],
+    "icon": "ShrineGuardianSeth-Seth.png",
+    "art": "ShrineGuardianSeth-Seth4267346.png"
+  },
+  {
+    "id": 66,
+    "type": "UNIT",
+    "name": "Silk Snipper",
+    "hp": [
+      29,
+      58
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.7,
+      0.55,
+      0.55
+    ],
+    "icon": "SIlkSnipper-FarmerScissors.png",
+    "art": "SilkSnipper-FarmerScissors4267197.png"
+  },
+  {
+    "id": 105,
+    "type": "BOSS",
+    "name": "Sister Splinter",
+    "hp": [
+      310,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.675,
+      0.575,
+      0.55,
+      0.5
+    ],
+    "icon": "SisterSplinter-SplinterQueen4267090.png",
+    "art": "SisterSplinter-SplinterQueen.png"
+  },
+  {
+    "id": 55,
+    "type": "UNIT",
+    "name": "Skarr Scout",
+    "hp": [
+      30,
+      90
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.75,
+      0.75,
+      0.7
+    ],
+    "icon": "SkarrScout-BoneHunterChild.png",
+    "art": "SkarrScout-BoneHunterChild4267265.png"
+  },
+  {
+    "id": 56,
+    "type": "UNIT",
+    "name": "Skarr Stalker",
+    "hp": [
+      75,
+      150
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SkarrStalker-BoneHunter.png",
+    "art": "SkarrStalker-BoneHunter4267125.png"
+  },
+  {
+    "id": 58,
+    "type": "MINIBOSS",
+    "name": "Skarrgard",
+    "hp": [
+      150,
+      300
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.65,
+      0.65,
+      0.65
+    ],
+    "icon": "Skarrgard-BoneHunterThrow4266949.png",
+    "art": "Skarrgard-BoneHunterThrow.png"
+  },
+  {
+    "id": 53,
+    "type": "UNIT",
+    "name": "Skarrlid",
+    "hp": [
+      20,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Skarrlid-BoneHunterTiny4266983.png",
+    "art": "Skarrlid-BoneHunterTiny.png"
+  },
+  {
+    "id": 61,
+    "type": "BOSS",
+    "name": "Skarrsinger Karmelita",
+    "hp": [
+      1500,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.25,
+      1.1,
+      1,
+      0.95
+    ],
+    "icon": "SkarrsingerKarmelita-HunterQueen4266960.png",
+    "art": "SkarrsingerKarmelita-HunterQueen.png"
+  },
+  {
+    "id": 54,
+    "type": "UNIT",
+    "name": "Skarrwing",
+    "hp": [
+      20,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Skarrwing-BoneHunterBuzzer4266932.png",
+    "art": "Skarrwing-BoneHunterBuzzer.png"
+  },
+  {
+    "id": 8,
+    "type": "UNIT",
+    "name": "Skull Brute",
+    "hp": [
+      30,
+      60
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.75,
+      0.6,
+      0.6
+    ],
+    "icon": "SkullBrute-BoneGoombaLarge.png",
+    "art": "SkullBrute-BoneGoombaLarge4267337.png"
+  },
+  {
+    "id": 6,
+    "type": "UNIT",
+    "name": "Skull Scuttler",
+    "hp": [
+      15,
+      60
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "SkullScuttler-BoneGoomba.png",
+    "art": "SkullScuttler-BoneGoomba4267240.png"
+  },
+  {
+    "id": 9,
+    "type": "BOSS",
+    "name": "Skull Tyrant",
+    "hp": [
+      450,
+      900
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.9,
+      0.85,
+      0.8
+    ],
+    "icon": "SkullTyrant-SkullKing.png",
+    "art": "SkullTyrant-SkullKing4267291.png"
+  },
+  {
+    "id": 7,
+    "type": "UNIT",
+    "name": "Skullwing",
+    "hp": [
+      15,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SKullwing-BoneGoombaBounceFly.png",
+    "art": "Skullwing-BoneGoombaBounceFly4267300.png"
+  },
+  {
+    "id": 80,
+    "type": "UNIT",
+    "name": "Slubberlug",
+    "hp": [
+      22,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Slubberlug-DustroachPollywog.png",
+    "art": "Slubberlug-DustroachPollywog4267269.png"
+  },
+  {
+    "id": 41,
+    "type": "UNIT",
+    "name": "Smelt Shoveller",
+    "hp": [
+      30,
+      120
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      0.85,
+      0.85
+    ],
+    "icon": "SmeltShoveller-DockWorker.png",
+    "art": "SmeltShoveller-DockWorker4267311.png"
+  },
+  {
+    "id": 41,
+    "type": "UNIT",
+    "name": "Smelt Shoveller (Cutscene)",
+    "hp": [
+      20,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SmeltShoveller-DockWorker.png",
+    "art": "SmeltShoveller-DockWorker4267311.png"
+  },
+  {
+    "id": 44,
+    "type": "UNIT",
+    "name": "Smokerock Sifter",
+    "hp": [
+      40,
+      160
+    ],
+    "modifiers": [
+      1.75,
+      1,
+      1,
+      0.85,
+      0.85
+    ],
+    "icon": "SmokerockSifter-ShieldDockWorker4266996.png",
+    "art": "SmokerockSifter-ShieldDockWorker.png"
+  },
+  {
+    "id": 38,
+    "type": "UNIT",
+    "name": "Snitchfly",
+    "hp": [
+      35,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      0.9,
+      0.8,
+      0.65,
+      0.65
+    ],
+    "icon": "Snitchfly-RosaryThief.png",
+    "art": "Snitchfly-RosaryThief4267159.png"
+  },
+  {
+    "id": 57,
+    "type": "UNIT",
+    "name": "Spear Skarr",
+    "hp": [
+      75,
+      150
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SpearSkarr-BoneHunterFly.png",
+    "art": "SpearSkarr-BoneHunterFly4267308.png"
+  },
+  {
+    "id": 129,
+    "type": "UNIT",
+    "name": "Spinebeak Kai",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SpinebeakKai-PokeSwimmer4266897.png",
+    "art": "SpinebeakKai-PokeSwimmer.png"
+  },
+  {
+    "id": 92,
+    "type": "UNIT",
+    "name": "Spit Squit",
+    "hp": [
+      55,
+      110
+    ],
+    "modifiers": [
+      1.5,
+      1.1,
+      1,
+      0.9,
+      0.9
+    ],
+    "icon": "SpitSquit-SwampMosquitoSkinny4267039.png",
+    "art": "SpitSquit-SwampMosquitoSkinny.png"
+  },
+  {
+    "id": 102,
+    "type": "UNIT",
+    "name": "Splinter",
+    "hp": [
+      25,
+      100
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Splinter-StickInsect.png",
+    "art": "Splinter-StickInsect4267160.png"
+  },
+  {
+    "id": 104,
+    "type": "UNIT",
+    "name": "Splinterbark",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Splinterbark-StickInsectFlyer4267029.png",
+    "art": "Splinterbark-StickInsectFlyer.png"
+  },
+  {
+    "id": 103,
+    "type": "UNIT",
+    "name": "Splinterhorn",
+    "hp": [
+      25,
+      100
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Splinterhorn-StickInsectCharger.png",
+    "art": "Splinterhorn-StickInsectCharger4267322.png"
+  },
+  {
+    "id": 74,
+    "type": "UNIT",
+    "name": "Squatcraw",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Squatcraw-CrowmanDagger4266922.png",
+    "art": "Squatcraw-CrowmanDagger.png"
+  },
+  {
+    "id": 77,
+    "type": "UNIT",
+    "name": "Squatcraw Juror",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "SquatcrawJuror-CrowmanDaggerJuror4267091.png",
+    "art": "SquatcrawJuror-CrowmanDaggerJuror.png"
+  },
+  {
+    "id": 117,
+    "type": "UNIT",
+    "name": "Squirrm",
+    "hp": [
+      12,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.8,
+      0.6,
+      0.6
+    ],
+    "icon": "Squirrm-CoralJudgeChild4266931.png",
+    "art": "Squirrm-CoralJudgeChild.png"
+  },
+  {
+    "id": 130,
+    "type": "UNIT",
+    "name": "Steelspine Kai",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SteelspineKai-SpikeSwimmer4267023.png",
+    "art": "SteelspineKai-SpikeSwimmer.png"
+  },
+  {
+    "id": 93,
+    "type": "UNIT",
+    "name": "Stilkin",
+    "hp": [
+      45,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Stilkin-SwampMuckman.png",
+    "art": "Stilkin-SwampMuckman4267328.png"
+  },
+  {
+    "id": 94,
+    "type": "UNIT",
+    "name": "Stilkin Trapper",
+    "hp": [
+      45,
+      0
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "StilkinTrapper-SwampMuckmanTall.png",
+    "art": "StilkinTrapper-SwampMuckmanTall4267304.png"
+  },
+  {
+    "id": 221,
+    "type": "BOSS",
+    "name": "Summoned Saviour",
+    "hp": [
+      500,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.3,
+      1.05,
+      0.9,
+      0.85
+    ],
+    "icon": "SummonedSaviour-Abyss_Mass.png",
+    "art": "SummonedSaviour-AbyssMass.png"
+  },
+  {
+    "id": 169,
+    "type": "UNIT",
+    "name": "Surgeon",
+    "hp": [
+      75,
+      0
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Surgeon-SongPilgrim02.png",
+    "art": "Surgeon-SongPilgrim024267257.png"
+  },
+  {
+    "id": 91,
+    "type": "UNIT",
+    "name": "Swamp Squit",
+    "hp": [
+      35,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "SwampSquit-SwampMosquito.png",
+    "art": "SwampSquit-SwampMosquito4267148.png"
+  },
+  {
+    "id": 73,
+    "type": "UNIT",
+    "name": "Tallcraw",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "Tallcraw-Crowman4267049.png",
+    "art": "Tallcraw-Crowman.png"
+  },
+  {
+    "id": 76,
+    "type": "UNIT",
+    "name": "Tallcraw Juror",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1.1,
+      1,
+      0.9,
+      0.9,
+      0.9
+    ],
+    "icon": "TallcrawJuror-CrowmanJuror.png",
+    "art": "TallcrawJuror-CrowmanJuror4267297.png"
+  },
+  {
+    "id": 17,
+    "type": "UNIT",
+    "name": "Tarmite",
+    "hp": [
+      25,
+      50
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.73,
+      0.73
+    ],
+    "icon": "Tarmite-BoneSpitter.png",
+    "art": "Tarmite-BoneSpitter4267333.png"
+  },
+  {
+    "id": 17,
+    "type": "UNIT",
+    "name": "Tarmite (Savage Beastfly)",
+    "hp": [
+      30,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.9,
+      0.73,
+      0.73
+    ],
+    "icon": "Tarmite-BoneSpitter.png",
+    "art": "Tarmite-BoneSpitter4267333.png"
+  },
+  {
+    "id": 171,
+    "type": "BOSS",
+    "name": "The Unravelled",
+    "hp": [
+      1000,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      0.9,
+      0.85
+    ],
+    "icon": "TheUnravelled-ConductorBoss.png",
+    "art": "TheUnravelled-ConductorBoss4267194.png"
+  },
+  {
+    "id": 67,
+    "type": "UNIT",
+    "name": "Thread Raker",
+    "hp": [
+      50,
+      100
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.6,
+      0.55,
+      0.55
+    ],
+    "icon": "ThreadRaker-FarmerCentipede.png",
+    "art": "ThreadRaker-FarmerCentipede4267284.png"
+  },
+  {
+    "id": 67,
+    "type": "UNIT",
+    "name": "Thread Raker (Greymoor Arena)",
+    "hp": [
+      0,
+      150
+    ],
+    "modifiers": [
+      1,
+      0.75,
+      0.6,
+      0.55,
+      0.55
+    ],
+    "icon": "ThreadRaker-FarmerCentipede.png",
+    "art": "ThreadRaker-FarmerCentipede4267284.png"
+  },
+  {
+    "id": 187,
+    "type": "BOSS",
+    "name": "Tormented Trobbio",
+    "hp": [
+      950,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1,
+      0.9,
+      0.8,
+      0.75
+    ],
+    "icon": "TormentedTrobbio4266979.png",
+    "art": "TormentedTrobbio.png"
+  },
+  {
+    "id": 186,
+    "type": "BOSS",
+    "name": "Trobbio",
+    "hp": [
+      700,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1,
+      0.9,
+      0.8,
+      0.8
+    ],
+    "icon": "Trobbio4266991.png",
+    "art": "Trobbio4267244.png"
+  },
+  {
+    "id": 151,
+    "type": "UNIT",
+    "name": "Undercrank",
+    "hp": [
+      70,
+      140
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Undercrank-UnderstoreHeavy.png",
+    "art": "Undercrank-UnderstoreHeavy4267326.png"
+  },
+  {
+    "id": 150,
+    "type": "UNIT",
+    "name": "Underloft",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      0.9
+    ],
+    "icon": "Underloft-UnderstoreThrower.png",
+    "art": "Underloft-UnderstoreThrower4267279.png"
+  },
+  {
+    "id": 149,
+    "type": "UNIT",
+    "name": "Underpoke",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      1,
+      1,
+      0.9
+    ],
+    "icon": "Underpoke-UnderstorePoker.png",
+    "art": "Underpoke-UnderstorePoker4267275.png"
+  },
+  {
+    "id": 147,
+    "type": "UNIT",
+    "name": "Underscrub",
+    "hp": [
+      27,
+      54
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "icon": "Underscrub-Pilgrim03Understore.png",
+    "art": "Underscrub-Pilgrim03Understore4267331.png"
+  },
+  {
+    "id": 148,
+    "type": "UNIT",
+    "name": "Undersweep",
+    "hp": [
+      35,
+      70
+    ],
+    "modifiers": [
+      1.25,
+      1,
+      0.8,
+      0.75,
+      0.75
+    ],
+    "icon": "Undersweep-PilgrimStaffUnderstore.png",
+    "art": "Undersweep-PilgrimStaffUnderstore4267250.png"
+  },
+  {
+    "id": 146,
+    "type": "UNIT",
+    "name": "Underworker",
+    "hp": [
+      30,
+      60
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Underworker-UnderstoreSmall4267087.png",
+    "art": "Underworker-UnderstoreSmall.png"
+  },
+  {
+    "id": 182,
+    "type": "UNIT",
+    "name": "Vaultborn",
+    "hp": [
+      40,
+      80
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Vaultborn-SongScholarAcolyte4267096.png",
+    "art": "Vaultborn-SongScholarAcolyte.png"
+  },
+  {
+    "id": 185,
+    "type": "UNIT",
+    "name": "Vaultkeeper",
+    "hp": [
+      70,
+      140
+    ],
+    "modifiers": [
+      1.1,
+      1,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Vaultkeeper-Scholar.png",
+    "art": "Vaultkeeper-Scholar4267173.png"
+  },
+  {
+    "id": 212,
+    "type": "UNIT",
+    "name": "Verdanir",
+    "hp": [
+      100,
+      0
+    ],
+    "modifiers": [
+      1.35,
+      1.15,
+      1,
+      1,
+      1
+    ],
+    "icon": "Verdanir-GrasshopperSlasher.png",
+    "art": "Verdanir-GrasshopperSlasher4267349.png"
+  },
+  {
+    "id": 14,
+    "type": "UNIT",
+    "name": "Vicious Caranid",
+    "hp": [
+      27,
+      108
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.6,
+      0.6,
+      0.5
+    ],
+    "icon": "ViciousCaranid-BoneCirclerVicious.png",
+    "art": "ViciousCaranid-BoneCirclerVicious4267336.png"
+  },
+  {
+    "id": 14,
+    "type": "UNIT",
+    "name": "Vicious Caranid (Savage Beastfly)",
+    "hp": [
+      25,
+      0
+    ],
+    "modifiers": [
+      1,
+      0.9,
+      0.6,
+      0.6,
+      0.5
+    ],
+    "icon": "ViciousCaranid-BoneCirclerVicious.png",
+    "art": "ViciousCaranid-BoneCirclerVicious4267336.png"
+  },
+  {
+    "id": 220,
+    "type": "UNIT",
+    "name": "Void Mass",
+    "hp": [
+      190,
+      0
+    ],
+    "modifiers": [
+      1.75,
+      1.25,
+      1.1,
+      1,
+      1
+    ],
+    "icon": "VoidMass-BlackThreadCore.png",
+    "art": "VoidMass-BlackThreadCore4267169.png"
+  },
+  {
+    "id": 141,
+    "type": "BOSS",
+    "name": "Voltvyrm",
+    "hp": [
+      550,
+      0
+    ],
+    "modifiers": [
+      1.8,
+      1.2,
+      1,
+      0.9,
+      0.8
+    ],
+    "icon": "Voltvyrm-ZapCoreEnemy.png",
+    "art": "Voltvyrm-ZapCoreEnemy4267202.png"
+  },
+  {
+    "id": 193,
+    "type": "UNIT",
+    "name": "Wardenfly",
+    "hp": [
+      70,
+      140
+    ],
+    "modifiers": [
+      1.6,
+      1.1,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "Wardenfly-SlabFlyLarge4267003.png",
+    "art": "Wardenfly-SlabFlyLarge.png"
+  },
+  {
+    "id": 193,
+    "type": "UNIT",
+    "name": "Wardenfly (With Cage)",
+    "hp": [
+      64,
+      0
+    ],
+    "modifiers": [
+      1.3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Wardenfly-SlabFlyLarge4267003.png",
+    "art": "Wardenfly-SlabFlyLarge.png"
+  },
+  {
+    "id": 140,
+    "type": "BOSS",
+    "name": "Watcher at the Edge",
+    "hp": [
+      900,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1.2,
+      1,
+      0.9,
+      0.85
+    ],
+    "icon": "WatcherattheEdge-CoralWarriorGrey.png",
+    "art": "WatcherattheEdge-CoralWarriorGrey4267135.png"
+  },
+  {
+    "id": 232,
+    "type": "BOSS",
+    "name": "Widow",
+    "hp": [
+      360,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Widow-SpinnerBoss.png",
+    "art": "Widow-SpinnerBoss4267339.png"
+  },
+  {
+    "id": 112,
+    "type": "UNIT",
+    "name": "Winged Furm",
+    "hp": [
+      30,
+      60
+    ],
+    "modifiers": [
+      1.2,
+      1,
+      0.75,
+      0.7,
+      0.7
+    ],
+    "icon": "WingedFurm-BellFly4267040.png",
+    "art": "WingedFurm-BellFly.png"
+  },
+  {
+    "id": 31,
+    "type": "UNIT",
+    "name": "Winged Pilgrim",
+    "hp": [
+      20,
+      80
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "WingedPilgrimBellbearer-PilgrimBellthrowerFly.png",
+    "art": "WingedPilgrimBellbearer-PilgrimBellthrowerFly4267163.png"
+  },
+  {
+    "id": 33,
+    "type": "UNIT",
+    "name": "Winged Pilgrim Bellbearer",
+    "hp": [
+      20,
+      40
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "WingedPilgrimBellbearer-PilgrimBellthrowerFly.png",
+    "art": "WingedPilgrimBellbearer-PilgrimBellthrowerFly4267163.png"
+  },
+  {
+    "id": 101,
+    "type": "UNIT",
+    "name": "Wood Wasp",
+    "hp": [
+      15,
+      30
+    ],
+    "modifiers": [
+      1,
+      0.8,
+      0.8,
+      0.8,
+      0.8
+    ],
+    "icon": "WoodWasp-ShellwoodWasp.png",
+    "art": "WoodWasp-ShellwoodWasp4267295.png"
+  },
+  {
+    "id": 88,
+    "type": "UNIT",
+    "name": "Wraith",
+    "hp": [
+      45,
+      0
+    ],
+    "modifiers": [
+      1.5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Wraith.png",
+    "art": "Wraith4267255.png"
+  },
+  {
+    "id": 135,
+    "type": "UNIT",
+    "name": "Yago",
+    "hp": [
+      60,
+      0
+    ],
+    "modifiers": [
+      1.4,
+      1.2,
+      1,
+      1,
+      1
+    ],
+    "icon": "Yago-CoralFlyerThrow.png",
+    "art": "Yago-CoralFlyerThrow4267261.png"
+  },
+  {
+    "id": 131,
+    "type": "UNIT",
+    "name": "Yuma",
+    "hp": [
+      5,
+      0
+    ],
+    "modifiers": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "icon": "Yuma-CoralSwimmerSmall.png",
+    "art": "Yuma-CoralSwimmerSmall4267262.png"
+  },
+  {
+    "id": 132,
+    "type": "UNIT",
+    "name": "Yumama",
+    "hp": [
+      75,
+      0
+    ],
+    "modifiers": [
+      2,
+      1.25,
+      1,
+      1,
+      1
+    ],
+    "icon": "Yumama-CoralBigJellyfish4267050.png",
+    "art": "Yumama-CoralBigJellyfish.png"
+  }
+]

@@ -20,7 +20,7 @@ export class CrestMenuState {
 
     // Methods
     SelectSlot(id: number, index: number) {
-        let previousID = this.selectedSlotID;
+        const previousID = this.selectedSlotID;
         this.selectedSlotID = id;
         this.selectedSlotIndex = index;
         if (previousID !== 0)               // avoid unecessary recalculation

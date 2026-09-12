@@ -5,7 +5,6 @@
 
     import { CrestType } from "$lib/enums/CrestType";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
-    import { SkillType } from "$lib/enums/SkillType";
 
     let loadout: UserLoadout = new UserLoadout();
     loadout.SetCrestType(CrestType.Architect);
@@ -19,9 +18,9 @@
     </div>
 
     <!-- Sections -->
-    <div class="w-full flex-1 min-h-0 xl:grid xl:grid-cols-10 xl:gap-8 xl:px-24 px-8">
+    <div class="h-full w-full flex-1 min-h-0 xl:grid xl:grid-cols-10 xl:gap-8 xl:px-24 px-8">
         <div class="col-span-3">
-            <EnemiesSection/>
+            <EnemiesSection data={loadout}/>
         </div>
         <div class="col-span-3">
             <StatisticSection data={loadout}/>
@@ -31,7 +30,6 @@
         </div>
     </div>
 </div>
-
 
 <style>
     :global(body) {
