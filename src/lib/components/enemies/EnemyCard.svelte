@@ -1,8 +1,10 @@
 <script lang="ts">
     import type { EnemyInfo } from "$lib/types/EnemyInfo";
 
-    let { info }: {info: EnemyInfo} = $props();
+    let { info, threaded = false}: {info: EnemyInfo, threaded?: boolean} = $props();
     let iconPath = $derived("assets/enemies/" + info.icon);
+    let artPath = $derived("assets/enemies/" + info.art);
+    let hpIndex = $derived(threaded ? 1 : 0);
 </script>
 
 <div class="flex flex-row items-center w-full border-b border-b-white/50 pl-4 my-2">
@@ -24,10 +26,9 @@
     <!-- Name & HP -->
     <div class="flex w-full flex-wrap place-items-center  place-content-between">
         <h2 class="ml-4 text-wrap text-lg 2xl:text-2xl">{info.name}</h2>
-        <h2 class="mx-4 text-bold text-lg 2xl:text-2xl">{info.hitpoints[0]}</h2>
+        <h2 class="mx-4 font-bold text-lg 2xl:text-2xl">{info.hitpoints[hpIndex]}</h2>
     </div>
 </div>
-
 
 
 

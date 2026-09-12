@@ -5,11 +5,16 @@
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
     import type { EnemiesSectionState } from "$lib/class/EnemiesSectionState.svelte";
     import EnemyCard from "../enemies/EnemyCard.svelte";
+    import SortToggleButton from "../enemies/SortToggleButton.svelte";
+    import { SortByType } from "$lib/enums/SortByType";
 
     let { data } : { data: UserLoadout } = $props();
     let enemySectionState: EnemiesSectionState = $derived(data.enemiesSectionState);
-
 </script>
+
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+
 
 <div class="flex flex-col h-full max-h-[90vh]">
     <SectionHeader title="Enemies"/>
@@ -26,13 +31,15 @@
     <SearchBar bind:query={enemySectionState.query}/> 
 
     <p class="mt-2" style={`filter: brightness(0.80)`}>{`Displaying ${enemySectionState.resultCount} result(s)`}</p>
+
     <div class="flex place-content-between mt-4">
-        <div>sort name</div>
-        <div>sort HP</div>
+        <SortToggleButton state={enemySectionState} text="Name" modes={[SortByType.NameAsc, SortByType.NameDesc]}/>
+        <SortToggleButton state={enemySectionState} text="Health" modes={[SortByType.HealthAsc, SortByType.HealthDesc]}/>
     </div>
+
     <div class="flex-1 max-h-80 xl:max-h-4/5 w-full overflow-y-auto">
         {#each enemySectionState.enemyInfo as info}
-            <EnemyCard info={info} />
+            <EnemyCard info={info} threaded={enemySectionState.blackThreadHealth} />
         {/each}
     </div>
 </div>

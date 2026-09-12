@@ -36,6 +36,7 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
+		"@svelte-plugins/tooltips": "^4.0.0-beta.1",
 		"svelte-carousel": "^1.0.25"
 	}
 }

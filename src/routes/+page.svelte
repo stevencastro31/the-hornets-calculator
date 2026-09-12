@@ -22,11 +22,12 @@
         <div class="col-span-3">
             <EnemiesSection data={loadout}/>
         </div>
-        <div class="col-span-3">
-            <StatisticSection data={loadout}/>
-        </div>
+
         <div class="col-span-4">
             <LoadoutSection data={loadout}/>
+        </div>
+        <div class="col-span-3">
+            <StatisticSection data={loadout}/>
         </div>
     </div>
 </div>
