@@ -15,7 +15,6 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 
-
 <div class="flex flex-col h-full max-h-[90vh]">
     <SectionHeader title="Enemies"/>
     <hr>
@@ -29,21 +28,21 @@
     </div>
 
     <SearchBar bind:query={enemySectionState.query}/> 
-
     <p class="mt-2" style={`filter: brightness(0.80)`}>{`Displaying ${enemySectionState.resultCount} result(s)`}</p>
+
+
 
     <div class="flex place-content-between mt-4">
         <SortToggleButton state={enemySectionState} text="Name" modes={[SortByType.NameAsc, SortByType.NameDesc]}/>
         <SortToggleButton state={enemySectionState} text="Health" modes={[SortByType.HealthAsc, SortByType.HealthDesc]}/>
     </div>
 
-    <div class="flex-1 max-h-80 xl:max-h-4/5 w-full overflow-y-auto">
+    <div class="flex-1 max-h-80 xl:max-h-4/6 w-full overflow-y-auto">
         {#each enemySectionState.enemyInfo as info}
             <EnemyCard info={info} threaded={enemySectionState.blackThreadHealth} />
         {/each}
     </div>
 </div>
-
 
 <style>
     hr {

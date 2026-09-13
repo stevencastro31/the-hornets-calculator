@@ -14,7 +14,7 @@
 
     $effect(() => {
         const observer = new ResizeObserver(() => { 
-            crestMenuScale = (144/164) * Math.min(crestMenuContainer.clientWidth / MIN_CREST_MENU_WIDTH, 1);
+            crestMenuScale = (136/164) * Math.min(crestMenuContainer.clientWidth / MIN_CREST_MENU_WIDTH, 1);
         });
         isCrestMenuReady = true;
         observer.observe(crestMenuContainer);
