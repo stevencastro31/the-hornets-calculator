@@ -22,3 +22,9 @@
     {/if}
     <h2 class=" text-xl">{text}</h2>
 </div>
+
+<style>
+    img {
+        user-select: none;
+    }
+</style>

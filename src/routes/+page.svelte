@@ -6,14 +6,16 @@
 
     import { CrestType } from "$lib/enums/CrestType";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
+    import AboutOverlay from "$lib/components/common/AboutOverlay.svelte";
 
     let loadout: UserLoadout = new UserLoadout();
     loadout.SetCrestType(CrestType.Hunter2);
+
+    let showOverlay: boolean = $state(true);
 </script>
 
-<div class="font-roboto text-white flex flex-col place-content-center" draggable="false">
+<div class="font-roboto text-white flex flex-col place-content-center relative" draggable="false">
     <!-- Header -->
-
     <div class="sticky w-screen top-0 z-200 bg-[#0A0A0C]">
         <div class="w-full flex flex-col bg-[url(/assets/banner/marrow.png)] bg-contain bg-no-repeat">
             <div class="flex place-content-between h-20 items-center">
@@ -21,7 +23,11 @@
                     <img src="assets/menu/silksong_icon.png" alt="icon" class="size-10"/>
                     <span class="text-xl md:text-3xl font-semibold text-shadow-lg">Hornet's Calculator</span>
                 </div>
-                <InfoButton/>
+
+                {#if !showOverlay}
+                    <InfoButton bind:checked={showOverlay}/>
+                {/if}
+
             </div>
             <div class="flex flex-row gap-4 px-8 pb-4 xl:hidden">
                 <a href="#enemies">Enemies</a>
@@ -43,12 +49,29 @@
             <StatisticSection data={loadout}/>
         </div>
     </div>
+
+    <!-- Overlay -->
+    {#if showOverlay}
+        <div class="bg-black/80 h-full w-screen z-300 absolute top-0 left-0 place-content-center place-items-center pointer-events-none">
+            <div class="fixed right-0 top-0 pointer-events-auto">
+                <InfoButton bind:checked={showOverlay}/>
+            </div>
+
+            <div class="fixed left-1/2 -translate-x-1/2 top-20 2xl:top-1/2 2xl:-translate-y-1/2 w-4/5 xl:w-3/7 pointer-events-auto">
+                <AboutOverlay/>
+            </div>
+        </div>
+    {/if}
 </div>
 
 <style>
     :global(body) {
 		background-color: #0A0A0C;
 	}
+
+    img {
+        user-select: none;
+    }
 </style>.
 
 
