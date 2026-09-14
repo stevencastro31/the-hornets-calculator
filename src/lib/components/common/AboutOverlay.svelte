@@ -29,6 +29,7 @@
             <li>Enemy damage modifiers are not currently considered in the damage calculations.</li>
             <li>DPS calculations do not take challenge modifiers into account.</li>
             <li>Multi-hit skills and tools assume that all subsequent hits are successful.</li>
+            <li>Black-Thread filters for units that have modified health during Act 3 only.</li>
         </ul>
 
         <!-- Tools & Skills -->
@@ -79,13 +80,5 @@
 
     a.tl {
         text-decoration-line: underline;
-    }
-
-    .hide-scrollbar {
-    scrollbar-width: none; /* Firefox */
-    }
-
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none; /* Chrome, Edge, Safari */
     }
 </style>

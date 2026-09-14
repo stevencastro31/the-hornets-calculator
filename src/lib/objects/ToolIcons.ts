@@ -1,9 +1,9 @@
 import { ToolType } from "../enums/ToolType"
 
-let base = "assets/tools/";
-let redPath = "red/";
-let bluePath = "blue/";
-let yellowPath = "yellow/";
+const base = "assets/tools/";
+const redPath = "red/";
+const bluePath = "blue/";
+const yellowPath = "yellow/";
 
 export const TOOL_ICONS: Record<ToolType, string> = {
     [ToolType.DruidsEye]: base + bluePath + "01_druids_eye.png", 

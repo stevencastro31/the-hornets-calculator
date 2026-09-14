@@ -5,9 +5,6 @@
     let { needleType = NeedleType.Needle, isSelected = false } : { needleType: NeedleType, isSelected?: boolean } = $props();
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-
 <div class="md:w-8 md:h-72 w-6 h-54 relative" draggable="false">
     <img src={NEEDLE_UIS[needleType]} alt="needle" class="h-full w-full"/>
     {#if isSelected}

@@ -52,7 +52,7 @@ export class DamageCalculator {
 
     // Methods
     CalculateSwingSpeed() {
-        let hps = 10;
+        let hps;
         if (this.loadout.HasTool(ToolType.FleaBrew))
             if (this.loadout.crest === CrestType.Shaman || this.loadout.crest === CrestType.Cursed) 
                 hps = this.loadout.crestInfo.swingSpeed;
@@ -78,11 +78,11 @@ export class DamageCalculator {
     }
 
     CalculateSpellDamage() {
-        let data: Array<SkillToolStatInfo> = [];
+        const data: Array<SkillToolStatInfo> = [];
 
         this.loadout.equippedSkills.forEach(skillType => {
-            let skillData: SkillInfo = SKILL_DATA[skillType];
-            let base: number = skillData.damage[this.loadout.needle];
+            const skillData: SkillInfo = SKILL_DATA[skillType];
+            const base: number = skillData.damage[this.loadout.needle];
             let modifier: number = 1;
 
             if (this.loadout.crest === CrestType.Shaman) modifier += 0.4;
@@ -107,12 +107,12 @@ export class DamageCalculator {
     }
 
     CalculateToolDamage() {
-        let data: Array<SkillToolStatInfo> = [];
+        const data: Array<SkillToolStatInfo> = [];
 
         this.loadout.equippedTools.forEach(toolType => {
             if (!TOOLS_WITH_DAMAGE.includes(toolType)) return;
 
-            let toolData: ToolInfo = TOOL_DATA[toolType];
+            const toolData: ToolInfo = TOOL_DATA[toolType];
             let subtext = toolData.hits > 1 ? ` (${toolData.hits} HITS)` : "";
 
             if (toolType === ToolType.RosaryCannon) subtext = " (MAX)";

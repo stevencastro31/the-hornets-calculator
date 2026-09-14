@@ -1,9 +1,6 @@
 <script lang="ts">
     import type { SkillToolStatInfo } from "$lib/types/SkillToolStatInfo";
     import StatLabel from "./StatLabel.svelte";
-    import SlotUI from "../crest/SlotUI.svelte";
-    import { SlotType } from "$lib/enums/SlotType";
-    import { ToolType } from "$lib/enums/ToolType";
 
     let { info }: { info: SkillToolStatInfo } = $props();
 </script>

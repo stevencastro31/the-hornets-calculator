@@ -4,7 +4,6 @@
     import NeedleStatSection from "./NeedleStatSection.svelte";
     import SkillToolStatSection from "./SkillToolStatSection.svelte";
 
-    import { CrestType } from "$lib/enums/CrestType";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
 
     let { data } : { data: UserLoadout } = $props();

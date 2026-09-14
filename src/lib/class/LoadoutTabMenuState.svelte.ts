@@ -16,8 +16,8 @@ export class LoadoutTabMenuState {
     disabledTools: SvelteSet<ToolType> = new SvelteSet();
 
     // used to display direction on equipped red tools & skills
-    redToolInfo: Array<any> = $state(TOOLS_RED.map(tool => ({ toolType: tool, direction: SlotDirection.Center })));  
-    skillInfo: Array<any> = $state(this.SKIILS.map(skill => ({ skillType: skill, direction: SlotDirection.Center })));
+    redToolInfo: Array<unknown> = $state(TOOLS_RED.map(tool => ({ toolType: tool, direction: SlotDirection.Center })));  
+    skillInfo: Array<unknown> = $state(this.SKIILS.map(skill => ({ skillType: skill, direction: SlotDirection.Center })));
 
     activeToolPageType: SlotType | number = $state(SlotType.Attack);
 
@@ -84,7 +84,7 @@ export class LoadoutTabMenuState {
             this.disabledTools.add(tool);
             if (!this.MUTUALLY_EXCLUSIVE_TOOLS.has(tool)) return;
 
-            let group = this.MUTUALLY_EXCLUSIVE_TOOL_GROUP.find(g => g.includes(tool))!;
+            const group = this.MUTUALLY_EXCLUSIVE_TOOL_GROUP.find(g => g.includes(tool))!;
             if (!group) return;
 
             if (slotTool === undefined || !group.includes(slotTool)) {

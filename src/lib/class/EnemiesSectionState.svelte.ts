@@ -3,7 +3,6 @@ import { ENEMY_DATA } from "$lib/objects/EnemyData";
 import type { EnemyInfo } from "$lib/types/EnemyInfo";
 import type { UserLoadout } from "./UserLoadout.svelte";
 import { SortByType } from "$lib/enums/SortByType";
-import SortToggleButton from "$lib/components/enemies/SortToggleButton.svelte";
 
 export class EnemiesSectionState {
     loadout: UserLoadout;
@@ -26,7 +25,7 @@ export class EnemiesSectionState {
 
     FilterAndSortEnemies() {
         // filter parameters
-        let lowercaseQuery = this.query.toLowerCase();
+        const lowercaseQuery = this.query.toLowerCase();
         let bosses: EnemyInfo[] = [];
         let minibosses: EnemyInfo[] = [];
         let memories: EnemyInfo[] = [];

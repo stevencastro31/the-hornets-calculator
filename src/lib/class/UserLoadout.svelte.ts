@@ -76,7 +76,7 @@ export class UserLoadout {
         if (this.HasTool(type)) return;                          // ignore if the tool is already equipped
 
          // unequip old tool
-        let oldTool: ToolType | undefined = this.crestMenuState.activeSlot?.toolType;
+        const oldTool: ToolType | undefined = this.crestMenuState.activeSlot?.toolType;
         if (oldTool !== undefined && this.HasTool(oldTool)) {
             this.equippedTools.delete(oldTool);
 
@@ -101,7 +101,7 @@ export class UserLoadout {
         if (this.HasSkill(type)) return;                         // ignore if the skill is already equipped
 
          // unequip old skill
-        let oldSkill: SkillType | undefined = this.crestMenuState.activeSlot?.skillType;
+        const oldSkill: SkillType | undefined = this.crestMenuState.activeSlot?.skillType;
         if (oldSkill !== undefined && this.HasSkill(oldSkill)) {
             this.equippedSkills.delete(oldSkill);
 
@@ -116,6 +116,7 @@ export class UserLoadout {
 
             if (this.crestMenuState.activeSlot?.type === SlotType.Skill)
                 this.loadoutTabMenuState.SetSkillDirection(type, this.crestMenuState.activeSlot.direction ?? SlotDirection.Up);
+            this.loadoutTabMenuState.Deselect();
         }
     }
 

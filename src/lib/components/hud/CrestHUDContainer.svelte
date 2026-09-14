@@ -23,7 +23,7 @@
     // #endregion
 </script>
 
-<div bind:this={crestHUDContainer} class="w-full" style={`visibility: ${true ? "visible" : "hidden"}; height: ${MIN_CREST_HUD_HEIGHT * crestHUDScale}px`}>
+<div bind:this={crestHUDContainer} class="w-full" style={`visibility: ${isCrestMenuReady ? "visible" : "hidden"}; height: ${MIN_CREST_HUD_HEIGHT * crestHUDScale}px`}>
     <div class="h-full w-full flex origin-top-left" style={`transform: scale(${crestHUDScale});`}>
         <CrestHUD loadout={loadout}/>
     </div>

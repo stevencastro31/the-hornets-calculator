@@ -3,12 +3,9 @@
 
     let { info, threaded = false}: {info: EnemyInfo, threaded?: boolean} = $props();
     let iconPath = $derived("assets/enemies/" + info.icon);
-    let artPath = $derived("assets/enemies/" + info.art);
+    // let artPath = $derived("assets/enemies/" + info.art);
     let hpIndex = $derived(threaded ? 1 : 0);
 </script>
-
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
 
 <div class="flex flex-row items-center w-full border-t border-t-white/50 pl-4 my-2 relative">
     <!-- Profile  -->

@@ -1,7 +1,7 @@
 import { SlotDirection } from "$lib/enums/SlotDirection";
 import { SlotType } from "../enums/SlotType";
 
-let base = "assets/menu/"
+const base = "assets/menu/"
 
 export const SLOT_ICONS: Record<SlotType, Partial<Record<SlotDirection, string>>> = {
     [SlotType.Attack]: {

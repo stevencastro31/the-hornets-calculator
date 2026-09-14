@@ -1,6 +1,6 @@
 import { CrestType } from "../enums/CrestType";
 
-let base = "assets/crests/";
+const base = "assets/crests/";
 
 export const CREST_UIS: Record<CrestType, string> = {
 	[CrestType.Architect]: base + "Crest_Architect.png",

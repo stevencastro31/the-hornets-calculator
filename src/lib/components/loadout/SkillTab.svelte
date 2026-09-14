@@ -12,7 +12,8 @@
     let crestMenuState: CrestMenuState = $derived(data.crestMenuState);
     let skillInfo = $derived(loadoutTabMenuState.skillInfo);
 
-    function HandleSkillClick(e: any, skillType: SkillType) {
+    function HandleSkillClick(e: Event, skillType: SkillType) {
+        if (data.HasSkill(skillType)) return;
         if (loadoutTabMenuState.selectedSkill === skillType)
             loadoutTabMenuState.EquipSkill();
         else
@@ -29,7 +30,7 @@
         <img src="assets/menu/silk_skill_heading.png" class="header" alt="header" draggable="false"/>
 
         <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Skill ? "auto" : "none"};`}>
-        {#each skillInfo as info}
+        {#each skillInfo as info (info.skillType)}
             <div class="w-20 h-22 m-3 my-2" onclick={ (e) => { HandleSkillClick(e, info.skillType )}}>
                 <div class="origin-top-left scale-60">
                     <SlotUI 
@@ -38,6 +39,7 @@
                         skillType={info.skillType} 
                         isSelected={loadoutTabMenuState.selectedSkill === info.skillType} 
                         isGlow={data.HasSkill(info.skillType)}
+                        isDisabled={data.HasSkill(info.skillType)}
                         />
                 </div>
             </div>

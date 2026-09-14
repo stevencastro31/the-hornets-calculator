@@ -14,7 +14,7 @@
     let crestType: CrestType = $derived(loadout.crest);
     let isActive = $derived(loadout.crestIsActive);
 
-    let { crestHUDInfo, crestHUDPath }: { crestHUDInfo: any; crestHUDPath: string } = $derived.by(() => {
+    let { crestHUDInfo, crestHUDPath }: { crestHUDInfo: HUDInfo | undefined, crestHUDPath: string } = $derived.by(() => {
         let info: HUDInfo | undefined;
         let path: string = HUD_UIS[crestType];
 
@@ -37,7 +37,7 @@
             <div class="dev outer-circle flex items-center justify-center" onclick={() => { loadout.ToggleCrest(); }} ><div class="inner-circle"></div></div>
             <div class="dev line"></div>
 
-            <img src={crestHUDPath} alt="crest HUD" class="absolute" style={`top: ${(crestHUDInfo.top + 4) * 0.25}rem; left: ${((crestHUDInfo.left + 12) * 0.25) - 2}rem; scale: ${crestHUDInfo.scale}%;`}/>
+            <img src={crestHUDPath} alt="crest HUD" class="absolute" style={`top: ${(crestHUDInfo!.top + 4) * 0.25}rem; left: ${((crestHUDInfo!.left + 12) * 0.25) - 2}rem; scale: ${crestHUDInfo!.scale}%;`}/>
         </div>
      </div>
 

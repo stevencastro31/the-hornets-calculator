@@ -1,6 +1,6 @@
 import { SlotType } from "$lib/enums/SlotType";
 
-let base = "assets/menu/"
+const base = "assets/menu/"
 
 export const GLOW_ICONS: Record<SlotType, string> = {
     [SlotType.Attack]: base + "tool_red_highlight.png",

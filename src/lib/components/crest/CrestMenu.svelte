@@ -34,7 +34,7 @@
                     padding-bottom: ${vesticrestData.padding[2] * 0.25}rem; 
                     padding-left: ${vesticrestData.padding[3] * 0.25}rem
                 `}/>
-            {#each vesticrestData.slots as slotInfo, index} 
+            {#each vesticrestData.slots as slotInfo, index (slotInfo.id)} 
                 <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
                     <SlotUI 
                         slotType={slotInfo.type} 
@@ -63,7 +63,7 @@
                 padding-bottom: ${crestData.padding[2] * 0.25}rem; 
                 padding-left: ${crestData.padding[3] * 0.25}rem
             `}/>
-        {#each crestData.slots as slotInfo, index} 
+        {#each crestData.slots as slotInfo, index (slotInfo.id)} 
             <div class="absolute" style={`left: ${slotInfo.x * 0.25}rem; top: ${slotInfo.y * 0.25}rem;`} onclick={(e) => { SelectCrestSlot(e, slotInfo.id, index); }}>
                 <SlotUI 
                     slotType={slotInfo.type} 

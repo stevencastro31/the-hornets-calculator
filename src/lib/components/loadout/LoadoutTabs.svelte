@@ -40,7 +40,7 @@
 
 <!-- Tab Buttons -->
 <ul class="flex flex-wrap border-b border-b-white/50 pb-4 2xl:pb-0">
-    {#each tabItems as tab}
+    {#each tabItems as tab, index (index)}
         <li class="m-2 2xl:ml-0 2xl:mb-0" >
             <div class="border border-gray-400 hover:border-white transition-colors duration-250 rounded-xl 2xl:rounded-b-none flex p-2 flex-row place-items-center" class:border-white={activeTabValue === tab.value} onclick={handleClick(tab.value)} >
                 <img class="size-8 md:size-10" src={`${LOADOUT_TAB_ICONS[tab.value]}`} alt="tab icon" draggable="false"/>
@@ -51,12 +51,12 @@
 </ul>
 
 <!-- Tab Content -->
-{#each tabItems as tab}
-	{#if activeTabValue == tab.value}
+{#each tabItems as tab, index  (index)}
+    {#if activeTabValue == tab.value}
         <div class="flex grow">
             <tab.component data={data}/>
         </div>
-	{/if}
+    {/if}
 {/each}
 
 <style>

@@ -2,13 +2,10 @@
     import StatLabel from "../stats/StatLabel.svelte";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
     import { CrestType } from "$lib/enums/CrestType";
-    import type { CrestInfo } from "$lib/types/CrestInfo";
     import type { DamageCalculator } from "$lib/class/DamageCalculator.svelte";
     import CheckBox from "../common/CheckBox.svelte";
 
     let { data } : { data: UserLoadout } = $props();
-    
-    let crestInfo: CrestInfo = $derived(data.crestInfo);
     let calculator: DamageCalculator = $derived(data.damageCalculator);
 </script>
 

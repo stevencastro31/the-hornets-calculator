@@ -14,8 +14,8 @@
     <div class="page md:px-8">
         <img src="assets/menu/crest_heading.png" class="header" alt="header" draggable="false"/>
         <div class="flex flex-wrap flex-row place-content-center">
-        {#each crests as crestType}
-            <div onclick={(e) => { data.SetCrestType(crestType); }}>
+        {#each crests as crestType (crestType)}
+            <div onclick={() => { data.SetCrestType(crestType); }}>
                 <CrestSlot crestType={crestType} isSelected={crestType === data.crest}/>
             </div>
         {/each}

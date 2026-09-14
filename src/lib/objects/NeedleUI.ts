@@ -1,6 +1,6 @@
 import { NeedleType } from "../enums/NeedleType";
 
-let base = "assets/needles/"
+const base = "assets/needles/"
 
 export const NEEDLE_UIS: Record<NeedleType, string> = {
     [NeedleType.Needle]: base + "needle.png",

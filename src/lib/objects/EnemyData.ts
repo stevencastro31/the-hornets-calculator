@@ -9,7 +9,7 @@ export const ENEMY_DATA: EnemyInfo[] = data.map((item) => {
     else type = EnemyType.MiniBoss;
 
     // special cases (small)
-    let memories = ["Skarrsinger Karmelita", "Crust King Khann", "Nyleth"];
+    const memories = ["Skarrsinger Karmelita", "Crust King Khann", "Nyleth"];
     if (memories.includes(item.name))
         type = EnemyType.Memory;
 

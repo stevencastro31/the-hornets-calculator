@@ -5,7 +5,7 @@
     let { state: sectionState, text, modes }: { state: EnemiesSectionState, text: string, modes: SortByType[] } = $props();
     let isAscending = $state(false);
 
-    function HandleButtonClick(event: MouseEvent & { currentTarget: EventTarget & HTMLDivElement; }) {
+    function HandleButtonClick() {
         isAscending = !isAscending;
         sectionState.sortMode = isAscending ? modes[0] : modes[1];
     }

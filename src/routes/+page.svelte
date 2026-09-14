@@ -4,14 +4,11 @@
     import LoadoutSection from "$lib/components/section/LoadoutSection.svelte";
     import InfoButton from "$lib/components/common/InfoButton.svelte";
 
-    import { CrestType } from "$lib/enums/CrestType";
     import { UserLoadout } from "$lib/class/UserLoadout.svelte";
     import AboutOverlay from "$lib/components/common/AboutOverlay.svelte";
 
     let loadout: UserLoadout = new UserLoadout();
-    loadout.SetCrestType(CrestType.Hunter2);
-
-    let showOverlay: boolean = $state(true);
+    let showOverlay: boolean = $state(false);
 </script>
 
 <div class="font-roboto text-white flex flex-col place-content-center relative" draggable="false">

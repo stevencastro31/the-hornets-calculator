@@ -59,8 +59,8 @@
             <img src="assets/menu/red_tools_heading.png" class="red tool header" alt="header" draggable="false"/>
 
             <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Attack ? "auto" : "none"};`}>
-            {#each redToolInfo as info}
-                <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, info.toolType )}}>
+            {#each redToolInfo as info (info.toolType)}
+                <div class="max-w-20 max-h-22 m-2 my-1 items-center" onclick={ (e) => { HandleToolClick(e, info.toolType )}}>
                     <div class="origin-top-left scale-60">
                         <SlotUI 
                             slotType={SlotType.Attack} 
@@ -82,7 +82,7 @@
 
             <!-- <div class="tools-container" style={`pointer-events: ${toolTabMenuState.activeToolPageType === SlotType.Defense ? "all" : "none"};`}> -->
             <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Defense ? "auto" : "none"};`}>
-            {#each TOOLS_BLUE as toolType}
+            {#each TOOLS_BLUE as toolType (toolType)}
                 <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, toolType )}}>
                     <div class="origin-top-left scale-60">
                         <SlotUI 
@@ -103,7 +103,7 @@
             <img src="assets/menu/yellow_tools_heading.png" class="yellow tool header" alt="header" draggable="false"/>
 
             <div class="tools-container" style={`pointer-events: ${crestMenuState.activeSlot?.type === SlotType.Explore ? "auto" : "none"};`}>
-            {#each TOOLS_YELLOW as toolType}
+            {#each TOOLS_YELLOW as toolType (toolType)}
                 <div class="w-20 h-22 m-2 my-1" onclick={ (e) => { HandleToolClick(e, toolType )}}>
                     <div class="origin-top-left scale-60">
                         <SlotUI 

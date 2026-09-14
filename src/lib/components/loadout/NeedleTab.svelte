@@ -14,7 +14,7 @@
     <div class="page md:px-10 px-8">
         <img src="assets/menu/needle_heading.png" class="header" alt="header" draggable="false"/>
         <div class="flex flex-wrap flex-row place-content-center">
-        {#each needles as needleType} 
+        {#each needles as needleType (needleType)} 
             <div class="px-4 xl:px-14 mb-4" onclick={ () => { data.SetNeedle(needleType); } }>
                 <NeedleSlot needleType={needleType} isSelected={data.needle === needleType}/>
             </div>

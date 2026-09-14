@@ -11,11 +11,20 @@
     <SectionHeader title="Loadout"/>
     <hr>
 
-    <div class="max-h-154">
+    <!-- <div class="max-h-154">
         <CrestMenuContainer data={data}/>
     </div>
 
-    <LoadoutTabs data={data}/>
+    <LoadoutTabs data={data}/> -->
+
+    <div class="relative">
+        <div class="sticky top-24 z-50 max-h-154 bg-[#0A0A0C] md:static">
+            <CrestMenuContainer data={data}/>
+        </div>
+
+        <LoadoutTabs data={data}/>
+    </div>
+
 </div> 
 
 <style>

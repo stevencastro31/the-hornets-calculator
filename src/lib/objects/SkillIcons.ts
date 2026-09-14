@@ -1,6 +1,6 @@
 import { SkillType } from "../enums/SkillType";
 
-let base = "assets/skills/"
+const base = "assets/skills/"
 
 export const SKILL_ICONS: Record<SkillType, string> = {
     [SkillType.SilkSpear]: base + "01_silkspear_icon.png",

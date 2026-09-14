@@ -18,11 +18,11 @@
     <StatLabel label="Regen" text="1" subtext="SILK"/>
 
     <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-4">
-        {#each calculator.skillDamageInfoDetail as detail}
+        {#each calculator.skillDamageInfoDetail as detail (detail.type)}
                 <SkillStatLabel info={detail}/>
         {/each}
 
-        {#each calculator.toolDamageInfoDetail as detail}
+        {#each calculator.toolDamageInfoDetail as detail  (detail.type)}
                 <SkillStatLabel info={detail}/>
         {/each}
     </div>
