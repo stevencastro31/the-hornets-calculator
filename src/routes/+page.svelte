@@ -11,6 +11,13 @@
     let showOverlay: boolean = $state(false);
 </script>
 
+<svelte:head>
+	<title>Hornet's Calculator - Hollow Knight: Silksong Damage Analysis Tool</title>
+	<meta name="description" content="calculate hornet's damage in Hollow Knight: Silksong using different tools, skills, crests, and effects."/>
+    <meta name="keywords" content="silksong calculator, hollow knight silksong, hornet damage calculator, silksong damage, hornet loadout"/>
+</svelte:head>
+
+
 <div class="font-roboto text-white flex flex-col place-content-center relative" draggable="false">
     <!-- Header -->
     <div class="sticky w-screen top-0 z-200 bg-[#0A0A0C]">
