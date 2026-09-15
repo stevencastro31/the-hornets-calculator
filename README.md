@@ -1,6 +1,8 @@
 # Hornet's Calculator
 [Hornet's Calculator](https://stevencastro31.github.io/the-hornets-calculator/) is a web-based damage analysis tool for the game [Hollow Knight: Silksong](https://hollowknightsilksong.com).
 
+This project is heavily inspired by Isaiah's work on his version of the [Hollow Knight Damage Calculator](https://github.com/IsaiahChin/the-knights-calculator). I found the project very cool, and ever since Silksong was released, I had always wanted a version of the calculator for Silksong.
+
 ## Features
 * **Enemies** – Search for in-game enemies and sort them by health or name.
 * **Loadout** – Interact with and customize a crest board UI inspired by the game to equip crests, skills, and tools.
